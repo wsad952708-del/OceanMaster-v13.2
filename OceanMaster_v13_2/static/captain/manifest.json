@@ -1,0 +1,17 @@
+{
+    "name": "OceanMaster 漁獲回報",
+    "short_name": "漁獲回報",
+    "description": "遠洋漁船離線優先漁獲回報系統",
+    "start_url": "/captain/",
+    "display": "standalone",
+    "background_color": "#0a1628",
+    "theme_color": "#00d4ff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

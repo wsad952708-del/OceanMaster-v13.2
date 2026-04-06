@@ -1,0 +1,16 @@
+output/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+data/cache/
+*.pkl
+*.pt
+*.pth
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+cache/
+C:/tmp/

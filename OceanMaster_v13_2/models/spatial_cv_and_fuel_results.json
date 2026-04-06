@@ -1,0 +1,45 @@
+{
+  "yellowfin": {
+    "spatial_cv_r2_mean": 0.476,
+    "spatial_cv_r2_std": 0.0927,
+    "spatial_cv_mae_mean": 0.04,
+    "n_folds": 5,
+    "n_samples": 30234,
+    "n_spatial_blocks": 90,
+    "time_sec": 39.4,
+    "data_source": "WCPFC_LONGLINE_2000-2018",
+    "method": "GBR_300trees + 10deg_spatial_blocking"
+  },
+  "bigeye": {
+    "spatial_cv_r2_mean": 0.578,
+    "spatial_cv_r2_std": 0.111,
+    "spatial_cv_mae_mean": 0.04,
+    "n_folds": 5,
+    "n_samples": 30513,
+    "n_spatial_blocks": 90,
+    "time_sec": 39.4,
+    "data_source": "WCPFC_LONGLINE_2000-2018",
+    "method": "GBR_300trees + 10deg_spatial_blocking"
+  },
+  "albacore": {
+    "spatial_cv_r2_mean": 0.578,
+    "spatial_cv_r2_std": 0.049,
+    "spatial_cv_mae_mean": 0.06,
+    "n_folds": 5,
+    "n_samples": 26986,
+    "n_spatial_blocks": 89,
+    "time_sec": 34.8,
+    "data_source": "WCPFC_LONGLINE_2000-2018",
+    "method": "GBR_300trees + 10deg_spatial_blocking"
+  },
+  "fuel_savings": {
+    "steaming_fuel_per_trip_L": 15840,
+    "fuel_saved_per_trip_L": 2376,
+    "cost_saved_per_trip_USD": 2019,
+    "annual_fuel_savings_L": 28908,
+    "annual_cost_savings_USD": 24571,
+    "annual_cpue_revenue_USD": 486666,
+    "total_annual_benefit_USD": 511238,
+    "assumptions": "15pct search reduction, 20pct CPUE improvement, 120L/hr 300GT longline vessel, $0.85/L fuel, $8/kg tuna avg, 30-day trips"
+  }
+}

@@ -1,0 +1,922 @@
+/* ═══════════════════════════════════════════════════════
+   OceanMaster v12 — Dashboard v2 CSS (Dark Theme)  [v12-phase8]
+   ═══════════════════════════════════════════════════════
+   設計理念: 船橋夜間使用 (暗色主題)，觸控友善
+   字型: Inter + Noto Sans TC
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+:root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #111827;
+    --bg-card: #1a2332;
+    --bg-card-hover: #1f2b3d;
+    --bg-glass: rgba(17, 24, 39, 0.85);
+    --border-color: #2d3748;
+    --border-glow: rgba(56, 189, 248, 0.3);
+
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --text-accent: #38bdf8;
+
+    --accent-blue: #38bdf8;
+    --accent-cyan: #22d3ee;
+    --accent-green: #34d399;
+    --accent-yellow: #fbbf24;
+    --accent-orange: #fb923c;
+    --accent-red: #f87171;
+    --accent-purple: #a78bfa;
+
+    --hsi-low: #1e3a5f;
+    --hsi-mid: #fbbf24;
+    --hsi-high: #ef4444;
+
+    --sidebar-width: 440px;
+    --right-panel-width: 320px;
+    --bottom-panel-height: 210px;
+    --header-height: 64px;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.15);
+
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans TC', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+}
+
+/* ── 全局佈局 ── */
+.app-layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
+    grid-template-rows: var(--header-height) 1fr var(--bottom-panel-height);
+    grid-template-areas:
+        "header header header"
+        "sidebar map right"
+        "sidebar bottom right";
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ── Header ── */
+.app-header {
+    grid-area: header;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.app-logo .version-badge {
+    font-size: 14px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.species-selector {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.species-selector:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-glow);
+}
+
+.header-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-btn:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+.header-btn.active {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+/* ── Map容器 ── */
+.map-container {
+    grid-area: map;
+    position: relative;
+    z-index: 1;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+}
+
+/* ── 圖層控制面板 ── */
+.layer-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    z-index: 500;
+    min-width: 200px;
+    box-shadow: var(--shadow-card);
+}
+
+.layer-controls h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.layer-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.layer-toggle:hover {
+    color: var(--text-primary);
+}
+
+.layer-toggle input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.layer-toggle input[type="checkbox"]:checked {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.layer-toggle input[type="checkbox"]:checked::after {
+    content: '✓';
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.layer-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ── 左側邊欄 ── */
+.left-sidebar {
+    grid-area: sidebar;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--bg-secondary);
+    z-index: 10;
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.sidebar-header .subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+/* 熱點卡片 */
+.hotspot-card {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hotspot-card:hover {
+    background: var(--bg-card);
+}
+
+.hotspot-card.active {
+    background: var(--bg-card);
+    border-left: 3px solid var(--accent-blue);
+}
+
+.hotspot-rank {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.hotspot-number {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+.hsi-badge {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 12px;
+}
+
+.hsi-high {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--accent-red);
+}
+
+.hsi-mid {
+    background: rgba(251, 191, 36, 0.2);
+    color: var(--accent-yellow);
+}
+
+.hsi-low {
+    background: rgba(56, 189, 248, 0.2);
+    color: var(--accent-blue);
+}
+
+.hotspot-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.hotspot-info .label {
+    color: var(--text-muted);
+}
+
+.hotspot-info .value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* 詳細面板 */
+.detail-panel {
+    padding: 16px;
+}
+
+.detail-section {
+    margin-bottom: 16px;
+}
+
+.detail-section-title {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    font-size: 16px;
+}
+
+.detail-row .label {
+    color: var(--text-secondary);
+}
+
+.detail-row .value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.status-good {
+    color: var(--accent-green);
+}
+
+.status-warning {
+    color: var(--accent-yellow);
+}
+
+.status-danger {
+    color: var(--accent-red);
+}
+
+.phi-display {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+}
+
+/* 食物鏈狀態指示器 */
+.food-chain-status {
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.trophic-level {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    font-size: 15px;
+}
+
+.trophic-arrow {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.trophic-icon {
+    font-size: 20px;
+}
+
+/* ── 底部面板 (食物鏈時間線) ── */
+.bottom-panel {
+    grid-area: bottom;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.bottom-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.bottom-panel-header h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+#timeline-canvas {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+}
+
+/* ── 右側面板 ── */
+.right-panel {
+    grid-area: right;
+    background: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    overflow-y: auto;
+    z-index: 100;
+    padding: 16px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow);
+}
+
+.stat-card-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-value {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* 進度條 */
+.progress-bar {
+    height: 6px;
+    background: var(--bg-primary);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 8px 0 4px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s ease;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+}
+
+/* 星級評分 */
+.star-rating {
+    display: flex;
+    gap: 3px;
+    font-size: 22px;
+}
+
+.star-rating .star-filled {
+    color: var(--accent-yellow);
+}
+
+.star-rating .star-empty {
+    color: var(--text-muted);
+}
+
+/* 月相顯示 */
+.moon-display {
+    font-size: 40px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* ── 時間滑桿 ── */
+.time-slider-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-color);
+    padding: 10px 20px;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.time-slider {
+    flex: 1;
+    appearance: none;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.time-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+.time-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    min-width: 130px;
+    text-align: center;
+}
+
+.play-btn {
+    background: var(--accent-blue);
+    border: none;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.play-btn:hover {
+    background: var(--accent-cyan);
+    transform: scale(1.1);
+}
+
+/* ── SHAP 模態框 ── */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    width: 550px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-card);
+}
+
+.modal-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* SHAP 條形圖 */
+.shap-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 15px;
+}
+
+.shap-label {
+    width: 160px;
+    text-align: right;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.shap-bar-container {
+    flex: 1;
+    height: 20px;
+    background: var(--bg-primary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.shap-bar {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.shap-bar.positive {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+}
+
+.shap-bar.negative {
+    background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+}
+
+.shap-value {
+    width: 60px;
+    text-align: right;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* ── 搜尋框 ── */
+.search-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-family: inherit;
+    width: 200px;
+    transition: var(--transition);
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-glow);
+}
+
+.search-box::placeholder {
+    color: var(--text-muted);
+}
+
+/* ── 載入動畫 ── */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Leaflet 覆蓋樣式 ── */
+.leaflet-container {
+    background: var(--bg-primary) !important;
+    font-family: inherit !important;
+}
+
+.leaflet-popup-content-wrapper {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-card) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.leaflet-popup-tip {
+    background: var(--bg-card) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.leaflet-popup-close-button {
+    color: var(--text-muted) !important;
+}
+
+.leaflet-control-zoom a {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: var(--bg-card-hover) !important;
+}
+
+/* ── 自訂標記 ── */
+.hotspot-marker {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 3px 12px rgba(56, 189, 248, 0.6);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.hotspot-marker.top3 {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+    box-shadow: 0 3px 16px rgba(251, 191, 36, 0.7);
+}
+
+/* ── 滾動條 ── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ── RWD ── */
+@media (max-width: 1200px) {
+    .app-layout {
+        grid-template-columns: 360px 1fr 280px;
+    }
+
+    :root {
+        --sidebar-width: 360px;
+        --right-panel-width: 280px;
+    }
+}
+
+@media (max-width: 900px) {
+    .app-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: var(--header-height) 1fr auto;
+        grid-template-areas:
+            "header"
+            "map"
+            "bottom";
+    }
+
+    .left-sidebar,
+    .right-panel {
+        display: none;
+    }
+
+    .left-sidebar.mobile-open,
+    .right-panel.mobile-open {
+        display: block;
+        position: fixed;
+        top: var(--header-height);
+        bottom: 0;
+        width: 85vw;
+        max-width: 380px;
+        z-index: 900;
+        box-shadow: var(--shadow-card);
+    }
+
+    .left-sidebar.mobile-open {
+        left: 0;
+    }
+
+    .right-panel.mobile-open {
+        right: 0;
+    }
+
+    .mobile-toggle {
+        display: flex !important;
+    }
+
+    .bottom-panel {
+        max-height: 160px;
+    }
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+/* ── 動畫 ── */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease infinite;
+}

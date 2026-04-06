@@ -1,0 +1,117 @@
+Total Size: 425.95 MB
+File Count: 866
+Top Extensions:
+  .py: 201
+  .npz: 146
+  .json: 112
+  .html: 103
+  .kml: 93
+  .geojson: 92
+  .csv: 36
+  .md: 33
+  .pdf: 9
+  .nc: 5
+
+Top 50 Largest Files:
+  models\checkpoints_r2\r2test_best.pt: 121320.75 KB
+  data\cmems_poc\sst_monthly_2019.nc: 20325.09 KB
+  data\real\WCPFC_L_PUBLIC_BY_YY_MM\WCPFC_L_PUBLIC_BY_YY_MM.csv: 20241.74 KB
+  data\wcpfc\LONGLINE.CSV: 17131.58 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Fish Catch by Longline for Pacific Islands Region\LONGLINE.CSV: 17131.58 KB
+  data\wcpfc\longline\LONGLINE.CSV: 17131.58 KB
+  data\real\WCPFC_L_PUBLIC_BY_YY_QTR_FLAG\WCPFC_L_PUBLIC_BY_YY_QTR_FLAG.csv: 10746.79 KB
+  data\real\WCPFC_S_PUBLIC_BY_YY_MM\WCPFC_S_PUBLIC_BY_YY_MM.csv: 6510.79 KB
+  data\wcpfc\PURSE_SEINE.CSV: 5366.71 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Fish Catch by Purse Seine for Pacific Islands Region\PURSE_SEINE.CSV: 5366.71 KB
+  data\cmems_poc\chl_monthly_2019.nc: 4555.39 KB
+  data\real\WCPFC_L_PUBLIC_BY_YY_FLAG_1\WCPFC_L_PUBLIC_BY_YY_FLAG.csv: 3284.01 KB
+  data\cache\tmp071e9vj7.tmp.npz: 3089.43 KB
+  data\cache\tmp68gdh19z.tmp.npz: 3089.43 KB
+  data\cache\tmpadn9i5kq.tmp.npz: 3089.43 KB
+  data\cache\tmpz26jklvm.tmp.npz: 3089.43 KB
+  data\cache\tmp3v4_7oz5.tmp.npz: 3087.14 KB
+  data\cache\tmp6vme2_t3.tmp.npz: 3087.14 KB
+  data\cache\tmpvjuzano4.tmp.npz: 3087.14 KB
+  data\cache\tmpy4ix1v9h.tmp.npz: 3087.14 KB
+  data\cache\tmp7ybu4noh.tmp.npz: 3085.32 KB
+  data\cache\tmpiw5mhgly.tmp.npz: 3085.32 KB
+  data\cache\tmprk84x8w5.tmp.npz: 3085.32 KB
+  data\cache\tmp_l2ht5n_.tmp.npz: 3085.32 KB
+  data\cache\tmpjildv45b.tmp.npz: 3084.99 KB
+  data\cache\tmpnmbfqky_.tmp.npz: 3084.99 KB
+  data\cache\tmpowqrri34.tmp.npz: 3084.99 KB
+  data\cache\tmp_hj4vean.tmp.npz: 3084.99 KB
+  data\cache\tmp0fb6jrle.tmp.npz: 3084.34 KB
+  data\cache\tmp8bdzb4lb.tmp.npz: 3084.34 KB
+  data\cache\tmpmj3pwd1b.tmp.npz: 3084.34 KB
+  data\cache\tmpneay75mn.tmp.npz: 3084.34 KB
+  data\cache\tmp305m12t2.tmp.npz: 3084.00 KB
+  data\cache\tmp3gwxaozs.tmp.npz: 3084.00 KB
+  data\cache\tmpjvszagly.tmp.npz: 3084.00 KB
+  data\cache\tmpm1mubyzz.tmp.npz: 3084.00 KB
+  data\cache\tmpbil97gjv.tmp.npz: 3083.39 KB
+  data\cache\tmpgk1jo3_3.tmp.npz: 3083.39 KB
+  data\cache\tmpmgysfpa2.tmp.npz: 3083.39 KB
+  data\cache\tmpu306pb8s.tmp.npz: 3083.39 KB
+  data\cache\tmp2o0jxw20.tmp.npz: 3082.94 KB
+  data\cache\tmp8ix4p_j8.tmp.npz: 3082.94 KB
+  data\cache\tmpe0hdhjtz.tmp.npz: 3082.94 KB
+  data\cache\tmptz5dkw0v.tmp.npz: 3082.94 KB
+  data\cache\tmpak_l17j8.tmp.npz: 3080.04 KB
+  data\cache\tmpgo5dpjbs.tmp.npz: 3080.04 KB
+  data\cache\tmptisbp7q5.tmp.npz: 3080.04 KB
+  data\cache\tmpvfu7ytkr.tmp.npz: 3080.04 KB
+  data\true_features\true_features_all.csv: 2665.24 KB
+  data\wcpfc\historical_prior_longline.json: 2654.76 KB
+
+Potential ML/AI Files (Top 50 by size):
+  models\checkpoints_r2\r2test_best.pt: 121320.75 KB
+  data\cache\tmp0fb6jrle.tmp.npz: 3084.34 KB
+  data\gfw_training_set.csv: 1103.50 KB
+  models\incremental_xgb.json: 729.70 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Fish Catch by Longline for Pacific Islands Region\longline.rtf: 495.45 KB
+  data\wcpfc\longline\longline.rtf: 495.45 KB
+  data\training\synthetic_neon_flying_squid.csv: 405.35 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Fish Catch by Purse Seine for Pacific Islands Region\purse_seine.rtf: 371.62 KB
+  models\unet_fishing_v18.pt: 369.87 KB
+  models\transfish_v18.pt: 295.20 KB
+  data\training\X_neon_flying_squid.npy: 172.00 KB
+  models\convlstm_sst_v18.pt: 84.86 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Fish Catch by Pole and Line for Pacific Islands Region\pole_and_line.rtf: 74.02 KB
+  models\cloud_removal_v18.pt: 46.01 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Tuna Catch by Driftnet for Pacific Islands Region\driftnet.rtf: 43.55 KB
+  train_wcpfc.py: 36.57 KB
+  engine\ml\dl_models_v2.py: 25.93 KB
+  engine\ml\dl_models_v2.py.bak: 25.93 KB
+  train_with_gfw.py: 25.27 KB
+  tests\test_deep_8layer.py: 24.91 KB
+  engine\ml\training_pipeline.py: 24.84 KB
+  engine\ml\training_data_builder.py: 24.33 KB
+  engine\hsi_models.py: 24.27 KB
+  ml_system\oceanmaster_ml_trainer_v2.py: 24.12 KB
+  engine\fm\fishing_agent.py: 20.45 KB
+  engine\food_chain_predictor.py: 19.85 KB
+  tests\test_dl_infra.py: 19.01 KB
+  tests\deep_7layer_test.py: 18.40 KB
+  engine\fm\agent_bootstrap.py: 17.24 KB
+  ml_system\integrated_predictor.py: 17.19 KB
+  engine\fish_behavior_model.py: 17.10 KB
+  engine\ml\convlstm_predictor.py: 15.90 KB
+  engine\ml\unet_fishing.py: 15.02 KB
+  engine\genetic_optimizer.py: 14.54 KB
+  engine\training_orchestrator.py: 14.49 KB
+  engine\ml\dl_trainer.py: 13.86 KB
+  tests\test_dl_round4.py: 13.63 KB
+  engine\pinn_loss.py: 13.39 KB
+  engine\micronekton_model.py: 12.91 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Tuna Catch by Driftnet for Pacific Islands Region\driftnet.pdf: 12.36 KB
+  engine\ml\dl_data_pipeline.py: 10.52 KB
+  engine\fm\rag_engine.py: 10.29 KB
+  engine\ml\ssl_pretrainer.py: 10.22 KB
+  engine\lunar_model.py: 10.08 KB
+  engine\omz_model.py: 9.89 KB
+  engine\npz_model.py: 9.88 KB
+  engine\dvm_model.py: 9.27 KB
+  engine\fm\llm_finetuner.py: 9.18 KB
+  data\wcpfc\DRIFTNET.CSV: 8.96 KB
+  data\wcpfc\collection\aggregated-catch-effort-data-western-and-central-fisheries-co4625a57e-05e5-4bbe-b5e3-8dac96bc1c92\Aggregated Tuna Catch by Driftnet for Pacific Islands Region\DRIFTNET.CSV: 8.96 KB

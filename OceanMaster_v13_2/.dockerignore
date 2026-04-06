@@ -1,0 +1,63 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+
+# IDE
+.vscode
+.idea
+*.swp
+
+# Environment (secrets)
+.env
+.env.*
+!.env.example
+
+# Output (mounted as volume) — except cold-start data files
+output/
+!output/hotspots.json
+!output/analysis_summary.json
+data/cache/
+data/woa_do_cache/
+
+# Tests
+tests/
+test_*.py
+*.test.*
+
+# Docker
+Dockerfile
+Dockerfile.production
+docker-compose.yml
+docker-compose.production.yml
+.dockerignore
+
+# Docs (not needed in image)
+*.md
+!requirements.txt
+!requirements_v102.txt
+
+# Temp & audit files
+temp_run*.txt
+dry_run_report.json
+pre_commercial_report.json
+compliance/
+audit*.txt
+audit*.md
+
+# [v13.2-P2] PoC & diagnostic scripts (not for production)
+poc_*.py
+*_diag_*.py
+fast_run.py
+
+# Large data (not needed at build time)
+data/raw/
+# [v13.2-R7] Keep WCPFC CSVs for calibration, exclude bulk collection data
+data/wcpfc/collection/
+data/wcpfc/longline/

@@ -1,0 +1,4364 @@
+[
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\AI_SYSTEM_BLUEPRINT_FOR_OTHER_AIs.md",
+    "line": 11,
+    "content": "系統作為「感官」，依賴位於 `engine/` 底下的 Fetcher (爬蟲)，每天自動從國外氣象衛星中心（如 Copernicus, NOAA）拉取最原始的物理網格資料 (`.nc` 檔)：",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\analyze_copernicus.py",
+    "line": 5,
+    "content": "keywords = ['copernicusmarine', 'copernicus', 'marine', 'cmems']",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\analyze_copernicus.py",
+    "line": 33,
+    "content": "with open(os.path.join(ROOT, \"copernicus_report.json\"), \"w\", encoding=\"utf-8\") as f:",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 4,
+    "content": "Builds training CSV from CMEMS satellite data + WCPFC catch records.",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 29,
+    "content": "NC_DIR = Path(\"C:/temp/cmems\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 37,
+    "content": "# CMEMS bounding box (covers full WCPFC longline area)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 64,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 70,
+    "content": "copernicusmarine.subset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 71,
+    "content": "dataset_id=\"cmems_mod_glo_phy_my_0.083deg_P1M-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 88,
+    "content": "copernicusmarine.subset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 89,
+    "content": "dataset_id=\"cmems_mod_glo_bgc_my_0.25deg_P1M-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 439,
+    "content": "parser = argparse.ArgumentParser(description=\"Build true features from CMEMS + WCPFC\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 441,
+    "content": "parser.add_argument(\"--download\", action=\"store_true\", help=\"Download CMEMS data\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 449,
+    "content": "log.info(f\"Downloading CMEMS data for {years}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\build_true_features.py",
+    "line": 471,
+    "content": "print(\"  --download  Download CMEMS NetCDF\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 5,
+    "content": "v10 新增: WOA2023 DO、Oregon State VGPM、ETOPO1、CMEMS BGC",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 80,
+    "content": "CMEMS_SOURCES = {",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 82,
+    "content": "\"dataset_id\": \"cmems_mod_glo_phy_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 84,
+    "content": "\"desc\": \"Copernicus 全球海洋物理\",",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 87,
+    "content": "\"dataset_id\": \"cmems_mod_glo_bgc_anfc_0.25deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 89,
+    "content": "\"desc\": \"Copernicus 全球海洋生化（DO/NPP）\",",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 102,
+    "content": "OPEN_METEO_URL = \"https://marine-api.open-meteo.com/v1/marine\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\config.py",
+    "line": 403,
+    "content": "\"fetch_cmems_bgc\":      {\"hours\": 24, \"jitter\": 3600},",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\DEPLOYMENT.md",
+    "line": 20,
+    "content": "- **CMEMS** (free): https://data.marine.copernicus.eu/register",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\DEPLOYMENT.md",
+    "line": 35,
+    "content": "nano .env  # Add CMEMS credentials and set OCEANMASTER_API_KEY",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\DEPLOYMENT.md",
+    "line": 155,
+    "content": "| `CMEMS_USERNAME` | Yes | — | Copernicus Marine username |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\DEPLOYMENT.md",
+    "line": 156,
+    "content": "| `CMEMS_PASSWORD` | Yes | — | Copernicus Marine password |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\DEPLOYMENT.md",
+    "line": 234,
+    "content": "| `CMEMS timeout` | Copernicus API slow/down | Check https://data.marine.copernicus.eu/status; retry later |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 1,
+    "content": "\"\"\"Download CMEMS multi-depth 3D temp/salinity + test thermocline/DO\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 15,
+    "content": "print(\"=\"*55 + \"\\n  CMEMS 3D Multi-depth (daily, 0-2000m)\\n\" + \"=\"*55)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 17,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 18,
+    "content": "r = copernicusmarine.subset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 19,
+    "content": "dataset_id=\"cmems_mod_glo_phy_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 26,
+    "content": "output_filename=\"cmems_3d_deep.nc\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 30,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_deep.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 43,
+    "content": "r = copernicusmarine.subset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 44,
+    "content": "dataset_id=\"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 51,
+    "content": "output_filename=\"cmems_3d_deep.nc\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 55,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_deep.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 64,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_deep.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\download_3d_deep.py",
+    "line": 86,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_deep.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 72,
+    "content": "# ─── CMEMS 帳號設定 (Copernicus Marine Service) ───",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 73,
+    "content": "# 請在 .env 中設定 CMEMS_USER 和 CMEMS_PASS",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 74,
+    "content": "if not os.environ.get(\"CMEMS_USER\"):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 76,
+    "content": "\"CMEMS_USER/CMEMS_PASS 未設定 — CMEMS 數據源將無法使用。\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 77,
+    "content": "\" 請在 .env 中設定，或 export CMEMS_USER=xxx CMEMS_PASS=xxx\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 106,
+    "content": "from engine.cmems_ssh import EddyDetector",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 570,
+    "content": "# [v13.2-P1] CMEMS 10-day forecast",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 573,
+    "content": "log.info(f\"  📅 CMEMS Forecast: {len(forecast_data)} days available\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 619,
+    "content": "cmems_nppv = data.get(\"nppv\")   # [v16.0] CMEMS BGC satellite NPP (mgC/m³/day)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 620,
+    "content": "cmems_phyc = data.get(\"phyc\")   # [v16.0] CMEMS BGC phytoplankton carbon (mmol/m³)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 646,
+    "content": "log.info(\"  SSH: using WOA climatology fallback (CMEMS unavailable)\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 675,
+    "content": "weather_task = self.weather_fetcher.fetch_marine_weather(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 768,
+    "content": "# ─── [v17-P1] 升級 salinity: 優先用 CMEMS SSS，次用 HYCOM，最後 climatology ───",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 774,
+    "content": "_sal_source = self._sss_data.get(\"source\", \"CMEMS-SSS\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 782,
+    "content": "_sal_source = self._sss_data.get(\"source\", \"CMEMS-SSS\") + \"-resized\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1045,
+    "content": "# [v13.2] DO: CMEMS BGC 優先 → WOA analyzer fallback",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1047,
+    "content": "log.info(f\"  ✅ DO: using CMEMS BGC (mean={np.nanmean(do_surface):.2f} ml/L)\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1061,
+    "content": "log.info(\"  DO: CMEMS unavailable, using WOA analyzer\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1063,
+    "content": "# 如果 WOA 也失敗，使用 CMEMS BGC 或氣候態 fallback",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1067,
+    "content": "log.warning(\"  WOA failed, using CMEMS BGC do_surface as fallback\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1070,
+    "content": "log.warning(\"  WOA+CMEMS both failed, using default DO=5.0 ml/L\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1092,
+    "content": "# [v16.0] CMEMS nppv 衛星數據優先 — 真實觀測取代 VGPM 公式估算",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1095,
+    "content": "if cmems_nppv is not None and np.any(np.isfinite(cmems_nppv)):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1096,
+    "content": "_nppv_valid = np.sum(np.isfinite(cmems_nppv) & (cmems_nppv > 0))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1097,
+    "content": "if _nppv_valid > 0.1 * cmems_nppv.size:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1105,
+    "content": "_zeu = np.full_like(cmems_nppv, 100.0)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1107,
+    "content": "if cmems_nppv.shape == _zeu.shape:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1108,
+    "content": "_sat_npp = np.nan_to_num(cmems_nppv, nan=0) * _zeu",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1110,
+    "content": "_min_y = min(cmems_nppv.shape[0], _zeu.shape[0])",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1111,
+    "content": "_min_x = min(cmems_nppv.shape[1], _zeu.shape[1])",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1114,
+    "content": "np.nan_to_num(cmems_nppv[:_min_y, :_min_x], nan=0) *",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1120,
+    "content": "_npp_source = \"CMEMS-BGC-satellite\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1121,
+    "content": "log.info(f\"  ✅ NPP: CMEMS 衛星數據 (mean={np.nanmean(_sat_npp):.0f} mgC/m²/d, \"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1122,
+    "content": "f\"valid={_nppv_valid}/{cmems_nppv.size})\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1124,
+    "content": "log.info(f\"  NPP: CMEMS nppv coverage too low ({_nppv_valid}/{cmems_nppv.size}), using VGPM\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1126,
+    "content": "log.info(f\"  NPP: CMEMS nppv unavailable, using VGPM formula\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1741,
+    "content": "_NRT_SOURCES = {\"MUR\", \"OSTIA\", \"CMEMS-NRT\", \"CMEMS\"}",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 1872,
+    "content": "# [v13.2] DO: 從 do_result 讀取（已合併 CMEMS + WOA）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 2010,
+    "content": "# [v16.0] 浮遊動物代理 — 優先用 CMEMS phyc 衛星數據",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 2012,
+    "content": "if cmems_phyc is not None and li < cmems_phyc.shape[0] and lj < cmems_phyc.shape[1]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 2013,
+    "content": "_phyc_val = float(cmems_phyc[li, lj])",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\main_v10_3.py",
+    "line": 2369,
+    "content": "log.info(\"  📅 Forecast: no CMEMS forecast data (cached?)\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\OceanMaster_v13_2_全檔案深度解析字典.md",
+    "line": 14,
+    "content": "4.  **`engine/cmems_ssh.py`**: 【海面高度 SSH】抓取 Copernicus 衛星的高度落差。用於計算重力梯度的洋流，以及尋找「極端渦旋」。",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\py_stats.txt",
+    "line": 17,
+    "content": "data\\cmems_poc\\sst_monthly_2019.nc: 20325.09 KB",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\py_stats.txt",
+    "line": 26,
+    "content": "data\\cmems_poc\\chl_monthly_2019.nc: 4555.39 KB",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 14,
+    "content": "OceanMaster is an end-to-end prediction system that identifies the most productive tuna fishing grounds across the Western & Central Pacific Ocean. It ingests data from **14+ satellite sources** (CMEMS, NOAA CoastWatch, NASA OceanColor, HYCOM, WOA2023), computes full **trophic cascade timelines** (phytoplankton → zooplankton → baitfish → tuna), and ranks hotspots using a **hybrid science-ML fusion** approach.",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 104,
+    "content": "│   CMEMS · NOAA CoastWatch · NASA OceanColor · HYCOM · WOA2023  │",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 155,
+    "content": "| **Satellite APIs** | CMEMS (Copernicus), NOAA CoastWatch ERDDAP, NASA OceanColor, HYCOM, WOA2023 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 168,
+    "content": "# Edit .env with your CMEMS credentials",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 182,
+    "content": "# Edit .env with your CMEMS credentials",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 198,
+    "content": "# Copernicus Marine Service (free account)",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 199,
+    "content": "# Register: https://data.marine.copernicus.eu/register",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 200,
+    "content": "CMEMS_USERNAME=your_cmems_username",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 201,
+    "content": "CMEMS_PASSWORD=your_cmems_password",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 329,
+    "content": "| Currents | OSCAR / CMEMS / HYCOM | 0.33° / 0.08° | ~5 days |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 332,
+    "content": "| BGC | CMEMS Global BGC | 0.25° | ~1 day |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 339,
+    "content": "| Sea State | Open-Meteo Marine | — | ~3 hours |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 371,
+    "content": "│   └── data_sources.py        #   CMEMS/Argo/ONI/GEBCO fetchers",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 408,
+    "content": "1. Deutsch, C. et al. (2015). Climate change tightens a metabolic constraint on marine habitats. *Science*, 348(6239), 1132-1135.",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 415,
+    "content": "8. Henson, S.A. et al. (2009). Phytoplankton-zooplankton seasonal coupling and the pelagic marine carbon cycle. *GBC*, 23(2).",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 442,
+    "content": "| 🛰️ 即時衛星數據 | 14+ 來源：CMEMS、NOAA、NASA、HYCOM、WOA2023 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\README.md",
+    "line": 453,
+    "content": "cp .env.example .env        # 填入 CMEMS 帳號",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\requirements.txt",
+    "line": 49,
+    "content": "copernicusmarine  # CMEMS ocean data API",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\upgrade_mur_sst.py",
+    "line": 53,
+    "content": "# === Method 3: Bicubic upscale from CMEMS ===",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\upgrade_mur_sst.py",
+    "line": 54,
+    "content": "print(\"\\n--- Generating 1km SST from CMEMS 9km (bicubic + submesoscale) ---\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\upgrade_mur_sst.py",
+    "line": 57,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\upgrade_mur_sst.py",
+    "line": 77,
+    "content": "ds9 = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\upgrade_mur_sst.py",
+    "line": 100,
+    "content": "print(f\"\\n  CMEMS 9km:  {sst9.shape:>15s} → {n9:>8,d} front pixels\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web_server.py",
+    "line": 27,
+    "content": "load_dotenv()  # [v13.2] 自動載入 .env (CMEMS_USER, CMEMS_PASS, etc.)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web_server.py",
+    "line": 1410,
+    "content": "- 結尾附上「資料來源: OceanMaster v{VERSION}, OISST/VIIRS/CMEMS」",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web_server.py",
+    "line": 1558,
+    "content": "lines.append(f\"\\n資料來源: OceanMaster v{VERSION}, OISST/VIIRS/CMEMS\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 94,
+    "content": "CMEMS PISCES 生態地球化學模型",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 100,
+    "content": "omz_depth_m = CMEMS DO < 3.5 mL/L 的最淺深度",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 140,
+    "content": "# ENSO 指標（CMEMS / NOAA 即時提供）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 194,
+    "content": "- Frontiers in Marine Science：冷渦旋讓黑潮東蛇行（已驗證 ✅）",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 297,
+    "content": "| `omz_depth_m` | CMEMS DO < 3.5 mL/L 的最淺深度 | CMEMS PISCES | Stramma 2012 ✅ | ★★★★★ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 301,
+    "content": "| `nino34_anomaly` | Niño3.4 SST 異常 | CMEMS/NOAA | Lehodey 2008 ✅ | ★★★★☆ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 303,
+    "content": "| `kuroshio_meander` | 黑潮路徑 SSH 曲率 | CMEMS SSH | Frontiers 2024 ✅ | ★★★★☆ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 304,
+    "content": "| `warm_core_ring` | SLA > 0.1m 獨立渦旋 | CMEMS SSH | FRA Japan ✅ | ★★★★☆ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 308,
+    "content": "| `sst_anomaly_30d` | SST - 30天移均 | CMEMS | 基礎 | ★★★☆☆ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 350,
+    "content": "OMZ 深度（CMEMS PISCES 3D 模型）       ← ★★★★★",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 351,
+    "content": "ENSO 指數（CMEMS/NOAA）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 354,
+    "content": "黑潮蛇行/暖水環（CMEMS SSH）            ← ★★★★☆",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 377,
+    "content": "- DeBruyn & Meeuwig (2001) — *Marine Ecology Progress Series* — 月相分析統計方法論（periodic regression vs ANOVA）",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\FOOD_CHAIN_SUPPLEMENT_補充研究報告.md",
+    "line": 392,
+    "content": "- Frontiers in Marine Science (2024) — 冷渦旋與黑潮蛇行; 劍魚與暖水環",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 22,
+    "content": "| SST（海表溫度） | CMEMS `cmems_mod_glo_phy-thetao` | 0.083° (~9km) | 1 天 | [data_fetcher_v2.py:377](file:///c:/Users/user/Desktop/好像快好了/OceanMaster_v13_2/engine/data_fetcher_v2.py#L377) |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 25,
+    "content": "| SSH / 海流 | CMEMS `cmems_mod_glo_phy` | 0.083° | 1 天 | [data_fetcher_v2.py:L1430](file:///c:/Users/user/Desktop/好像快好了/OceanMaster_v13_2/engine/data_fetcher_v2.py#L1430) |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 26,
+    "content": "| 溶氧（DO） | CMEMS BGC `cmems_mod_glo_bgc` | 0.25° | 1 天 | [dissolved_oxygen.py:L135](file:///c:/Users/user/Desktop/好像快好了/OceanMaster_v13_2/engine/dissolved_oxygen.py#L135) |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 28,
+    "content": "| 天氣/浪高 | Open-Meteo Marine + Forecast | 0.25° | 即時 | [weather_fetcher.py](file:///c:/Users/user/Desktop/好像快好了/OceanMaster_v13_2/engine/weather_fetcher.py) |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 32,
+    "content": "> ⚠️ **全部使用免費公開數據源。** 無需付費衛星訂閱。CMEMS 需免費帳號。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 115,
+    "content": "| CMEMS SST | ~1 天 | SST 鋒面位置可能偏移 5-15 km |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 132,
+    "content": "**解法**：接入真實 CMEMS 3D DO + GLORYS 溫度後，bigeye 預期改善至 ρ > 0.2。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_Pitch_Deck.md",
+    "line": 133,
+    "content": "即時 pipeline 已使用 CMEMS DO，只是 hindcast proxy 未使用。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_完整專案簡報.md",
+    "line": 23,
+    "content": "| 海洋數據擷取 | 12 | `data_fetcher_v2`, `cmems_ssh`, `salinity_fetcher`, `wave_fetcher`, `mur_sst_loader` | ✅ 有 fallback |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_完整專案簡報.md",
+    "line": 107,
+    "content": "| 15天 CHL 延遲 | 食物鏈時間差 | `data_fetcher_v2.fetch_cmems_chl_lagged()` | ✅ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_完整系統檔案清單.md",
+    "line": 39,
+    "content": "| `data_fetcher_v2.py` | 98 KB / 2,062 行 | **生產級多源資料擷取** — 統一接口擷取 OISST、CMEMS、VIIRS 等 12 種衛星/海洋數據，含自動重試、快取、降級回報機制 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_完整系統檔案清單.md",
+    "line": 40,
+    "content": "| `cmems_ssh.py` | 24 KB / 721 行 | **哥白尼海洋服務** — 海面高度 (SSH)、海流速度/方向、渦旋自動偵測 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_完整系統檔案清單.md",
+    "line": 65,
+    "content": "| `marine_heatwave.py` | 3 KB / 114 行 | **海洋熱浪偵測** — SST 異常持續 5+ 天時標記熱浪事件 |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_系統功能完整簡報.md",
+    "line": 81,
+    "content": "| CMEMS (哥白尼) | 海流、海面高度 (SSH)、鹽度 | 0.083° |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_v13_2_系統功能完整簡報.md",
+    "line": 354,
+    "content": "│ OISST/CMEMS/... │",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_儀表板使用說明書.md",
+    "line": 210,
+    "content": "| 波高 | 2.68 m（綠/黃/橙/紅色標示危險等級） | Open-Meteo Marine API |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_儀表板使用說明書.md",
+    "line": 215,
+    "content": "| 浪向/週期 | 東 / 8.2s | Open-Meteo Marine |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_儀表板使用說明書.md",
+    "line": 314,
+    "content": "| 海流方向 | 點擊觸發 | Open-Meteo Marine API |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_完整技術簡報.md",
+    "line": 26,
+    "content": "│  OISST / MUR / CMEMS / VIIRS / WW3 / GEBCO / Argo...   │",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_完整技術簡報.md",
+    "line": 40,
+    "content": "| SST+U+V+SSH | CMEMS (哥白尼) | 0.083° | Copernicus API | 海流、渦旋、地轉流 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_完整技術簡報.md",
+    "line": 42,
+    "content": "| 3D 水溫 | CMEMS PHY 3D | 0.083° × 50 層 | Copernicus API | 溫躍層、D20、100m 水溫 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_完整技術簡報.md",
+    "line": 43,
+    "content": "| SSH (海面高度) | CMEMS SLA | 0.25° | Copernicus API | 渦旋偵測、地轉流 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_完整技術簡報.md",
+    "line": 50,
+    "content": "| 鹽度 | CMEMS SSS | 0.25° | Copernicus API | 鹽度鋒面 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_完整技術簡報.md",
+    "line": 54,
+    "content": "MUR 1km → CMEMS SST → OISST 0.25° → 氣候態月均",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_船東功能說明書.md",
+    "line": 36,
+    "content": "| 海面溫度 (SST) | NASA OISST / MUR 1km / CMEMS | 判斷魚群喜好水溫區域 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_船東功能說明書.md",
+    "line": 38,
+    "content": "| 海面高度 (SSH) | CMEMS 哥白尼 | 偵測渦旋、洋流 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_船東功能說明書.md",
+    "line": 39,
+    "content": "| 海流速度/方向 | CMEMS 海流場 | 航線規劃、延繩漂流預測 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_船東功能說明書.md",
+    "line": 40,
+    "content": "| 溫躍層深度 | CMEMS 3D 水溫 | 判斷魚群聚集深度 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\OceanMaster_船東功能說明書.md",
+    "line": 47,
+    "content": "| 鹽度 | CMEMS SSS | 鹽度鋒面偵測 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\README_訓練指南.md",
+    "line": 12,
+    "content": "│  │ ① 真實漁獲   │──→│ CMEMS (L4)     │──→│ XGBoost   │  │",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\Squid_Data_Sources.md",
+    "line": 65,
+    "content": "| CMEMS Chl-a | 浮游植物濃度 (魷魚餌料代理) | https://marine.copernicus.eu |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 11,
+    "content": "| SST 海表溫度 | CMEMS Copernicus + NOAA OISST ERDDAP | 每 6 小時（Pipeline 背景更新） | ✅ 帳號 `wsad952708@gmail.com` 認證成功 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 12,
+    "content": "| SSH 海面高度 | CMEMS GLORYS forecast | 每 6 小時 | ✅ 3D 溫度場 (35×361×661) 下載成功 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 13,
+    "content": "| 3D 海洋溫度場 | CMEMS `cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m` | 每 6 小時 | ✅ 用於溫躍層/Z20/MLD 計算 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 15,
+    "content": "| 波高 / 波週期 / 波向 | Open-Meteo Marine API | 即時 | ✅ 實測 wave=[0.3, 5.1]m |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 48,
+    "content": "| MLD 預報模型 | `engine/mld_forecast.py` | CMEMS MLD 預報 | CMEMS 預報資料累積 | ❌ 使用 temp_3d 計算 fallback |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 101,
+    "content": "- **接法**：Pipeline 已從 CMEMS 抓到真實海流場（`u_current`, `v_current`），但前端未讀取",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 118,
+    "content": "| CMEMS (Copernicus) | `.env` → `CMEMS_USER` / `CMEMS_PASS` | ✅ 有帳號密碼，認證成功 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 136,
+    "content": "| SST | CMEMS → NOAA OISST | 氣候學平均 | ✅ 主要來源正常 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 137,
+    "content": "| SSH | CMEMS GLORYS | HYCOM NRT | ✅ 主要來源正常 |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\SYSTEM_STATUS_系統狀態總報告.md",
+    "line": 138,
+    "content": "| 波高 | NOAA WW3 ERDDAP | Open-Meteo Marine | ⚠️ WW3 返回 404，使用 Open-Meteo |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 48,
+    "content": "> - `copernicusmarine` — CMEMS 海洋數據 API",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 91,
+    "content": "| `CMEMS_USER` | ✅ | Copernicus 海洋數據帳號 | 免費 → https://data.marine.copernicus.eu/register |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 92,
+    "content": "| `CMEMS_PASS` | ✅ | Copernicus 密碼 | 同上 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 99,
+    "content": "> **`CMEMS_USER` 和 `CMEMS_PASS` 是必填的**。沒有它就無法下載即時 SST / SSH / 海流數據。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 110,
+    "content": "如果 CMEMS 帳號還在審核中，先用這個看 UI：",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 137,
+    "content": "INFO:     CMEMS 數據同步中...",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 150,
+    "content": "> - 第一次啟動會花 1-3 分鐘下載 CMEMS 海洋數據，之後快取 6 小時",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 361,
+    "content": "#### 從 CMEMS 下載網格數據",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 386,
+    "content": "# 1. 準備數據（這裡用隨機數據示範，實際應用 CMEMS 真實數據）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 523,
+    "content": "| SST 海溫 | Copernicus CMEMS | 海面溫度 + 溫度梯度 | 每日 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 524,
+    "content": "| SSH 海面高度 | Copernicus CMEMS | 渦流 / 洋流偵測 | 每日 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 525,
+    "content": "| 海流 (U/V) | Copernicus CMEMS | 海流方向 + 速度 | 每日 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 533,
+    "content": "### 6.2 測試 CMEMS 連線",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 535,
+    "content": "確認 `.env` 中 `CMEMS_USER` 和 `CMEMS_PASS` 已填寫，然後：",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 539,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 540,
+    "content": "ds = copernicusmarine.open_dataset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 541,
+    "content": "dataset_id='cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m',",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 546,
+    "content": "print('✅ CMEMS 連線成功！')",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 570,
+    "content": "│  │   ├── 自動: 每30分鐘從 CMEMS 抓 SST/SSH/海流               │ │",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 649,
+    "content": "### Q: `CMEMS_USER` 跟 `CMEMS_PASS` 去哪裡註冊？",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 650,
+    "content": "到 https://data.marine.copernicus.eu/register ，填入 email，等 1-2 天審核。完全免費。",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 663,
+    "content": "1. 確認 `.env` 有填 `CMEMS_USER` 和 `CMEMS_PASS`",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\TUTORIAL_完整教學.md",
+    "line": 706,
+    "content": "notepad .env    # 填入 CMEMS_USER, CMEMS_PASS, OCEANMASTER_API_KEY",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 35,
+    "content": "## 第二步：取得 CMEMS 帳號（免費）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 37,
+    "content": "OceanMaster 需要衛星數據，最主要的來源是 Copernicus Marine Service：",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 39,
+    "content": "1. 前往 https://data.marine.copernicus.eu/register",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 91,
+    "content": "2. 用文字編輯器打開 `.env`，填入你的 CMEMS 帳號：",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 93,
+    "content": "CMEMS_USER=你的用戶名",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 94,
+    "content": "CMEMS_PASS=你的密碼",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 153,
+    "content": "### Q: CMEMS 連線逾時？",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\完整小白教學.md",
+    "line": 155,
+    "content": "Copernicus 有時候會比較慢，系統會自動使用快取或氣候態數據作為備援。",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 33,
+    "content": "| **CMEMS** | 海洋數據（SST、海流等） | https://data.marine.copernicus.eu/register |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 111,
+    "content": "# 必填 ─── CMEMS 帳號（免費註冊）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 112,
+    "content": "CMEMS_USER=你的CMEMS帳號",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 113,
+    "content": "CMEMS_PASS=你的CMEMS密碼",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 119,
+    "content": "> 💡 **CMEMS 是什麼？** Copernicus Marine Service，歐盟提供的免費海洋數據。包含全球的 SST（海水溫度）、海流、鹽度、葉綠素等。系統靠這些數據來找魚。",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 124,
+    "content": "python -c \"from dotenv import load_dotenv; load_dotenv(); import os; print('CMEMS_USER:', os.getenv('CMEMS_USER', '❌ 未設定'))\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 444,
+    "content": "### Q2：CMEMS 數據下載失敗？",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 448,
+    "content": "3. 試試看能不能登入 https://data.marine.copernicus.eu",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 449,
+    "content": "4. CMEMS 偶爾會維護，等一下再試",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\新手教程_完整指南.md",
+    "line": 512,
+    "content": "🔑 設定       複製 .env.example → .env，填 CMEMS 帳密",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\漁船使用指南.md",
+    "line": 314,
+    "content": "- [ ] `.env` 已設定 CMEMS 帳號",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\研究資源清單_第二波補充.md",
+    "line": 33,
+    "content": "| 4 | `oceanhackweek/tutorials_marine_sdm` | R | MaxEnt+Bio-ORACLE 教學 2023 | ⭐⭐⭐ |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\研究資源清單_第二波補充.md",
+    "line": 121,
+    "content": "pip install copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\研究資源清單_第二波補充.md",
+    "line": 221,
+    "content": "| **微型花生/中層魚** | 1D trait-based DVM 模型 | Copernicus 2024 | DSL 深度→forage 可用性→鮪魚覓食深度 |",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\遠洋漁業資源清單.md",
+    "line": 16,
+    "content": "| 5 | **marineHeatWaves** | `pip install mhw-detect` | 海洋熱浪偵測→新特徵 |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\遠洋漁業資源清單.md",
+    "line": 92,
+    "content": "## 七、CMEMS / 衛星數據下載（5 個）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\遠洋漁業資源清單.md",
+    "line": 96,
+    "content": "| 24 | `copernicusmarine` 官方 | CMEMS 全數據 | `pip install copernicusmarine` | ⭐⭐⭐⭐⭐ 已用 |",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\遠洋漁業資源清單.md",
+    "line": 100,
+    "content": "| 28 | `AlbertGallegoJimenez/cmems-downloader-toolbox` | ArcGIS 介面 | — | ⭐⭐ |",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\遠洋漁業資源清單.md",
+    "line": 131,
+    "content": "| 38 | **`ecjoliver/marineHeatWaves`** | **海洋熱浪偵測 (Hobday 2016)** | Python | ⭐⭐⭐⭐ |",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\docs\\遠洋漁業資源清單.md",
+    "line": 170,
+    "content": "| `copernicusmarine` | CMEMS 全數據 | ✅ 已用 |",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\accuracy_booster.py",
+    "line": 773,
+    "content": "# NaN/Inf 安全: CMEMS 地轉流近赤道可能產生極端值",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\acoustic_proxy.py",
+    "line": 8,
+    "content": "Proud et al. (2017) ICES J. Marine Sci. 74:2006-2015",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ai_fusion.py",
+    "line": 160,
+    "content": "# [v17] 競品整合: 增加鋒面持久性/匯聚帶加分 (INCOIS PFZ + Aker BioMarine)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ai_fusion.py",
+    "line": 182,
+    "content": "# [v17] 海流匯聚帶加分 (+10%) — Aker BioMarine: 漂流物匯聚預測魚群",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\argo_profiles.py",
+    "line": 7,
+    "content": "CMEMS 衛星反演的 MLD/Z20 估算值。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\carbon_calculator.py",
+    "line": 15,
+    "content": "# IMO emission factor for marine diesel (MDO/MGO)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 2,
+    "content": "OceanMaster v13.2 — CMEMS SSH 數據擷取 + 渦旋偵測",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 4,
+    "content": "🔴 關鍵升級：接入 Copernicus Marine SSH 數據",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 7,
+    "content": "- CMEMS 全球海洋物理分析預報 (0.083°, 日)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 8,
+    "content": "dataset_id: cmems_mod_glo_phy_anfc_0.083deg_P1D-m",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 33,
+    "content": "log = logging.getLogger(\"OceanMaster.CMEMS\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 37,
+    "content": "#  CMEMS SSH 數據擷取",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 40,
+    "content": "class CMEMSFetcher:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 42,
+    "content": "Copernicus Marine SSH 數據擷取器",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 45,
+    "content": "1. copernicusmarine Python API (需要帳號)",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 48,
+    "content": "免費帳號申請: https://marine.copernicus.eu/",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 63,
+    "content": "# 嘗試導入 copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 65,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 66,
+    "content": "self._has_cmems_api = True",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 68,
+    "content": "self._has_cmems_api = False",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 69,
+    "content": "log.info(\"copernicusmarine 未安裝，使用 AVISO+ HTTP 備用方式\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 76,
+    "content": "1. CMEMS Python API → 最佳 (0.083°, 日更新)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 80,
+    "content": "# 方法 1: CMEMS API",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 81,
+    "content": "if self._has_cmems_api:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 82,
+    "content": "result = await self._fetch_via_cmems_api()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 95,
+    "content": "async def _fetch_via_cmems_api(self) -> Optional[Dict[str, np.ndarray]]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 96,
+    "content": "\"\"\"透過 copernicusmarine API 取得 SSH\"\"\"",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 98,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 105,
+    "content": "log.info(\"透過 CMEMS API 取得 SSH 數據...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 107,
+    "content": "# [v13.2-R7] 傳入 CMEMS 帳密",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 108,
+    "content": "_user = self.username or os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 109,
+    "content": "_pass = self.password or os.environ.get(\"CMEMS_PASS\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 113,
+    "content": "dataset_id=\"cmems_mod_glo_phy_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 125,
+    "content": "ds = copernicusmarine.open_dataset(**kw)",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 141,
+    "content": "\"source\": \"CMEMS\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 145,
+    "content": "log.info(f\"CMEMS SSH 取得成功: {ssh_data.shape}, \"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 150,
+    "content": "log.warning(f\"CMEMS API 取得失敗: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\cmems_ssh.py",
+    "line": 300,
+    "content": "三種方法融合（逆向工程自 AVISO/CMEMS 渦旋追蹤系統）：",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\commercial_core_v2.py",
+    "line": 46,
+    "content": "NOAA ERDDAP | HYCOM 3D | CMEMS | WOA2023 | Oregon State VGPM",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 13,
+    "content": "4. CMEMS        — 海流/SSH/鹽度 (copernicusmarine 庫, 0.083deg)",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 14,
+    "content": "5. CMEMS BGC    — 溶氧/NPP (0.25deg)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 111,
+    "content": "# Try all working ERDDAP mirrors (CMEMS SST is primary source anyway)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 445,
+    "content": "# ── [v13.2] 策略: CMEMS 優先 → NOAA ERDDAP fallback ──",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 446,
+    "content": "# CMEMS 更穩定 (歐洲 Copernicus, 免費帳號), NOAA 受美國政府影響",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 448,
+    "content": "# Step 1: CMEMS SST (主要數據源)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 449,
+    "content": "cmems_result = await self._fetch_cmems_sst()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 450,
+    "content": "if cmems_result:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 451,
+    "content": "return cmems_result",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 464,
+    "content": "async def _fetch_cmems_sst(self) -> Optional[dict]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 465,
+    "content": "\"\"\"[v13.2] CMEMS SST — 主要數據源 (0.05° 日均 L4)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 467,
+    "content": "數據集: cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m (分析+預報)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 470,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 472,
+    "content": "log.info(\"  SST: CMEMS_USER not set, skipping CMEMS SST\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 475,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 477,
+    "content": "log.warning(\"  SST: copernicusmarine not installed\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 480,
+    "content": "# 嘗試多個 CMEMS SST 數據集",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 482,
+    "content": "(\"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m\", \"thetao\"),  # 分析+預報",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 483,
+    "content": "(\"cmems_mod_glo_phy_anfc_0.083deg_P1D-m\", \"thetao\"),          # 物理分析",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 487,
+    "content": "log.info(f\"  🌊 CMEMS SST: trying {dsid}...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 496,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 511,
+    "content": "self._st[\"SST\"] = f\"CMEMS({dsid[:20]})\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 512,
+    "content": "log.info(f\"  🌊 CMEMS SST OK: {sst_arr.shape}, \"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 517,
+    "content": "log.warning(f\"  CMEMS SST ({dsid}): {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 519,
+    "content": "log.warning(\"  CMEMS SST: all datasets failed\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 522,
+    "content": "async def _fetch_cmems_chl(self) -> Optional[dict]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 523,
+    "content": "\"\"\"[v15.3] CMEMS CHL — 葉綠素 a 即時數據 (0.25° 日均)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 525,
+    "content": "數據集: cmems_mod_glo_bgc-pft_anfc_0.25deg_P1D-m (浮游植物 + CHL)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 526,
+    "content": "cmems_mod_glo_bgc_anfc_0.25deg_P1D-m (BGC 分析+預報)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 528,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 530,
+    "content": "log.info(\"  CHL: CMEMS_USER not set, skipping CMEMS CHL\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 533,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 535,
+    "content": "log.warning(\"  CHL: copernicusmarine not installed\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 539,
+    "content": "(\"cmems_mod_glo_bgc-pft_anfc_0.25deg_P1D-m\", \"chl\"),",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 540,
+    "content": "(\"cmems_mod_glo_bgc_anfc_0.25deg_P1D-m\", \"chl\"),",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 544,
+    "content": "log.info(f\"  🌿 CMEMS CHL: trying {dsid}...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 553,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 565,
+    "content": "self._st[\"CHL\"] = f\"CMEMS({dsid[:20]})\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 566,
+    "content": "log.info(f\"  🌿 CMEMS CHL OK: {chl_arr.shape}, \"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 571,
+    "content": "log.warning(f\"  CMEMS CHL ({dsid}): {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 573,
+    "content": "log.warning(\"  CMEMS CHL: all datasets failed\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 576,
+    "content": "async def fetch_cmems_chl_lagged(self, days_lag: int = 15) -> Optional[dict]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 577,
+    "content": "\"\"\"[蒼鷺] CMEMS CHL 時滯 — 抓取 N 天前的葉綠素 a 數據",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 582,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 586,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 594,
+    "content": "(\"cmems_mod_glo_bgc-pft_anfc_0.25deg_P1D-m\", \"chl\"),",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 595,
+    "content": "(\"cmems_mod_glo_bgc_anfc_0.25deg_P1D-m\", \"chl\"),",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 608,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 625,
+    "content": "async def _fetch_cmems_currents(self) -> Optional[dict]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 626,
+    "content": "\"\"\"[v15.3] CMEMS 即時海流 — uo/vo (0.083° 日均)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 628,
+    "content": "數據集: cmems_mod_glo_phy-cur_anfc_0.083deg_P1D-m (海流分析+預報)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 631,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 633,
+    "content": "log.info(\"  CURRENTS: CMEMS_USER not set, skipping CMEMS currents\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 636,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 638,
+    "content": "log.warning(\"  CURRENTS: copernicusmarine not installed\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 642,
+    "content": "dsid = \"cmems_mod_glo_phy-cur_anfc_0.083deg_P1D-m\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 643,
+    "content": "log.info(f\"  🌊 CMEMS Currents: trying {dsid}...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 652,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 667,
+    "content": "dataset_id=\"cmems_mod_glo_phy_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 673,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 685,
+    "content": "self._st[\"CURRENTS\"] = f\"CMEMS-0.083°\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 686,
+    "content": "log.info(f\"  🌊 CMEMS Currents OK: u={u_arr.shape}, \"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 691,
+    "content": "log.warning(f\"  CMEMS Currents: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 908,
+    "content": "# ── [v15.3] Step 0: CMEMS CHL (最穩定, 0.25° 日均) ──",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 909,
+    "content": "cmems_chl = await self._fetch_cmems_chl()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 910,
+    "content": "if cmems_chl:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 911,
+    "content": "return cmems_chl",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1029,
+    "content": "# ── [v15.3] Step 0: CMEMS 即時海流 (最穩定, 0.083°) ──",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1030,
+    "content": "cmems_cur = await self._fetch_cmems_currents()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1031,
+    "content": "if cmems_cur:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1032,
+    "content": "return cmems_cur",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1087,
+    "content": "# CMEMS geostrophic fallback",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1088,
+    "content": "cmems = await self._cmems_physics()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1089,
+    "content": "if cmems:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1090,
+    "content": "return cmems",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1139,
+    "content": "async def _cmems_physics(self):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1140,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1142,
+    "content": "log.info(\"CMEMS: set CMEMS_USER/CMEMS_PASS env vars\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1145,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1147,
+    "content": "log.warning(\"pip install copernicusmarine\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1154,
+    "content": "dataset_id=\"cmems_mod_glo_phy_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1160,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1185,
+    "content": "self._st[\"CURRENTS\"] = \"CMEMS-GEO\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1186,
+    "content": "log.info(f\"CMEMS SSH: {ssh.shape}, u/v derived via geostrophic balance\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1189,
+    "content": "log.warning(f\"CMEMS: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1192,
+    "content": "async def _cmems_bgc(self):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1193,
+    "content": "\"\"\"CMEMS BGC: O₂ + NO₃ + phyc + nppv (營養鹽 + 初級生產力) [v12-gfw]\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1194,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1197,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1199,
+    "content": "# [v13.2] 限制 CMEMS 並發連線數，避免 connection pool full",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1200,
+    "content": "os.environ.setdefault(\"COPERNICUSMARINE_MAX_CONCURRENT_REQUESTS\", \"3\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1203,
+    "content": "\"cmems_mod_glo_bgc-bio_anfc_0.25deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1204,
+    "content": "\"cmems_mod_glo_bgc_anfc_0.25deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1217,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1223,
+    "content": "self._st[\"DO\"] = \"CMEMS-BGC\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1224,
+    "content": "log.info(f\"  CMEMS BGC O₂: {o2.shape}, range=[{np.nanmin(o2):.1f}, {np.nanmax(o2):.1f}] mmol/m³\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1239,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1245,
+    "content": "self._st[\"NO3\"] = \"CMEMS-BGC\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1246,
+    "content": "log.info(f\"  CMEMS BGC NO₃: {no3.shape}, range=[{np.nanmin(no3):.2f}, {np.nanmax(no3):.2f}] mmol/m³\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1249,
+    "content": "log.debug(f\"  CMEMS NO₃ ({dsid}): {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1262,
+    "content": "username=user, password=os.environ.get(\"CMEMS_PASS\", \"\"))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1268,
+    "content": "self._st[\"PHYC\"] = \"CMEMS-BGC\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1269,
+    "content": "log.info(f\"  CMEMS BGC phyc: {phyc.shape}, mean={np.nanmean(phyc):.2f} mmol/m³\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1273,
+    "content": "self._st[\"NPP\"] = \"CMEMS-BGC\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1274,
+    "content": "log.info(f\"  CMEMS BGC nppv: {nppv.shape}, mean={np.nanmean(nppv):.2f} mgC/m³/day\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1278,
+    "content": "log.debug(f\"  CMEMS phyc/nppv ({dsid}): {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1282,
+    "content": "log.warning(\"CMEMS BGC: no working dataset found\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1286,
+    "content": "async def _fetch_cmems_forecast(self, max_days: int = 10) -> Optional[Dict[int, Dict[str, Any]]]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1287,
+    "content": "\"\"\"CMEMS 全球海洋預報 — 1-10 天前向預報 [v13.2-P1]",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1289,
+    "content": "數據源 (Copernicus Marine Service, 免費帳號):",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1290,
+    "content": "SST:  cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1291,
+    "content": "海流: cmems_mod_glo_phy-cur_anfc_0.083deg_P1D-m",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1292,
+    "content": "鹽度: cmems_mod_glo_phy-so_anfc_0.083deg_P1D-m",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1297,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1299,
+    "content": "log.info(\"  CMEMS Forecast: set CMEMS_USER/CMEMS_PASS env vars\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1302,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1304,
+    "content": "log.warning(\"  CMEMS Forecast: pip install copernicusmarine\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1308,
+    "content": "cached = self.cache.get(\"cmems_fc_day1\", 12)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1310,
+    "content": "log.info(\"  CMEMS Forecast: cache hit\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1315,
+    "content": "cd = self.cache.get(f\"cmems_fc_day{d}\", 12)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1326,
+    "content": "return self._fetch_cmems_forecast_sync(cm, max_days)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1335,
+    "content": "log.warning(\"  ⚠️ CMEMS Forecast: 60s timeout — 跳過，使用 NRT SST\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1339,
+    "content": "log.warning(f\"  CMEMS Forecast failed: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1343,
+    "content": "def _fetch_cmems_forecast_sync(self, cm, max_days: int) -> Optional[Dict[int, Dict[str, Any]]]:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1344,
+    "content": "\"\"\"CMEMS forecast 同步下載 — 每個 sub-call 30s timeout, 不用 with 避免 shutdown(wait=True).\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1347,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1348,
+    "content": "password = os.environ.get(\"CMEMS_PASS\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1361,
+    "content": "ds = cm.open_dataset(dataset_id=\"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1374,
+    "content": "ds = cm.open_dataset(dataset_id=\"cmems_mod_glo_phy-cur_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1386,
+    "content": "ds = cm.open_dataset(dataset_id=\"cmems_mod_glo_phy-so_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1405,
+    "content": "log.warning(f\"  ⚠️ CMEMS Forecast {label}: {timeout}s timeout — skipped\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1408,
+    "content": "log.warning(f\"  CMEMS Forecast {label}: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1414,
+    "content": "log.info(\"  CMEMS Forecast: fetching SST...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1424,
+    "content": "log.info(\"  CMEMS Forecast: fetching currents...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1433,
+    "content": "log.info(\"  CMEMS Forecast: fetching salinity...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1441,
+    "content": "self.cache.put(f\"cmems_fc_day{day_offset}\", fc)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1442,
+    "content": "self._st[\"FORECAST\"] = f\"CMEMS({len(forecasts)}d)\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1443,
+    "content": "log.info(f\"  ✅ CMEMS Forecast: {len(forecasts)} days, \"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1628,
+    "content": "2. Open-Meteo Marine API (單點，展開到網格) — 免費、無 key",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1816,
+    "content": "rb = await self._cmems_bgc()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1818,
+    "content": "r_forecast = await self._fetch_cmems_forecast()",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1873,
+    "content": "self._record_fallback(\"CURRENTS\", \"OSCAR + CMEMS both failed\", \"WOA-CLIM\", \"climatology\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1900,
+    "content": "# ── SSH: try CMEMS SEALEVEL if not already from currents ──",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 1917,
+    "content": "# ── CMEMS BGC 營養鹽 [v12-gfw] ──",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_fetcher_v2.py",
+    "line": 2035,
+    "content": "# ── [v13.2-P1] CMEMS 10-day forecast ──",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 4,
+    "content": "[v11 Data-1] CMEMS BGC Fetcher",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 25,
+    "content": "#  [v11 Data-1] CMEMS BGC (Copernicus Marine)",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 28,
+    "content": "class CMEMSBGCFetcher:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 30,
+    "content": "CMEMS Biogeochemical 數據擷取器",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 32,
+    "content": "數據源: Copernicus Marine Service (免費註冊)",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 38,
+    "content": "免費替代方案: 使用 E.U. Copernicus Marine open data",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 41,
+    "content": "BASE_URL = \"https://nrt.cmems-du.eu/motu-web/Motu\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 47,
+    "content": "\"product_id\": \"cmems_mod_glo_bgc-bio_anfc_0.25deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 52,
+    "content": "\"product_id\": \"cmems_mod_glo_bgc-bio_anfc_0.25deg_P1M-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\data_sources.py",
+    "line": 65,
+    "content": "def __init__(self, cache_dir: str = \"cache/cmems\"):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 103,
+    "content": "[v18] Fetch real weather windows from Open-Meteo Marine API.",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 107,
+    "content": "API: https://marine-api.open-meteo.com/v1/marine (free, no key)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 116,
+    "content": "f\"https://marine-api.open-meteo.com/v1/marine?\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 133,
+    "content": "marine = json.loads(resp.read())",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 139,
+    "content": "hourly_wave = marine.get(\"hourly\", {}).get(\"wave_height\", [])",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 141,
+    "content": "times = marine.get(\"hourly\", {}).get(\"time\", [])",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\departure_optimizer.py",
+    "line": 144,
+    "content": "raise ValueError(\"Insufficient marine data\")",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\diffusion_inpainter.py",
+    "line": 14,
+    "content": "📌 買家需要：從 NOAA / CMEMS 下載多年份的衛星 NetCDF",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\diffusion_inpainter.py",
+    "line": 159,
+    "content": "\"買家請提供：NOAA / CMEMS 的 SST / Chl-a NetCDF 檔案。\\n\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\dissolved_oxygen.py",
+    "line": 14,
+    "content": "2. CMEMS BGC: cmems_mod_glo_bgc_anfc_0.25deg_P1D-m (實時)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\dissolved_oxygen.py",
+    "line": 490,
+    "content": "cmems_do: Optional[np.ndarray] = None,",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\dissolved_oxygen.py",
+    "line": 510,
+    "content": "if cmems_do is not None and cmems_do.ndim == 3:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\dissolved_oxygen.py",
+    "line": 511,
+    "content": "log.info(\"  使用 CMEMS 實時 DO 數據\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\dissolved_oxygen.py",
+    "line": 512,
+    "content": "do_profile = cmems_do",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\eddy_detector.py",
+    "line": 21,
+    "content": "- OceanDataFetcher 已擷取的 SSH + 地轉流 (AVISO/CMEMS)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\eddy_detector.py",
+    "line": 188,
+    "content": "# 參考: Yu et al. (2023) Frontiers in Marine Science",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\eez_filter.py",
+    "line": 13,
+    "content": "- Marine Regions / Flanders Marine Institute EEZ v12",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\eez_filter.py",
+    "line": 49,
+    "content": "# 頂點按逆時針排列。座標來自 Marine Regions EEZ v12 簡化。",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\fish_behavior_model.py",
+    "line": 11,
+    "content": "- DVM 進食窗口: Schaefer & Fuller 2007, Marine Biology",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\fish_behavior_model.py",
+    "line": 13,
+    "content": "- 大目鮪深潛: Schaefer & Fuller 2010, Marine Biology",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\forecast_hsi.py",
+    "line": 6,
+    "content": "使用已有的 CMEMS forecast SST 數據，逐日計算 HSI grid，",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\forecast_hsi.py",
+    "line": 9,
+    "content": "數據來源: CMEMS analysis-forecast (已由 data_fetcher_v2 抓取)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\forecast_hsi.py",
+    "line": 114,
+    "content": "log.warning(\"  Forecast: no CMEMS forecast data available\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\gebco_features.py",
+    "line": 187,
+    "content": "Ref: Wilson et al. (2007) Marine Geodesy 30:3-35",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\hook_depth.py",
+    "line": 9,
+    "content": "數據來源: CMEMS 溫度剖面 + Argo 浮標氣候態",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\html_map_generator.py",
+    "line": 49,
+    "content": "# v15: Real feature lookup from CMEMS data",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\lagrangian_advection.py",
+    "line": 13,
+    "content": "2. 用 HYCOM/CMEMS 海流場 (u, v) 進行 RK4 前向積分 72hr",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\lagrangian_advection.py",
+    "line": 22,
+    "content": "Lévy et al. (2018). The role of submesoscale currents in structuring marine",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\lagrangian_advection.py",
+    "line": 892,
+    "content": "3. Forward-advect using CMEMS forecast flow fields",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\lagrangian_advection.py",
+    "line": 895,
+    "content": "Ref: CLS FSLE methodology (d'Ovidio 2004) + CMEMS forecast",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\marine_heatwave.py",
+    "line": 2,
+    "content": "OceanMaster v13.2 — Marine Heatwave Detector [D2]",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\marine_heatwave.py",
+    "line": 4,
+    "content": "Detect Marine Heatwaves (MHW) per Hobday et al. (2016).",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\marine_heatwave.py",
+    "line": 18,
+    "content": "class MarineHeatwaveDetector:",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\marine_heatwave.py",
+    "line": 20,
+    "content": "Detect and classify Marine Heatwaves from SST data.",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 4,
+    "content": "Task #17: CMEMS 5-day MLD Forecast",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 7,
+    "content": "1. CMEMS PHY_001_024 (5-day forecast, via copernicusmarine)",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 54,
+    "content": "1. CMEMS PHY_001_024 forecast (if copernicusmarine available)",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 67,
+    "content": "# ─── 1. CMEMS Forecast ───",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 68,
+    "content": "cmems_data = await self._try_cmems_forecast(lat_range, lon_range, lats, lons)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 69,
+    "content": "if cmems_data is not None:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 70,
+    "content": "return cmems_data",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 101,
+    "content": "async def _try_cmems_forecast(",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 108,
+    "content": "\"\"\"嘗試 CMEMS PHY_001_024 MLD forecast\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 110,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 112,
+    "content": "if not os.environ.get(\"CMEMS_PASS\"):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 115,
+    "content": "# 使用 copernicusmarine 庫取得 MLD",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 116,
+    "content": "# [v13.2] CMEMS MLD 預報尚未實作。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 118,
+    "content": "# 未來: 當 copernicusmarine 庫穩定後，可直接取得 CMEMS 的 MLD 分析/預報產品。",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mld_forecast.py",
+    "line": 119,
+    "content": "log.debug(\"  CMEMS MLD forecast: not yet implemented, using temp3d fallback\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mur_sst_loader.py",
+    "line": 4,
+    "content": "將預設 CMEMS SST (9km) 升級為 MUR SST (~1km)。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mur_sst_loader.py",
+    "line": 31,
+    "content": "fallback_cmems: str = \"C:/tmp/L2_cache/cmems_sst.nc\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mur_sst_loader.py",
+    "line": 51,
+    "content": "if Path(fallback_cmems).exists():",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mur_sst_loader.py",
+    "line": 52,
+    "content": "return _bicubic_upscale(fallback_cmems, cache_path)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mur_sst_loader.py",
+    "line": 91,
+    "content": "def _bicubic_upscale(cmems_path, cache_path, scale=9):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\mur_sst_loader.py",
+    "line": 94,
+    "content": "ds = xr.open_dataset(cmems_path)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\npz_model.py",
+    "line": 26,
+    "content": "Fasham et al. (1990) J Marine Res",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\npz_model.py",
+    "line": 27,
+    "content": "Franks (2002) J Marine Systems",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ocean_physics.py",
+    "line": 177,
+    "content": "(13.0, 14.5, 123.0, 124.5),   # Catanduanes + Camarines",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\omz_model.py",
+    "line": 19,
+    "content": "- CMEMS BGC o2 (若有 API key)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\pinn_loss.py",
+    "line": 15,
+    "content": "2. 對應時間的 CMEMS 海流場 (u, v 速度向量)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\pinn_loss.py",
+    "line": 120,
+    "content": "⚠️ 需要真實數據：CMEMS 的 u, v 海流場",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\pinn_loss.py",
+    "line": 169,
+    "content": "- NOAA OISST 或 CMEMS SST 的連續天數資料",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\pinn_loss.py",
+    "line": 170,
+    "content": "- CMEMS 的 u, v 海流場 (與 SST 同解析度)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\pinn_loss.py",
+    "line": 223,
+    "content": "⚠️ 需要真實數據：CMEMS SSH (海平面高度) 資料",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\roi_calculator.py",
+    "line": 28,
+    "content": "DIESEL_PRICE_TWD = 28.5       # NT$/L (2025 avg marine diesel)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\route_planner_v2.py",
+    "line": 455,
+    "content": "Uses Open-Meteo Marine API (free, no key).",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\route_planner_v2.py",
+    "line": 479,
+    "content": "f\"https://marine-api.open-meteo.com/v1/marine?\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\salinity_fetcher.py",
+    "line": 8,
+    "content": "2. CMEMS SMOS (Global Ocean PSY4, BBox)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\sst_change_detector.py",
+    "line": 52,
+    "content": "sst_forecast: {day_offset: {\"sst\": grid}}, e.g. from CMEMS forecast",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\temporal_forecast.py",
+    "line": 31,
+    "content": "從 CMEMS forecast 提取時序特徵:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\temporal_forecast.py",
+    "line": 95,
+    "content": "時序預報 ensemble: 融合 CMEMS forecast + SST 趨勢分析。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\temporal_forecast.py",
+    "line": 103,
+    "content": "forecast_data: CMEMS forecast {day: {\"sst\": ndarray, ...}}",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\text_briefing.py",
+    "line": 259,
+    "content": "lines.append(f\"Source: OceanMaster v13.2 | OISST/VIIRS/CMEMS\".center(W))",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 6,
+    "content": "2. Copernicus GLOBAL_ANALYSISFORECAST_PHY_001_024 — mlotst (MLD)",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 306,
+    "content": "# ─── GLORYS12 via copernicusmarine ───",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 311,
+    "content": "從 Copernicus Marine GLORYS12 取得 3D 溫度場，計算 Z20 / MLD。",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 316,
+    "content": "免費: 只需 Copernicus Marine 帳號",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 319,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 321,
+    "content": "log.debug(\"  copernicusmarine 未安裝，跳過 GLORYS12\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 326,
+    "content": "user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 327,
+    "content": "pwd = os.environ.get(\"CMEMS_PASS\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 329,
+    "content": "log.debug(\"  CMEMS_USER 未設定，跳過 GLORYS12\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 342,
+    "content": "(\"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m\", \"thetao\", \"GLORYS-forecast\"),",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\thermocline_fetcher.py",
+    "line": 343,
+    "content": "(\"cmems_mod_glo_phy_my_0.083deg_P1D-m\", \"thetao\", \"GLORYS12-reanalysis\"),",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\training_orchestrator.py",
+    "line": 242,
+    "content": "\"資料來源: NOAA OISST (SST) + CMEMS (Chl-a, SSH)\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 8,
+    "content": "2. CMEMS Wave (GLOBAL_ANALYSISFORECAST_WAV, VHM0)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 61,
+    "content": "1. WW3 ERDDAP → 2. Open-Meteo Marine → 3. 風速估算 → 4. 氣候態",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 80,
+    "content": "# ─── 2. Open-Meteo Marine (scatter → grid) ───",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 81,
+    "content": "marine_data = await self._fetch_open_meteo_marine(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 84,
+    "content": "if marine_data is not None:",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 85,
+    "content": "return marine_data",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 193,
+    "content": "async def _fetch_open_meteo_marine(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 199,
+    "content": "\"\"\"Open-Meteo Marine API (scatter 取樣 → griddata 插值)\"\"\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 214,
+    "content": "f\"https://marine-api.open-meteo.com/v1/marine?\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 251,
+    "content": "log.info(f\"  Wave: Open-Meteo Marine ({len(pts_wh)} pts), \"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\wave_fetcher.py",
+    "line": 258,
+    "content": "\"source\": \"OpenMeteo-Marine\",",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 12,
+    "content": "1. Open-Meteo Marine API (wave_height)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 46,
+    "content": "async def fetch_marine_weather(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 87,
+    "content": "# ── 並行抓取: Marine API + Forecast API ──",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 88,
+    "content": "marine_task = self._fetch_marine_api(sample_lats, sample_lons)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 91,
+    "content": "marine_data, forecast_data = await asyncio.gather(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 92,
+    "content": "marine_task, forecast_task, return_exceptions=True",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 95,
+    "content": "# ── 處理 Marine API 結果 (wave_height) ──",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 97,
+    "content": "if isinstance(marine_data, dict) and \"points\" in marine_data:",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 98,
+    "content": "wave_pts = marine_data[\"points\"]",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 128,
+    "content": "source_parts.append(\"Marine-API\")",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 152,
+    "content": "# ─── Open-Meteo Marine API (波高) ───",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 154,
+    "content": "async def _fetch_marine_api(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 157,
+    "content": "\"\"\"呼叫 Open-Meteo Marine API 取得 wave_height\"\"\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 166,
+    "content": "f\"https://marine-api.open-meteo.com/v1/marine?\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 194,
+    "content": "log.debug(f\"  Marine API ({lat:.1f},{lon:.1f}): {e}\")",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\weather_fetcher.py",
+    "line": 200,
+    "content": "log.info(f\"  Marine API: {len(points)} wave points fetched\")",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\zooplankton_proxy.py",
+    "line": 12,
+    "content": "1. CMEMS BGC zooc 直接產品（若有 API key）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\fm\\agent_bootstrap.py",
+    "line": 161,
+    "content": "agent.register_tool(\"weather_fetcher\", weather.fetch_marine_weather, \"海洋天氣 — 擷取風速/氣壓/降雨資料\")",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\fm\\agent_bootstrap.py",
+    "line": 350,
+    "content": "agent.register_tool(\"data_orchestrator\", fetcher.fetch_all, \"資料擷取 — 從 NOAA/CMEMS/HYCOM 抓衛星數據\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\dl_data_pipeline.py",
+    "line": 4,
+    "content": "將 CMEMS/ERDDAP 環境場資料轉換為 PyTorch DL 模型可用的 2D 張量。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\dl_data_pipeline.py",
+    "line": 50,
+    "content": "# Source: WOA 2023 + GlobColour + CMEMS GLORYS12V1 global statistics.",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\dl_data_pipeline.py",
+    "line": 63,
+    "content": "\"bottom_temp\": (5.0, 4.0),    # °C, CMEMS GLORYS bottom layer",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\ssl_pretrainer.py",
+    "line": 14,
+    "content": "📌 缺少什麼：大量無標註衛星圖（NOAA OISST、CMEMS Chl-a）",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\ssl_pretrainer.py",
+    "line": 254,
+    "content": "\"資料來源：NOAA OISST (免費) + CMEMS (免費註冊)\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\stacking_ensemble.py",
+    "line": 31,
+    "content": "- TunaCAST: SSH渦旋 + 溫躍層 → 現在加入 CMEMS SSH",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\stacking_ensemble.py",
+    "line": 704,
+    "content": "# Yu et al. (2023) Frontiers in Marine Science",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\training_pipeline.py",
+    "line": 76,
+    "content": "use_cmems=True, use_erddap=True",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\training_pipeline.py",
+    "line": 95,
+    "content": "2. 回查衛星歷史 (CMEMS/ERDDAP/氣候學)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 8,
+    "content": "1. CMEMS L4 (gap-filled, most reliable)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 46,
+    "content": "class CMEMSHistorical:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 47,
+    "content": "\"\"\"CMEMS Copernicus historical data retrieval.\"\"\"",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 50,
+    "content": "\"sst\": \"cmems_mod_glo_phy_my_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 51,
+    "content": "\"chl\": \"cmems_obs-oc_glo_bgc-plankton_my_l4-gapfree-multi-4km_P1D\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 52,
+    "content": "\"ssh\": \"cmems_mod_glo_phy_my_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 53,
+    "content": "\"mld\": \"cmems_mod_glo_phy_my_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 58,
+    "content": "self.user = os.environ.get(\"CMEMS_USER\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 59,
+    "content": "self.pwd = os.environ.get(\"CMEMS_PASS\", \"\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 62,
+    "content": "log.warning(\"  CMEMS credentials not set, using fallback\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 68,
+    "content": "\"\"\"Retrieve single point value from CMEMS.\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 72,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 317,
+    "content": "def detect_marine_heatwave(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 321,
+    "content": "Marine heatwave detection (simplified Hobday 2016).",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 750,
+    "content": "def __init__(self, use_cmems: bool = True, use_erddap: bool = True):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 751,
+    "content": "self.cmems = CMEMSHistorical() if use_cmems else None",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 764,
+    "content": "if self.cmems and self.cmems.available:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 765,
+    "content": "val = self.cmems.fetch_point(date, lat, lon, \"thetao\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 767,
+    "content": "source = \"cmems\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 790,
+    "content": "if self.cmems and self.cmems.available:",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 791,
+    "content": "val = self.cmems.fetch_point(date, lat, lon, \"mass_concentration_of_chlorophyll_a_in_sea_water\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 793,
+    "content": "source = \"cmems\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 958,
+    "content": "mhw = detect_marine_heatwave(sst, sst_clim, sst_90th)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\satellite\\historical_fetcher.py",
+    "line": 1073,
+    "content": "extractor = HistoricalFeatureExtractor(use_cmems=False, use_erddap=False)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_0740_Map.html",
+    "line": 384,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_0806_Map.html",
+    "line": 385,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_0818_Map.html",
+    "line": 385,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1026_Map.html",
+    "line": 385,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1056_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1107_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1147_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1201_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1216_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1227_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1239_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1644_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1709_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1743_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1755_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1818_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1841_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1854_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1908_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1932_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_1945_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_2000_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_2017_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_2033_Map.html",
+    "line": 388,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_2048_Map.html",
+    "line": 400,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_2057_Map.html",
+    "line": 400,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260225_2117_Map.html",
+    "line": 400,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0340_Map.html",
+    "line": 400,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0342_Map.html",
+    "line": 400,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0402_Map.html",
+    "line": 400,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0424_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0450_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0505_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0810_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0841_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0903_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_0921_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260226_1024_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260227_1303_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260227_1314_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260227_1926_Map.html",
+    "line": 401,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\output\\OceanMaster_v103_20260228_1432_Map.html",
+    "line": 409,
+    "content": "⚠️ 海洋物理數據以 5°×5° 格點為單位（CMEMS 衛星 + WCPFC 漁業統計），同區域熱點數值相同屬正常現象。HSI 排名依據即時衛星數據計算，右欄數值為歷史參考。",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\pipeline\\data_orchestrator.py",
+    "line": 185,
+    "content": "weather_task = self._weather.fetch_marine_weather(",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 28,
+    "content": "H(\"1. HYCOM 3D (copernicusmarine 多層)\")",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 30,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 31,
+    "content": "r = copernicusmarine.subset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 32,
+    "content": "dataset_id=\"cmems_mod_glo_phy_anfc_0.083deg_PT1H-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 39,
+    "content": "output_filename=\"cmems_3d_temp_sal.nc\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 43,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_temp_sal.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 203,
+    "content": "if os.path.exists(\"C:/tmp/L2_cache/cmems_3d_temp_sal.nc\"):",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_remaining.py",
+    "line": 205,
+    "content": "ds3d = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_temp_sal.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 21,
+    "content": "# ═══ 1. CMEMS SSH 下載 ═══",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 22,
+    "content": "print(\"\\n=== 1. CMEMS SSH ===\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 24,
+    "content": "import copernicusmarine",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 25,
+    "content": "r = copernicusmarine.subset(",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 26,
+    "content": "dataset_id=\"cmems_mod_glo_phy_anfc_0.083deg_PT1H-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 32,
+    "content": "output_filename=\"cmems_ssh.nc\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 37,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_ssh.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 39,
+    "content": "test(\"CMEMS SSH\", True, f\"shape={ssh.shape}, range={np.nanmin(ssh):.3f}~{np.nanmax(ssh):.3f}m\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 42,
+    "content": "test(\"CMEMS SSH\", False, str(e)[:80])",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify.py",
+    "line": 128,
+    "content": "(\"Open-Meteo Marine\", \"https://marine-api.open-meteo.com/v1/marine?latitude=25&longitude=130&hourly=wave_height&forecast_days=1\"),",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify_3.py",
+    "line": 46,
+    "content": "ds_ssh = xr.open_dataset(\"C:/tmp/L2_cache/cmems_ssh.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify_3.py",
+    "line": 86,
+    "content": "ds_s = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify_3.py",
+    "line": 87,
+    "content": "ds_p = xr.open_dataset(\"C:/tmp/L2_cache/cmems_phy.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\batch_verify_3.py",
+    "line": 88,
+    "content": "ds_b = xr.open_dataset(\"C:/tmp/L2_cache/cmems_bgc.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\compare_fronts.py",
+    "line": 12,
+    "content": "ds9 = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\compare_fronts.py",
+    "line": 35,
+    "content": "print(f\"  CMEMS 9km:  {sst9.shape[0]}x{sst9.shape[1]} = {pix9:,} pixels → {n9:,} front pixels\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 2,
+    "content": "OceanMaster L2 數據驗證 — 下載真實 CMEMS 數據 + 全線路跑通測試",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 4,
+    "content": "1. 下載 CMEMS SST / CHL / 海流 (最新 1 天, 台灣外海小區)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 42,
+    "content": "# STEP 1: Download CMEMS SST + CHL + Currents",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 44,
+    "content": "section(\"STEP 1: CMEMS 真實衛星數據下載\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 55,
+    "content": "sst_file = CACHE_DIR / \"cmems_sst.nc\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 56,
+    "content": "bgc_file = CACHE_DIR / \"cmems_bgc.nc\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 57,
+    "content": "phy_file = CACHE_DIR / \"cmems_phy.nc\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 60,
+    "content": "import copernicusmarine as cm",
+    "kw": "copernicusmarine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 63,
+    "content": "log.info(\"  Downloading CMEMS SST (analysis-forecast)...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 65,
+    "content": "dataset_id=\"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 79,
+    "content": "log.info(\"  Downloading CMEMS currents (u, v)...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 81,
+    "content": "dataset_id=\"cmems_mod_glo_phy-cur_anfc_0.083deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 95,
+    "content": "log.info(\"  Downloading CMEMS CHL (biogeochemistry)...\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 97,
+    "content": "dataset_id=\"cmems_mod_glo_bgc-pft_anfc_0.25deg_P1D-m\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 110,
+    "content": "RESULTS[\"cmems_download\"] = \"✅ OK\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 111,
+    "content": "log.info(\"  ✅ CMEMS download complete\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 114,
+    "content": "RESULTS[\"cmems_download\"] = f\"❌ {e}\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 115,
+    "content": "ERRORS.append(f\"CMEMS download: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 116,
+    "content": "log.error(f\"  ❌ CMEMS download failed: {e}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\scripts\\run_L2_validation.py",
+    "line": 201,
+    "content": "url = (\"https://marine-api.open-meteo.com/v1/marine?\"",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 8,
+    "content": "L5: RealData      — 真實 CMEMS/MUR 數據",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 234,
+    "content": "# CMEMS SST",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 236,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 239,
+    "content": "T(5, \"CMEMS SST\", sst.shape == (181, 301), f\"shape={sst.shape}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 242,
+    "content": "T(5, \"CMEMS SST\", False, str(e)[:60])",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 244,
+    "content": "# CMEMS current",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 246,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_phy.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 249,
+    "content": "T(5, \"CMEMS current\", u.shape == v.shape, f\"u={u.shape}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 252,
+    "content": "T(5, \"CMEMS current\", False, str(e)[:60])",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 256,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_ssh.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 259,
+    "content": "T(5, \"CMEMS SSH\", ssh.shape[0] > 10, f\"shape={ssh.shape}\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 266,
+    "content": "ds = xr.open_dataset(\"C:/tmp/L2_cache/cmems_3d_deep.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\deep_7layer_test.py",
+    "line": 278,
+    "content": "T(5, \"Fronts on CMEMS\", n > 0, f\"{n} front pixels\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 14,
+    "content": "# Load CMEMS",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 17,
+    "content": "ds_s = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 18,
+    "content": "ds_p = xr.open_dataset(\"C:/tmp/L2_cache/cmems_phy.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 19,
+    "content": "ds_b = xr.open_dataset(\"C:/tmp/L2_cache/cmems_bgc.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 67,
+    "content": "from engine.marine_heatwave import MarineHeatwaveDetector",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 69,
+    "content": "r = MarineHeatwaveDetector().detect(sst, clim)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 70,
+    "content": "test(\"marine_heatwave\", r is not None)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_35_modules.py",
+    "line": 71,
+    "content": "except Exception as e: test(\"marine_heatwave\", False, str(e)[:80])",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_advanced_L2.py",
+    "line": 3,
+    "content": "用真實 CMEMS 海流數據 (已下載在 C:/tmp/L2_cache)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_advanced_L2.py",
+    "line": 23,
+    "content": "# ═══ Load real CMEMS data ═══",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_advanced_L2.py",
+    "line": 24,
+    "content": "section(\"LOAD: 讀取 CMEMS 真實衛星數據\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_advanced_L2.py",
+    "line": 28,
+    "content": "ds_sst = xr.open_dataset(f\"{CACHE}/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_advanced_L2.py",
+    "line": 29,
+    "content": "ds_phy = xr.open_dataset(f\"{CACHE}/cmems_phy.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_advanced_L2.py",
+    "line": 30,
+    "content": "ds_bgc = xr.open_dataset(f\"{CACHE}/cmems_bgc.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_8layer.py",
+    "line": 43,
+    "content": "\"engine.cmems_ssh\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_8layer.py",
+    "line": 75,
+    "content": "\"engine.marine_heatwave\",",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_verification.py",
+    "line": 8,
+    "content": "Layer 5: Real CMEMS data pipeline end-to-end",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_verification.py",
+    "line": 248,
+    "content": "heading(\"5. REAL CMEMS DATA PIPELINE\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_verification.py",
+    "line": 254,
+    "content": "ds_sst = xr.open_dataset(f\"{CACHE}/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_verification.py",
+    "line": 255,
+    "content": "ds_phy = xr.open_dataset(f\"{CACHE}/cmems_phy.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_verification.py",
+    "line": 256,
+    "content": "ds_bgc = xr.open_dataset(f\"{CACHE}/cmems_bgc.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_deep_verification.py",
+    "line": 300,
+    "content": "test(\"Real data: CMEMS files exist\", False, \"Files not found in C:/tmp/L2_cache\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_e2e_final.py",
+    "line": 14,
+    "content": "ds_s = xr.open_dataset(\"C:/tmp/L2_cache/cmems_sst.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_e2e_final.py",
+    "line": 15,
+    "content": "ds_p = xr.open_dataset(\"C:/tmp/L2_cache/cmems_phy.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_e2e_final.py",
+    "line": 16,
+    "content": "ds_b = xr.open_dataset(\"C:/tmp/L2_cache/cmems_bgc.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_e2e_final.py",
+    "line": 17,
+    "content": "ds_ssh = xr.open_dataset(\"C:/tmp/L2_cache/cmems_ssh.nc\")",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 34,
+    "content": "\"engine.cmems_ssh\",",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 136,
+    "content": "def test_config_has_cmems():",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 137,
+    "content": "\"\"\"Config must reference CMEMS data sources.\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 140,
+    "content": "assert \"CMEMS\" in content.upper() or \"copernicus\" in content.lower()",
+    "kw": "copernicus"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 459,
+    "content": "def test_cmems_forecast_method():",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 460,
+    "content": "\"\"\"OceanDataFetcher must have _fetch_cmems_forecast method.\"\"\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 463,
+    "content": "assert hasattr(f, \"_fetch_cmems_forecast\"), \"Missing _fetch_cmems_forecast method\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 465,
+    "content": "assert inspect.iscoroutinefunction(f._fetch_cmems_forecast), \\",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v12_full.py",
+    "line": 466,
+    "content": "\"_fetch_cmems_forecast must be async\"",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v182.py",
+    "line": 5,
+    "content": "detect_marine_heatwave,",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v182.py",
+    "line": 11,
+    "content": "ext = HistoricalFeatureExtractor(use_cmems=False, use_erddap=False)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\test_v182.py",
+    "line": 37,
+    "content": "mhw = detect_marine_heatwave(30.0, 27.0, 29.0)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\verify_fixes.py",
+    "line": 18,
+    "content": "ds = xr.open_dataset('C:/tmp/L2_cache/cmems_sst.nc')",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\_deep_verify_v183.py",
+    "line": 208,
+    "content": "extractor = HistoricalFeatureExtractor(use_cmems=False, use_erddap=False)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\tests\\_deep_verify_v183.py",
+    "line": 264,
+    "content": "ext = HistoricalFeatureExtractor(use_cmems=False, use_erddap=False)",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard.js",
+    "line": 656,
+    "content": "📡 資料源: 30+ (NOAA / CMEMS / HYCOM / Open-Meteo)<br>",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 1210,
+    "content": "NASA MUR 1km ｜ CMEMS ｜ Open-Meteo ｜ 82/82 ✅<br>更新：<span id=\"ut\"></span>",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 1989,
+    "content": "// Fetch marine + weather in parallel",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 1990,
+    "content": "const [marineResp, wxResp] = await Promise.all([",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 1991,
+    "content": "fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&current=wave_height,wave_direction,wave_period,ocean_current_velocity,ocean_current_direction`),",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 1995,
+    "content": "const marine = await marineResp.json();",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 1999,
+    "content": "const waveH = marine.current?.wave_height;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 2000,
+    "content": "const waveDir = marine.current?.wave_direction ?? 0;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 2001,
+    "content": "const wavePeriod = marine.current?.wave_period;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 2002,
+    "content": "const currentVel = marine.current?.ocean_current_velocity;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 2003,
+    "content": "const currentDir = marine.current?.ocean_current_direction ?? 0;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 2013,
+    "content": "// Land detection: marine API returns null for land",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_main.html",
+    "line": 2147,
+    "content": "fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height&timezone=Asia/Taipei&forecast_days=3`)",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 1181,
+    "content": "NASA MUR 1km ｜ CMEMS ｜ Open-Meteo ｜ 82/82 ✅<br>更新：<span id=\"ut\"></span>",
+    "kw": "cmems"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2070,
+    "content": "'滿載號', '龍騰號', '吉祥號', '富貴號', '潮興號', 'DEEP BLUE', 'MARINER', 'HORIZON', 'STORM RIDER', 'WAVE KING',",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2332,
+    "content": "// Fetch marine + weather in parallel",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2333,
+    "content": "const [marineResp, wxResp] = await Promise.all([",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2334,
+    "content": "fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&current=wave_height,wave_direction,wave_period,ocean_current_velocity,ocean_current_direction`),",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2338,
+    "content": "const marine = await marineResp.json();",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2342,
+    "content": "const waveH = marine.current?.wave_height;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2343,
+    "content": "const waveDir = marine.current?.wave_direction ?? 0;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2344,
+    "content": "const wavePeriod = marine.current?.wave_period;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2345,
+    "content": "const currentVel = marine.current?.ocean_current_velocity;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2346,
+    "content": "const currentDir = marine.current?.ocean_current_direction ?? 0;",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2356,
+    "content": "// Land detection: marine API returns null for land",
+    "kw": "marine"
+  },
+  {
+    "file": "c:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\web\\dashboard_v3.html",
+    "line": 2513,
+    "content": "fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height&timezone=Asia/Taipei&forecast_days=3`)",
+    "kw": "marine"
+  }
+]

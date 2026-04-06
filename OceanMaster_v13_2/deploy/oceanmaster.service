@@ -1,0 +1,28 @@
+[Unit]
+Description=OceanMaster v12 — AI Tuna Fishing Ground Prediction Server
+After=network.target
+Documentation=https://github.com/your-org/oceanmaster
+
+[Service]
+Type=simple
+User=oceanmaster
+Group=oceanmaster
+WorkingDirectory=/opt/oceanmaster
+Environment=PATH=/opt/oceanmaster/venv/bin:/usr/bin
+Environment=PYTHONPATH=/opt/oceanmaster
+EnvironmentFile=/opt/oceanmaster/.env
+ExecStart=/opt/oceanmaster/venv/bin/python -m uvicorn web_server:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=oceanmaster
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/oceanmaster/output /opt/oceanmaster/data/cache /opt/oceanmaster/models
+
+[Install]
+WantedBy=multi-user.target

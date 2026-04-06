@@ -1,0 +1,320 @@
+﻿=== FILE COUNTS ===
+Total files: 891
+Total dirs: 60
+  .npz         146 files     141.0 MB
+  .pt            5 files     119.3 MB
+  .csv          36 files     112.8 MB
+  .nc            5 files      26.3 MB
+  .html        103 files       8.5 MB
+  .json        115 files       8.4 MB
+  .py          212 files       2.7 MB
+  .kml          93 files       1.5 MB
+  .rtf           5 files       1.4 MB
+  .pdf           9 files       1.1 MB
+  .png           2 files       1.0 MB
+  .geojson      92 files       1.0 MB
+  .parquet       2 files       0.7 MB
+  .md           36 files       0.4 MB
+  .npy           2 files       0.2 MB
+  .js            4 files       0.1 MB
+  .docx          1 files       0.1 MB
+                 7 files       0.0 MB
+  .bak           1 files       0.0 MB
+  .db            1 files       0.0 MB
+  .css           1 files       0.0 MB
+  .txt           4 files       0.0 MB
+  .production     1 files       0.0 MB
+  .example       1 files       0.0 MB
+  .conf          1 files       0.0 MB
+
+=== PYTHON FILES: 212 ===
+Total .py lines: 71254
+
+=== ENGINE ===
+Total .py in engine/: 138 (init: 8, real: 130)
+  ROOT                 105 real .py   1414.3 KB   37300 lines
+  edge                   1 real .py      6.3 KB     200 lines
+  eez                    1 real .py      9.6 KB     228 lines
+  fm                     4 real .py     57.3 KB    1483 lines
+  ml                    16 real .py    272.5 KB    7259 lines
+  multi_agent            1 real .py      6.6 KB     188 lines
+  navigation             1 real .py     12.8 KB     389 lines
+  satellite              1 real .py     41.3 KB    1113 lines
+
+=== ENGINE ROOT TOP 30 (by size) ===
+  data_fetcher_v2.py                         91.5 KB   1925 lines
+  lagrangian_advection.py                    56.1 KB   1437 lines
+  ais_shadow_fishing.py                      47.6 KB   1245 lines
+  ocean_srgan.py                             40.6 KB   1105 lines
+  dashboard_template.py                      35.8 KB    535 lines
+  algorithms.py                              33.2 KB    868 lines
+  commercial_core_v2.py                      31.2 KB    809 lines
+  ocean_physics.py                           29.6 KB    747 lines
+  accuracy_booster.py                        29.1 KB    806 lines
+  cmems_ssh.py                               25.6 KB    737 lines
+  dissolved_oxygen.py                        25.1 KB    617 lines
+  hsi_models.py                              24.3 KB    634 lines
+  safety_checker.py                          23.5 KB    643 lines
+  enhanced_data_sources.py                   21.7 KB    567 lines
+  ai_fusion.py                               21.6 KB    566 lines
+  thermocline_fetcher.py                     21.4 KB    536 lines
+  gfw_data_loader.py                         20.6 KB    549 lines
+  data_sources.py                            19.9 KB    594 lines
+  food_chain_predictor.py                    19.8 KB    528 lines
+  typhoon_tracker.py                         19.7 KB    514 lines
+  route_planner_v2.py                        18.9 KB    509 lines
+  catch_data_interface.py                    17.7 KB    454 lines
+  html_map_generator.py                      17.6 KB    406 lines
+  kuroshio_engine.py                         17.3 KB    454 lines
+  ocean_diagnostics.py                       17.2 KB    467 lines
+  eddy_detector.py                           17.2 KB    439 lines
+  fish_behavior_model.py                     17.1 KB    478 lines
+  species_params.py                          15.4 KB    390 lines
+  typhoon_ml_features.py                     15.4 KB    419 lines
+  calibration.py                             15.1 KB    410 lines
+
+=== DATA FILES ===
+  .csv     36 files     112.8 MB
+  .nc       2 files      24.3 MB
+  .npz    146 files     141.0 MB
+  .npy      2 files       0.2 MB
+
+=== WCPFC DATA ===
+  LONGLINE.CSV: 156,212 rows x 22 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'hhooks']
+  POLE_AND_LINE.CSV: 40,294 rows x 9 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'days']
+  PURSE_SEINE.CSV: 30,025 rows x 31 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'days']
+  DRIFTNET.CSV: 253 rows x 7 cols -- ['yy', 'mm', 'lat5', 'lon5', 'days', 'alb_n']
+  DRIFTNET.CSV: 253 rows x 7 cols -- ['yy', 'mm', 'lat5', 'lon5', 'days', 'alb_n']
+  LONGLINE.CSV: 156,212 rows x 22 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'hhooks']
+  LONGLINE.CSV: 156,212 rows x 22 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'hhooks']
+  POLE_AND_LINE.CSV: 40,294 rows x 9 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'days']
+  PURSE_SEINE.CSV: 30,025 rows x 31 cols -- ['yy', 'mm', 'lat5', 'lon5', 'cwp_grid', 'days']
+  TOTAL: 609,780 rows
+
+=== MODEL WEIGHTS ===
+  models\cloud_removal_v18.pt: 0.0 MB
+  models\convlstm_sst_v18.pt: 0.1 MB
+  models\transfish_v18.pt: 0.3 MB
+  models\unet_fishing_v18.pt: 0.4 MB
+  models\checkpoints_r2\r2test_best.pt: 118.5 MB
+
+=== TESTS: 22 files ===
+  _deep_verify_v183.py: 295 lines
+  deep_7layer_test.py: 416 lines
+  test_35_modules.py: 245 lines
+  test_advanced_L2.py: 305 lines
+  test_api.py: 127 lines
+  test_calibration.py: 240 lines
+  test_deep_8layer.py: 592 lines
+  test_deep_verification.py: 367 lines
+  test_dl_infra.py: 481 lines
+  test_dl_round2.py: 168 lines
+  test_dl_round3.py: 160 lines
+  test_dl_round4.py: 298 lines
+  test_e2e_final.py: 136 lines
+  test_r4_diag.py: 59 lines
+  test_safety_filter.py: 219 lines
+  test_science.py: 364 lines
+  test_seahawk_features.py: 331 lines
+  test_v12_full.py: 752 lines
+  test_v182.py: 40 lines
+  test_v18_upgrades.py: 155 lines
+  test_wave_cascade.py: 20 lines
+  verify_fixes.py: 38 lines
+
+=== FASTAPI ENDPOINTS ===
+web_server.py: 1657 lines
+  GET /
+  GET /dashboard.js
+  GET /health
+  GET /api/hotspots
+  GET /api/hotspots/public
+  GET /api/analyze
+  GET /api/status
+  GET /api/sea_conditions
+  GET /api/sea-conditions
+  GET /api/v1/explain
+  GET /api/v1/backtest
+  GET /api/typhoon-status
+  GET /api/v1/food_chain
+  GET /api/v1/squid_jigging_forecast
+  GET /api/v1/dvm_profile
+  POST /api/v1/report_catch
+  GET /api/v1/catch_stats
+  GET /api/system-health
+  GET /api/v1/food_chain_timeline
+  GET /api/v1/feeding_windows
+  GET /api/v1/fish_movement
+  GET /dashboard/v2
+  GET /dashboard_v2.js
+  GET /dashboard_v2.css
+  GET /api/v1/weekly_briefing
+  GET /api/v1/sat_briefing
+  GET /map.html
+  Total: 27 endpoints
+
+=== WEB FRONTEND ===
+  web\dashboard.js: 58.0 KB
+  web\dashboard_main.html: 155.3 KB
+  web\dashboard_v2.css: 19.0 KB
+  web\dashboard_v2.js: 28.1 KB
+  web\dashboard_v3.html: 192.4 KB
+  web\data_server.py: 3.1 KB
+  static\captain\app.js: 8.9 KB
+  static\captain\index.html: 8.1 KB
+  static\captain\manifest.json: 0.6 KB
+  static\captain\sw.js: 2.0 KB
+
+=== KEY MODULE API ===
+
+  [engine.algorithms]
+    class Any: []
+    class RegularGridInterpolator: []
+    functions: ['calculate_eke', 'compute_boa_gradient', 'compute_chl_gradient', 'compute_ftle', 'compute_productivity_front', 'compute_thermocline', 'detect_eddies', 'detect_salinity_fronts', 'detect_sst_fronts', 'filter_fishing_lights']
+
+  [engine.hsi_models]
+    class Any: []
+    functions: ['compute_all_hsi', 'compute_all_spawning_hsi', 'compute_hsi_bigeye', 'compute_hsi_skipjack', 'compute_hsi_squid', 'compute_hsi_yellowfin', 'compute_spawning_habitat', 'gaussian_si', 'get_moon_phase', 'range_si']
+
+  [engine.ai_fusion]
+    class Any: []
+    class datetime: ['astimezone', 'combine', 'ctime', 'date', 'dst', 'fromisocalendar', 'fromisoformat', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'now', 'replace', 'strftime', 'strptime', 'time', 'timestamp', 'timetuple', 'timetz', 'today', 'toordinal', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday']
+    class timezone: ['dst', 'fromutc', 'tzname', 'utcoffset']
+    functions: ['assess_safety', 'fuse_and_rank', 'get_competition_penalty', 'get_eez_filter', 'near_known_land']
+    constants: ['FUSION_BUFFER_DEG', 'HAS_COMPETITION', 'HAS_EEZ', 'KNOWN_LAND_BBOXES', 'SPECIES_DEPTH_RANGE']
+
+  [engine.safety_checker]
+    class Any: []
+    class Enum: []
+    class SafetyLevel: []
+    class SafetyResult: []
+    class datetime: ['astimezone', 'combine', 'ctime', 'date', 'dst', 'fromisocalendar', 'fromisoformat', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'now', 'replace', 'strftime', 'strptime', 'time', 'timestamp', 'timetuple', 'timetz', 'today', 'toordinal', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday']
+    class timedelta: ['total_seconds']
+    class timezone: ['dst', 'fromutc', 'tzname', 'utcoffset']
+    functions: ['assess_grid_safety', 'assess_sea_hazards', 'compute_parametric_roll_risk', 'compute_rogue_wave_risk', 'compute_strong_current_zones', 'compute_swell_warning', 'dataclass', 'filter_hotspots_by_safety', 'is_safe_for_fishing']
+    constants: ['POST_TYPHOON_MAX_DIST_KM', 'POST_TYPHOON_OPTIMAL_DAYS', 'PRESSURE_LOW_HPA', 'TYPHOON_CAUTION_RADIUS_KM', 'TYPHOON_DANGER_RADIUS_KM', 'WAVE_CAUTION_M', 'WAVE_DANGER_M', 'WIND_CAUTION_MS', 'WIND_DANGER_MS']
+
+  [engine.gebco_features]
+    class GEBCOFeatures: ['compute_features']
+    class Path: ['absolute', 'as_posix', 'as_uri', 'chmod', 'copy', 'copy_into', 'cwd', 'exists', 'expanduser', 'from_uri', 'full_match', 'glob', 'group', 'hardlink_to', 'home', 'is_absolute', 'is_block_device', 'is_char_device', 'is_dir', 'is_fifo', 'is_file', 'is_junction', 'is_mount', 'is_relative_to', 'is_reserved', 'is_socket', 'is_symlink', 'iterdir', 'joinpath', 'lchmod', 'lstat', 'match', 'mkdir', 'move', 'move_into', 'open', 'owner', 'read_bytes', 'read_text', 'readlink', 'relative_to', 'rename', 'replace', 'resolve', 'rglob', 'rmdir', 'samefile', 'stat', 'symlink_to', 'touch', 'unlink', 'walk', 'with_name', 'with_segments', 'with_stem', 'with_suffix', 'write_bytes', 'write_text']
+    functions: ['generic_filter', 'sobel']
+
+  [engine.lunar_model]
+    class LunarPhaseEngine: ['compute_lunar_cpue_modifier', 'compute_moon_phase', 'compute_surface_illuminance', 'get_best_fishing_days']
+    class datetime: ['astimezone', 'combine', 'ctime', 'date', 'dst', 'fromisocalendar', 'fromisoformat', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'now', 'replace', 'strftime', 'strptime', 'time', 'timestamp', 'timetuple', 'timetz', 'today', 'toordinal', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday']
+    class timezone: ['dst', 'fromutc', 'tzname', 'utcoffset']
+    constants: ['LUNAR_CPUE_MODIFIERS']
+
+  [engine.kuroshio_engine]
+    class KuroshioEngine: ['analyze_full', 'compute_distance_grid', 'compute_intrusion_index', 'compute_species_boost', 'detect_edge_features', 'estimate_axis']
+    constants: ['KUROSHIO_CLIMATOLOGY_AXIS', 'KUROSHIO_HALF_WIDTH_KM', 'KUROSHIO_SST_CONTRAST', 'STRAIT_SOUTH_GATE']
+
+  [engine.typhoon_tracker]
+    class Any: []
+    class BaseFetcher: ['fetch_with_cascade', 'get_health_report', 'get_recent_log']
+    class DataSource: []
+    class ForecastPoint: []
+    class Path: ['absolute', 'as_posix', 'as_uri', 'chmod', 'copy', 'copy_into', 'cwd', 'exists', 'expanduser', 'from_uri', 'full_match', 'glob', 'group', 'hardlink_to', 'home', 'is_absolute', 'is_block_device', 'is_char_device', 'is_dir', 'is_fifo', 'is_file', 'is_junction', 'is_mount', 'is_relative_to', 'is_reserved', 'is_socket', 'is_symlink', 'iterdir', 'joinpath', 'lchmod', 'lstat', 'match', 'mkdir', 'move', 'move_into', 'open', 'owner', 'read_bytes', 'read_text', 'readlink', 'relative_to', 'rename', 'replace', 'resolve', 'rglob', 'rmdir', 'samefile', 'stat', 'symlink_to', 'touch', 'unlink', 'walk', 'with_name', 'with_segments', 'with_stem', 'with_suffix', 'write_bytes', 'write_text']
+    class TyphoonAlert: []
+    class TyphoonTracker: ['fetch_active_typhoons', 'fetch_with_cascade', 'get_health_report', 'get_recent_log', 'to_geojson']
+    class datetime: ['astimezone', 'combine', 'ctime', 'date', 'dst', 'fromisocalendar', 'fromisoformat', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'now', 'replace', 'strftime', 'strptime', 'time', 'timestamp', 'timetuple', 'timetz', 'today', 'toordinal', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday']
+    class timedelta: ['total_seconds']
+    class timezone: ['dst', 'fromutc', 'tzname', 'utcoffset']
+    functions: ['asdict', 'dataclass', 'field', 'haversine_km', 'kt_to_category']
+    constants: ['ET']
+
+  [engine.shap_explainer]
+    class Any: []
+    class SHAPExplainer: ['explain_point', 'register_model']
+    functions: ['get_shap_explainer']
+    constants: ['FEATURE_NAMES_ZH']
+
+  [engine.ml.stacking_ensemble]
+    class Any: []
+    class CPUEStandardizer: ['compute_nominal_vs_standardized', 'standardize_cpue']
+    class FeatureEngineer: ['extract_features']
+    class FishingStackingModel: ['build_stacking_model', 'calibrate_conformal', 'load_model', 'predict', 'predict_with_uncertainty', 'safe_model_load', 'train', 'train_from_captain_reports']
+    class GradientBoostingRegressor: ['apply', 'fit', 'get_metadata_routing', 'get_params', 'predict', 'score', 'set_fit_request', 'set_params', 'set_score_request', 'staged_predict']
+    class KFold: ['get_metadata_routing', 'get_n_splits', 'split']
+    class LogisticRegression: ['decision_function', 'densify', 'fit', 'get_metadata_routing', 'get_params', 'predict', 'predict_log_proba', 'predict_proba', 'score', 'set_fit_request', 'set_params', 'set_score_request', 'sparsify']
+    class MLFusionEngine: ['predict_all_species']
+    class Path: ['absolute', 'as_posix', 'as_uri', 'chmod', 'copy', 'copy_into', 'cwd', 'exists', 'expanduser', 'from_uri', 'full_match', 'glob', 'group', 'hardlink_to', 'home', 'is_absolute', 'is_block_device', 'is_char_device', 'is_dir', 'is_fifo', 'is_file', 'is_junction', 'is_mount', 'is_relative_to', 'is_reserved', 'is_socket', 'is_symlink', 'iterdir', 'joinpath', 'lchmod', 'lstat', 'match', 'mkdir', 'move', 'move_into', 'open', 'owner', 'read_bytes', 'read_text', 'readlink', 'relative_to', 'rename', 'replace', 'resolve', 'rglob', 'rmdir', 'samefile', 'stat', 'symlink_to', 'touch', 'unlink', 'walk', 'with_name', 'with_segments', 'with_stem', 'with_suffix', 'write_bytes', 'write_text']
+    class RandomForestClassifier: ['apply', 'decision_path', 'fit', 'get_metadata_routing', 'get_params', 'predict', 'predict_log_proba', 'predict_proba', 'score', 'set_fit_request', 'set_params', 'set_score_request']
+    class RandomForestRegressor: ['apply', 'decision_path', 'fit', 'get_metadata_routing', 'get_params', 'predict', 'score', 'set_fit_request', 'set_params', 'set_score_request']
+    class Ridge: ['fit', 'get_metadata_routing', 'get_params', 'predict', 'score', 'set_fit_request', 'set_params', 'set_score_request']
+    class RidgeCV: ['fit', 'get_metadata_routing', 'get_params', 'predict', 'score', 'set_fit_request', 'set_params', 'set_score_request']
+    class SpatialBlockCV: ['cross_val_score', 'split']
+    class StackingRegressor: ['fit', 'fit_transform', 'get_feature_names_out', 'get_metadata_routing', 'get_params', 'predict', 'score', 'set_output', 'set_params', 'set_score_request', 'transform']
+    class StandardScaler: ['fit', 'fit_transform', 'get_feature_names_out', 'get_metadata_routing', 'get_params', 'inverse_transform', 'partial_fit', 'set_fit_request', 'set_inverse_transform_request', 'set_output', 'set_params', 'set_partial_fit_request', 'set_transform_request', 'transform']
+    class TabPFNWrapper: ['fit', 'predict', 'train_species']
+    class datetime: ['astimezone', 'combine', 'ctime', 'date', 'dst', 'fromisocalendar', 'fromisoformat', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'now', 'replace', 'strftime', 'strptime', 'time', 'timestamp', 'timetuple', 'timetz', 'today', 'toordinal', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday']
+    class timezone: ['dst', 'fromutc', 'tzname', 'utcoffset']
+    functions: ['cross_val_predict', 'mean_squared_error', 'r2_score']
+    constants: ['CPUE_CAPS', 'HAS_CATBOOST', 'HAS_LGB', 'HAS_SKLEARN', 'HAS_XGB']
+
+  [engine.species_params]
+    functions: ['get_species', 'list_species']
+    constants: ['DVM_PARAMS', 'FORAGE_PARAMS', 'KUROSHIO_SPECIES_AFFINITY', 'SPECIES', 'Z20_PREFS']
+
+  [engine.wave_fetcher]
+    class Any: []
+    class BaseFetcher: ['fetch_with_cascade', 'get_health_report', 'get_recent_log']
+    class CascadeResult: []
+    class DataSource: []
+    class WaveFetcher: ['fetch_wave_height', 'fetch_with_cascade', 'get_health_report', 'get_recent_log']
+    constants: ['CLIM_WAVE_HEIGHT', 'ERDDAP_MIRRORS', 'WW3_DATASETS']
+
+  [engine.weather_fetcher]
+    class Any: []
+    class BaseFetcher: ['fetch_with_cascade', 'get_health_report', 'get_recent_log']
+    class CascadeResult: []
+    class DataSource: []
+    class WeatherFetcher: ['fetch_marine_weather', 'fetch_with_cascade', 'get_health_report', 'get_recent_log']
+    class datetime: ['astimezone', 'combine', 'ctime', 'date', 'dst', 'fromisocalendar', 'fromisoformat', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'now', 'replace', 'strftime', 'strptime', 'time', 'timestamp', 'timetuple', 'timetz', 'today', 'toordinal', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday']
+    class timezone: ['dst', 'fromutc', 'tzname', 'utcoffset']
+    constants: ['CLIM_PRECIPITATION', 'CLIM_PRESSURE', 'CLIM_WAVE_HEIGHT']
+
+=== NotImplementedError SCAN ===
+Total: 39 occurrences in 12 files
+  deep_scan_v2.py: 3 times (lines [188, 189, 197])
+  engine\diffusion_inpainter.py: 3 times (lines [157, 176, 186])
+  engine\edge\model_compressor.py: 4 times (lines [83, 114, 140, 159])
+  engine\fm\fishing_agent.py: 1 times (lines [347])
+  engine\fm\llm_finetuner.py: 3 times (lines [142, 220, 258])
+  engine\fm\rag_engine.py: 3 times (lines [139, 227, 258])
+  engine\genetic_optimizer.py: 2 times (lines [321, 392])
+  engine\ml\federated_trainer.py: 4 times (lines [142, 154, 205, 213])
+  engine\ml\imitation_learner.py: 2 times (lines [137, 153])
+  engine\ml\ssl_pretrainer.py: 1 times (lines [249])
+  engine\multi_agent\fleet_coordinator.py: 1 times (lines [158])
+  engine\training_orchestrator.py: 12 times (lines [194, 239, 275, 284, 293, 306, 320, 328, 334, 340, 348, 356])
+
+=== SYNTAX ERRORS ===
+  engine\data_fetcher_v2.py:517 -- unexpected indent
+  engine\thermocline_fetcher.py:377 -- unexpected indent
+  engine\satellite\historical_fetcher.py:72 -- expected an indented block after 'try' statement on line 71
+
+=== ENGINE IMPORT TEST ===
+CuPy not found, falling back to NumPy.
+Pass: 124/130 (95.4%)
+Failures:
+  engine.data_fetcher_v2: IndentationError: unexpected indent (data_fetcher_v2.py, line 517)
+  engine.diffusion_inpainter: NameError: name 'nn' is not defined
+  engine.ml.imitation_learner: NameError: name 'nn' is not defined
+  engine.ml.ssl_pretrainer: NameError: name 'nn' is not defined
+  engine.satellite.historical_fetcher: IndentationError: expected an indented block after 'try' statement on line 71 (historical_fetcher.
+  engine.thermocline_fetcher: IndentationError: unexpected indent (thermocline_fetcher.py, line 377)
+
+=== DEPLOY FILES ===
+  Dockerfile: 3.2 KB
+  Dockerfile.production: 3.5 KB
+  docker-compose.yml: 0.6 KB
+  docker-compose.production.yml: 1.1 KB
+  requirements.txt: 1.5 KB
+  .env.example: 2.2 KB
+  deploy/nginx-oceanmaster.conf: 1.9 KB
+  deploy/oceanmaster.service: 0.8 KB
+
+=== TOTAL PROJECT SIZE: 0.42 GB ===
+
+=== REQUIREMENTS.TXT ===

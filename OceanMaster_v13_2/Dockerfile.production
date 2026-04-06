@@ -1,0 +1,96 @@
+# OceanMaster v15.3 -- Production Image  # [v13.2] version bump
+# Multi-stage build, non-root user, selective COPY
+#
+# Build:   docker build -f Dockerfile.production -t oceanmaster:13.2-prod .
+# Run:     docker run -p 8000:8000 --env-file .env oceanmaster:13.2-prod
+#
+# WARNING: SECURITY: .env is NOT baked into the image.
+#    You MUST provide it at runtime via --env-file or docker-compose env_file.
+
+# ==================================================
+# Stage 1: Builder -- install dependencies
+# ==================================================
+# [v13.2-P3] Pin base image digest to prevent supply chain attacks.
+# Update digest after verifying: docker pull python:3.11-slim && docker inspect --format='{{index .RepoDigests 0}}' python:3.11-slim
+FROM python:3.11-slim@sha256:fba6f3b73795df99960f4269b297420bdbe01a8631fc31ea3f121f2486d332d0 AS builder
+
+WORKDIR /build
+
+# System deps for netCDF4 / scipy / numpy / lightgbm
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libhdf5-dev \
+    libnetcdf-dev \
+    cmake \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+
+# ==================================================
+# Stage 2: Runtime -- minimal image
+# ==================================================
+FROM python:3.11-slim@sha256:fba6f3b73795df99960f4269b297420bdbe01a8631fc31ea3f121f2486d332d0 AS runtime
+
+LABEL maintainer="OceanMaster <info@oceanmaster.tw>"
+LABEL version="13.2"
+LABEL description="AI-Powered Tuna Fishing Ground Prediction System"
+
+# Security: non-root user
+RUN useradd --create-home --shell /bin/bash appuser
+
+WORKDIR /home/appuser/app
+
+# Runtime deps only (no build-essential)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libhdf5-serial-dev \
+    libnetcdf-dev \
+    libgomp1 \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python packages from builder
+COPY --from=builder /install /usr/local
+
+# Application code -- selective COPY (no tests, output, raw data, etc.)
+COPY engine/ engine/
+COPY web/ web/
+COPY models/ models/
+COPY pipeline/ pipeline/
+COPY ml_system/ ml_system/
+COPY static/ static/
+COPY data/ data/
+COPY config.py .
+COPY web_server.py .
+COPY main_v10_3.py .
+COPY train_and_validate.py .
+COPY cron_cleanup_pipeline.py .
+# WARNING: [v12-phase11-security] .env is NOT copied into the image.
+# [v15.3] Pre-computed pipeline output (hotspots.json) for cold-start
+COPY output/ output/
+# Credentials must be injected at runtime via:
+#   docker run --env-file .env ...
+#   or docker-compose env_file: [.env]
+
+# Necessary directories
+RUN mkdir -p output data/cache data/woa_do_cache data/wcpfc \
+    && chown -R appuser:appuser /home/appuser/app
+
+# Environment
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/home/appuser/app \
+    TZ=Asia/Taipei \
+    LOG_LEVEL=INFO
+
+# Switch to non-root user
+USER appuser
+
+EXPOSE 8000
+
+# Health check -- verify server returns valid JSON
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 --start-period=30s \
+    CMD curl -sf http://localhost:8000/health | python -c "import sys,json; d=json.load(sys.stdin); assert d.get('status') in ('healthy','stale','degraded')" || exit 1
+
+# [v13.2-P3] MUST use --workers 1 to ensure in-process rate limiter and
+# semaphore work correctly. Multi-worker needs Redis-backed rate limit.
+CMD ["python", "-m", "uvicorn", "web_server:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]

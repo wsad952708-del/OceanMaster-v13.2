@@ -1,0 +1,198 @@
+{
+  "test_date": "2026-03-03T18:53:03.549373+00:00",
+  "gfw_records": 34031,
+  "grid_cells": 5079,
+  "training_samples": 5079,
+  "feature_count": 12,
+  "feature_names": [
+    "sst",
+    "chl",
+    "ssh",
+    "eke",
+    "current_speed",
+    "month_sin",
+    "month_cos",
+    "sst_chl_interaction",
+    "bathy_depth",
+    "bathy_slope",
+    "bathy_dist_to_seamount",
+    "bathy_dist_to_shelf_break"
+  ],
+  "feature_coverage": {
+    "sst": "100%",
+    "chl": "100%",
+    "ssh": "100%",
+    "eke": "100%",
+    "current_speed": "100%",
+    "month_sin": "100%",
+    "month_cos": "100%",
+    "sst_chl_interaction": "100%",
+    "bathy_depth": "100%",
+    "bathy_slope": "100%",
+    "bathy_dist_to_seamount": "100%",
+    "bathy_dist_to_shelf_break": "100%"
+  },
+  "models_trained": {
+    "yellowfin": {
+      "rmse": 0.07336722333318357,
+      "r2": 0.7573909241460474,
+      "n_samples": 5079,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "bathy_depth",
+          "importance": 0.4674559514409202
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.21996370468411422
+        },
+        {
+          "name": "bathy_dist_to_shelf_break",
+          "importance": 0.09905553585450297
+        },
+        {
+          "name": "bathy_dist_to_seamount",
+          "importance": 0.07437056743142126
+        },
+        {
+          "name": "month_cos",
+          "importance": 0.03507576605627705
+        }
+      ],
+      "status": "trained"
+    },
+    "bigeye": {
+      "rmse": 0.07336722333318357,
+      "r2": 0.7573909241460474,
+      "n_samples": 5079,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "bathy_depth",
+          "importance": 0.4674559514409202
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.21996370468411422
+        },
+        {
+          "name": "bathy_dist_to_shelf_break",
+          "importance": 0.09905553585450297
+        },
+        {
+          "name": "bathy_dist_to_seamount",
+          "importance": 0.07437056743142126
+        },
+        {
+          "name": "month_cos",
+          "importance": 0.03507576605627705
+        }
+      ],
+      "status": "trained"
+    },
+    "skipjack": {
+      "rmse": 0.07336722333318357,
+      "r2": 0.7573909241460474,
+      "n_samples": 5079,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "bathy_depth",
+          "importance": 0.4674559514409202
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.21996370468411422
+        },
+        {
+          "name": "bathy_dist_to_shelf_break",
+          "importance": 0.09905553585450297
+        },
+        {
+          "name": "bathy_dist_to_seamount",
+          "importance": 0.07437056743142126
+        },
+        {
+          "name": "month_cos",
+          "importance": 0.03507576605627705
+        }
+      ],
+      "status": "trained"
+    },
+    "albacore": {
+      "rmse": 0.07336722333318357,
+      "r2": 0.7573909241460474,
+      "n_samples": 5079,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "bathy_depth",
+          "importance": 0.4674559514409202
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.21996370468411422
+        },
+        {
+          "name": "bathy_dist_to_shelf_break",
+          "importance": 0.09905553585450297
+        },
+        {
+          "name": "bathy_dist_to_seamount",
+          "importance": 0.07437056743142126
+        },
+        {
+          "name": "month_cos",
+          "importance": 0.03507576605627705
+        }
+      ],
+      "status": "trained"
+    }
+  },
+  "spatial_cv": {
+    "mean_r2": -5.694243853539487,
+    "std_r2": 8.274381025244942,
+    "n_folds": 6,
+    "per_fold": [
+      -16.26063408077658,
+      -18.439952212805473,
+      0.3856747039478655,
+      -0.6164797300338445,
+      0.18726927277842365,
+      0.5786589256526844
+    ]
+  },
+  "temporal_holdout": {
+    "r2": 0.513808192850721,
+    "rmse": 0.11523852292712804,
+    "train_months": "Jan-Feb",
+    "test_months": "Mar",
+    "train_n": 3340,
+    "test_n": 1739
+  },
+  "obis_validation": {},
+  "physical_sanity": {
+    "sst_range_ok": "100%",
+    "chl_range_ok": "100%",
+    "non_zero_effort": "100%",
+    "passed": true
+  },
+  "status": "READY_FOR_PRODUCTION_DATA",
+  "elapsed_seconds": 224.4,
+  "pkl_files": [
+    "models\\ml12_stacking_albacore.pkl",
+    "models\\ml12_stacking_bigeye.pkl",
+    "models\\ml12_stacking_skipjack.pkl",
+    "models\\ml12_stacking_yellowfin.pkl",
+    "models\\scaler_albacore.pkl",
+    "models\\scaler_bigeye.pkl",
+    "models\\scaler_skipjack.pkl",
+    "models\\scaler_yellowfin.pkl",
+    "models\\stacking_albacore.pkl",
+    "models\\stacking_bigeye.pkl",
+    "models\\stacking_skipjack.pkl",
+    "models\\stacking_yellowfin.pkl"
+  ],
+  "pkl_count": 12
+}

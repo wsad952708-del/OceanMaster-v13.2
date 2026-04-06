@@ -1,0 +1,333 @@
+{
+  "scan_time": "2026-04-02T00:09:47.552967",
+  "python_version": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "phases": {
+    "syntax": {
+      "total": 208,
+      "pass": 205,
+      "fail": 3,
+      "failures": [
+        {
+          "file": "engine\\data_fetcher_v2.py",
+          "line": 517,
+          "msg": "unexpected indent"
+        },
+        {
+          "file": "engine\\thermocline_fetcher.py",
+          "line": 377,
+          "msg": "unexpected indent"
+        },
+        {
+          "file": "engine\\satellite\\historical_fetcher.py",
+          "line": 72,
+          "msg": "expected an indented block after 'try' statement on line 71"
+        }
+      ]
+    },
+    "import": {
+      "total": 130,
+      "pass": 124,
+      "fail": 6,
+      "failures": [
+        {
+          "module": "engine.data_fetcher_v2",
+          "error": "IndentationError: unexpected indent (data_fetcher_v2.py, line 517)"
+        },
+        {
+          "module": "engine.diffusion_inpainter",
+          "error": "NameError: name 'nn' is not defined"
+        },
+        {
+          "module": "engine.ml.imitation_learner",
+          "error": "NameError: name 'nn' is not defined"
+        },
+        {
+          "module": "engine.ml.ssl_pretrainer",
+          "error": "NameError: name 'nn' is not defined"
+        },
+        {
+          "module": "engine.satellite.historical_fetcher",
+          "error": "IndentationError: expected an indented block after 'try' statement on line 71 (historical_fetcher.py, line 72)"
+        },
+        {
+          "module": "engine.thermocline_fetcher",
+          "error": "IndentationError: unexpected indent (thermocline_fetcher.py, line 377)"
+        }
+      ]
+    },
+    "classes": {
+      "total": 11,
+      "pass": 4,
+      "fail": 7,
+      "failures": [
+        {
+          "class": "engine.algorithms.OceanAlgorithms",
+          "error": "AttributeError: module 'engine.algorithms' has no attribute 'OceanAlgorithms'"
+        },
+        {
+          "class": "engine.hsi_models.HSICalculator",
+          "error": "AttributeError: module 'engine.hsi_models' has no attribute 'HSICalculator'"
+        },
+        {
+          "class": "engine.safety_checker.SafetyChecker",
+          "error": "AttributeError: module 'engine.safety_checker' has no attribute 'SafetyChecker'"
+        },
+        {
+          "class": "engine.thermocline_fetcher.ThermoclineFetcher",
+          "error": "IndentationError: unexpected indent (thermocline_fetcher.py, line 377)"
+        },
+        {
+          "class": "engine.gebco_features.GEBCOFeatureExtractor",
+          "error": "AttributeError: module 'engine.gebco_features' has no attribute 'GEBCOFeatureExtractor'"
+        },
+        {
+          "class": "engine.lunar_model.LunarFishingModel",
+          "error": "AttributeError: module 'engine.lunar_model' has no attribute 'LunarFishingModel'"
+        },
+        {
+          "class": "engine.ai_fusion.AIFusionEngine",
+          "error": "AttributeError: module 'engine.ai_fusion' has no attribute 'AIFusionEngine'"
+        }
+      ]
+    },
+    "models": {
+      "pt_files": 5,
+      "torch_available": false,
+      "details": [
+        {
+          "file": "models\\cloud_removal_v18.pt",
+          "size_mb": 0.0
+        },
+        {
+          "file": "models\\convlstm_sst_v18.pt",
+          "size_mb": 0.1
+        },
+        {
+          "file": "models\\transfish_v18.pt",
+          "size_mb": 0.3
+        },
+        {
+          "file": "models\\unet_fishing_v18.pt",
+          "size_mb": 0.4
+        },
+        {
+          "file": "models\\checkpoints_r2\\r2test_best.pt",
+          "size_mb": 118.5
+        }
+      ]
+    },
+    "stacking_e2e": {
+      "status": "fail",
+      "error": "ImportError: cannot import name 'StackingEnsemblePredictor' from 'engine.ml.stacking_ensemble' (C:\\Users\\user\\Desktop\\好像快好了\\OceanMaster_v13_2\\engine\\ml\\stacking_ensemble.py)"
+    },
+    "api": {
+      "routes": 27,
+      "endpoints": [
+        {
+          "method": "get",
+          "path": "/"
+        },
+        {
+          "method": "get",
+          "path": "/dashboard.js"
+        },
+        {
+          "method": "get",
+          "path": "/health"
+        },
+        {
+          "method": "get",
+          "path": "/api/hotspots"
+        },
+        {
+          "method": "get",
+          "path": "/api/hotspots/public"
+        },
+        {
+          "method": "get",
+          "path": "/api/analyze"
+        },
+        {
+          "method": "get",
+          "path": "/api/status"
+        },
+        {
+          "method": "get",
+          "path": "/api/sea_conditions"
+        },
+        {
+          "method": "get",
+          "path": "/api/sea-conditions"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/explain"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/backtest"
+        },
+        {
+          "method": "get",
+          "path": "/api/typhoon-status"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/food_chain"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/squid_jigging_forecast"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/dvm_profile"
+        },
+        {
+          "method": "post",
+          "path": "/api/v1/report_catch"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/catch_stats"
+        },
+        {
+          "method": "get",
+          "path": "/api/system-health"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/food_chain_timeline"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/feeding_windows"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/fish_movement"
+        },
+        {
+          "method": "get",
+          "path": "/dashboard/v2"
+        },
+        {
+          "method": "get",
+          "path": "/dashboard_v2.js"
+        },
+        {
+          "method": "get",
+          "path": "/dashboard_v2.css"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/weekly_briefing"
+        },
+        {
+          "method": "get",
+          "path": "/api/v1/sat_briefing"
+        },
+        {
+          "method": "get",
+          "path": "/map.html"
+        }
+      ]
+    },
+    "secrets": {
+      "env_tracked": false,
+      "env_in_history": false,
+      "gitignore_has_env": true
+    },
+    "not_implemented": {
+      "total": 43,
+      "files": 13,
+      "details": {
+        "count_stats.py": [
+          31,
+          51
+        ],
+        "dynamic_verification.py": [
+          357,
+          359,
+          368,
+          376,
+          547
+        ],
+        "engine\\diffusion_inpainter.py": [
+          157,
+          176,
+          186
+        ],
+        "engine\\genetic_optimizer.py": [
+          321,
+          392
+        ],
+        "engine\\training_orchestrator.py": [
+          194,
+          239,
+          275,
+          284,
+          293,
+          306,
+          320,
+          328,
+          334,
+          340,
+          348,
+          356
+        ],
+        "engine\\edge\\model_compressor.py": [
+          83,
+          114,
+          140,
+          159
+        ],
+        "engine\\fm\\fishing_agent.py": [
+          347
+        ],
+        "engine\\fm\\llm_finetuner.py": [
+          142,
+          220,
+          258
+        ],
+        "engine\\fm\\rag_engine.py": [
+          139,
+          227,
+          258
+        ],
+        "engine\\ml\\federated_trainer.py": [
+          142,
+          154,
+          205,
+          213
+        ],
+        "engine\\ml\\imitation_learner.py": [
+          137,
+          153
+        ],
+        "engine\\ml\\ssl_pretrainer.py": [
+          249
+        ],
+        "engine\\multi_agent\\fleet_coordinator.py": [
+          158
+        ]
+      }
+    },
+    "science": {
+      "total": 4,
+      "pass": 1,
+      "details": {
+        "algorithms": "fail",
+        "hsi": "fail",
+        "species_params": "pass",
+        "thermocline": "fail"
+      }
+    },
+    "data": {
+      "csv": 36,
+      "nc": 2,
+      "npz": 146,
+      "total_mb": 278.1
+    }
+  }
+}

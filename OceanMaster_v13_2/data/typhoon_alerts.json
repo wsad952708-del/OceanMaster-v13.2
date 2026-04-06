@@ -1,0 +1,67 @@
+{
+  "alerts": [
+    {
+      "typhoon_id": "WPUNKNOWN26",
+      "name": "UNNAMED",
+      "lat": -90.0,
+      "lon": -9026.0,
+      "intensity_kt": 50,
+      "category": 0,
+      "timestamp": "2026-03-03T21:26:52.864170+00:00",
+      "basin": "WP",
+      "forecast_track": [
+        {
+          "hour": 0,
+          "lat": -90.0,
+          "lon": -9026.0,
+          "intensity_kt": 50,
+          "category": 0
+        },
+        {
+          "hour": 12,
+          "lat": -89.05,
+          "lon": -9027.3,
+          "intensity_kt": 47,
+          "category": 0
+        },
+        {
+          "hour": 24,
+          "lat": -88.1,
+          "lon": -9028.6,
+          "intensity_kt": 45,
+          "category": 0
+        },
+        {
+          "hour": 36,
+          "lat": -87.15,
+          "lon": -9029.9,
+          "intensity_kt": 42,
+          "category": 0
+        },
+        {
+          "hour": 48,
+          "lat": -86.2,
+          "lon": -9031.2,
+          "intensity_kt": 40,
+          "category": 0
+        },
+        {
+          "hour": 60,
+          "lat": -85.25,
+          "lon": -9032.5,
+          "intensity_kt": 38,
+          "category": 0
+        },
+        {
+          "hour": 72,
+          "lat": -84.3,
+          "lon": -9033.8,
+          "intensity_kt": 36,
+          "category": 0
+        }
+      ],
+      "source": "JTWC"
+    }
+  ],
+  "timestamp": "2026-03-03T21:26:52.864553+00:00"
+}
