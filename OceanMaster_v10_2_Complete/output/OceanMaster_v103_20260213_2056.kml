@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>🎣 OceanMaster v10.2 漁場預測</name>
+<description>生成: 2026-02-13 20:58 UTC
+⚠️ 本預測僅供參考，實際作業請依據船長經驗和即時觀測</description>
+<Style id="s_best"><IconStyle><scale>1.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_good"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_fair"><IconStyle><scale>0.9</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_low"><IconStyle><scale>0.7</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_area"><PolyStyle><color>20ffffff</color><outline>1</outline></PolyStyle><LineStyle><color>ff0088ff</color><width>1</width></LineStyle></Style>
+<LookAt><longitude>127.5</longitude><latitude>21.5</latitude><range>2500000</range></LookAt>
+<Folder><name>🎯 v10.2 漁場熱點</name><open>1</open>
+<description>Φ(Deutsch2015真實計算) + SEAPODYM棲息地 + 營養鏈
+Φ不截斷 + EEZ地理校正 + HSI幾何平均
+生成: 2026-02-13 20:58 UTC</description>
+<Folder><name>鰹魚</name>
+<Placemark><name>#1 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 7.77 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -5m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 554 nm (55.4hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 36%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 33%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 30%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,16.0,0</coordinates></Point></Placemark>
+<Placemark><name>#2 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 9.61 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 10m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 524 nm (52.4hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 38%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 31%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 29%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,16.5,0</coordinates></Point></Placemark>
+<Placemark><name>#3 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 9.39 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 1094m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 494 nm (49.4hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 38%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 31%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 30%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,17.0,0</coordinates></Point></Placemark>
+<Placemark><name>#4 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 9.01 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1182 mgC/m²/d | DO: 4.6 ml/L
+🏔️ 深度: 824m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 475 nm (47.5hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 43%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 43%
+  3. 🍤 餌料可及性 (差) → 貢獻 12%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>122.5,17.25,0</coordinates></Point></Placemark>
+<Placemark><name>#5 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 9.39 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 961m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 465 nm (46.5hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 38%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 31%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 30%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,17.5,0</coordinates></Point></Placemark>
+<Placemark><name>#6 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.93 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1193 mgC/m²/d | DO: 4.6 ml/L
+🏔️ 深度: 482m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 444 nm (44.4hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 43%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 43%
+  3. 🍤 餌料可及性 (差) → 貢獻 12%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>122.25,17.75,0</coordinates></Point></Placemark>
+<Placemark><name>#7 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 9.61 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1519 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 564m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 435 nm (43.5hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 42%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 38%
+  3. 🍤 餌料可及性 (差) → 貢獻 17%
+  4. 🌊 穩定鋒面 (差) → 貢獻 3%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,18.0,0</coordinates></Point></Placemark>
+<Placemark><name>#8 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 9.19 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1888 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 3183m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 406 nm (40.6hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 39%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 38%
+  3. 🍤 餌料可及性 (良) → 貢獻 20%
+  4. 🌊 穩定鋒面 (良) → 貢獻 4%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,18.5,0</coordinates></Point></Placemark>
+<Placemark><name>#9 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.07 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 2215 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -322m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 401 nm (40.1hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 40%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 36%
+  3. 🍤 餌料可及性 (良) → 貢獻 21%
+  4. 🌊 穩定鋒面 (差) → 貢獻 3%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.75,18.5,0</coordinates></Point></Placemark>
+<Placemark><name>#10 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.78 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1291 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 101m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 398 nm (39.8hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 42%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 42%
+  3. 🍤 餌料可及性 (差) → 貢獻 14%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>121.75,18.5,0</coordinates></Point></Placemark>
+<Placemark><name>#11 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.52 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1294 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: 29m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 399 nm (39.9hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 42%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 42%
+  3. 🍤 餌料可及性 (差) → 貢獻 15%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>122.25,18.5,0</coordinates></Point></Placemark>
+<Placemark><name>#12 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.39 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1651 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 2337m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 377 nm (37.7hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 41%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 40%
+  3. 🍤 餌料可及性 (差) → 貢獻 18%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,19.0,0</coordinates></Point></Placemark>
+<Placemark><name>#13 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.19 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1761 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 1615m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 325 nm (32.5hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 43%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 40%
+  3. 🍤 餌料可及性 (差) → 貢獻 16%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>121.0,19.75,0</coordinates></Point></Placemark>
+<Placemark><name>#14 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.93 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 2147 mgC/m²/d | DO: 4.6 ml/L
+🏔️ 深度: 2914m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 298 nm (29.8hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 43%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 43%
+  3. 🍤 餌料可及性 (差) → 貢獻 14%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.75,20.25,0</coordinates></Point></Placemark>
+<Placemark><name>#15 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.07 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -589m
+⚓ 水域: 台灣EEZ
+EEZ驗證: 台灣籍漁船免許可
+📍 距離: 181 nm (18.1hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 38%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 32%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 29%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.75,22.25,0</coordinates></Point></Placemark>
+<Placemark><name>#16 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.07 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -5m
+⚓ 水域: 台灣EEZ
+EEZ驗證: 台灣籍漁船免許可
+📍 距離: 127 nm (12.7hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 38%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 31%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 28%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.25,23.5,0</coordinates></Point></Placemark>
+<Placemark><name>#17 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.07 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -16m
+⚓ 水域: 台灣EEZ
+EEZ驗證: 台灣籍漁船免許可
+📍 距離: 96 nm (9.6hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 37%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 31%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 28%
+  4. 🌊 穩定鋒面 (良) → 貢獻 3%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>120.5,24.0,0</coordinates></Point></Placemark>
+<Placemark><name>#18 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.00 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1514 mgC/m²/d | DO: 4.7 ml/L
+🏔️ 深度: 556m
+⚓ 水域: 台灣EEZ
+EEZ驗證: 台灣籍漁船免許可
+📍 距離: 47 nm (4.7hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 44%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 39%
+  3. 🍤 餌料可及性 (差) → 貢獻 16%
+  4. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>122.25,24.5,0</coordinates></Point></Placemark>
+<Placemark><name>#19 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.07 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -12m
+⚓ 水域: 台灣EEZ
+EEZ驗證: 台灣籍漁船免許可
+📍 距離: 23 nm (2.3hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 38%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 32%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 29%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>121.75,24.75,0</coordinates></Point></Placemark>
+<Placemark><name>#20 鰹魚 (100%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 100% ═══
+🧬 代謝指數Φ: 8.07 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5000 mgC/m²/d | DO: 4.8 ml/L
+🏔️ 深度: -93m
+⚓ 水域: 台灣EEZ
+EEZ驗證: 台灣籍漁船免許可
+📍 距離: 28 nm (2.8hr)
+📊 【鰹魚（正鰹）】評分 100% — 主要優勢：
+  1. 🍤 餌料可及性 (優) → 貢獻 37%
+  2. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 31%
+  3. 🌡️ 水溫適宜度 (優) → 貢獻 28%
+  4. 🌊 穩定鋒面 (優) → 貢獻 4%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>121.25,25.0,0</coordinates></Point></Placemark>
+</Folder>
+</Folder>
+<Folder><name>分析範圍</name><Placemark><styleUrl>#s_area</styleUrl>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>
+120.0,15.0,0 135.0,15.0,0 135.0,28.0,0 120.0,28.0,0 120.0,15.0,0
+</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder>
+</Document>
+</kml>

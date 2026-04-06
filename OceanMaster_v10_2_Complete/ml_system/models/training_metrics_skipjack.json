@@ -1,0 +1,129 @@
+{
+  "species": "skipjack",
+  "n_samples": 106,
+  "n_features": 26,
+  "train_r2": 0.9915831587342036,
+  "train_rmse": 1.7403943695670605,
+  "cv_mae": 3.6837318870627116,
+  "cv_mae_std": 0.43812101460161007,
+  "cv_r2": 0.9299191017617796,
+  "cv_r2_std": 0.03381925577659648,
+  "feature_importance": [
+    {
+      "name": "eddy_strength",
+      "importance": 0.17286419793134167
+    },
+    {
+      "name": "lat_norm",
+      "importance": 0.14662219343571253
+    },
+    {
+      "name": "lat_lon_interaction",
+      "importance": 0.13500168711914087
+    },
+    {
+      "name": "current_speed",
+      "importance": 0.12764346845161725
+    },
+    {
+      "name": "lon_norm",
+      "importance": 0.08870549635252226
+    },
+    {
+      "name": "front_eddy_interaction",
+      "importance": 0.08605437599577233
+    },
+    {
+      "name": "ssh",
+      "importance": 0.08493763395645873
+    },
+    {
+      "name": "sst_chl_interaction",
+      "importance": 0.04686850751164371
+    },
+    {
+      "name": "hsi",
+      "importance": 0.038530108246237975
+    },
+    {
+      "name": "phi_hsi_product",
+      "importance": 0.032504345260642435
+    },
+    {
+      "name": "phi_over_crit",
+      "importance": 0.013800850929812638
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.007584085635368102
+    },
+    {
+      "name": "phi",
+      "importance": 0.006036760813348629
+    },
+    {
+      "name": "do",
+      "importance": 0.0052878109953073665
+    },
+    {
+      "name": "chl",
+      "importance": 0.004084811058522252
+    },
+    {
+      "name": "month_cos",
+      "importance": 0.0012877937853632104
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.0008492987108042679
+    },
+    {
+      "name": "month_sin",
+      "importance": 0.0004298231229982472
+    },
+    {
+      "name": "sst",
+      "importance": 0.0004122032065667846
+    },
+    {
+      "name": "sst_squared",
+      "importance": 0.0003136376177195043
+    },
+    {
+      "name": "thermal_stress",
+      "importance": 0.00011083822892906151
+    },
+    {
+      "name": "front_strength",
+      "importance": 7.00716341702648e-05
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.0
+    },
+    {
+      "name": "region_kuroshio",
+      "importance": 0.0
+    },
+    {
+      "name": "region_warm_pool",
+      "importance": 0.0
+    },
+    {
+      "name": "region_subtropical",
+      "importance": 0.0
+    }
+  ],
+  "timestamp": "2026-02-13T18:34:55.736992",
+  "config": {
+    "species": "skipjack",
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "random_state": 42,
+    "n_estimators_rf": 200,
+    "n_estimators_gbr": 150,
+    "max_depth_rf": 12,
+    "max_depth_gbr": 6,
+    "learning_rate_gbr": 0.05
+  }
+}

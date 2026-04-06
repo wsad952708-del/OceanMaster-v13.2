@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OceanMaster v8.0 - 漁場預測地圖</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; background: #0a1628; color: #e0e8f0; }
+
+#map { width: 100%; height: 100vh; }
+
+.panel {
+  position: absolute; top: 12px; left: 12px; z-index: 1000;
+  background: rgba(10, 22, 40, 0.95); border: 1px solid #1e3a5f;
+  border-radius: 10px; padding: 16px; width: 320px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5); backdrop-filter: blur(8px);
+  max-height: calc(100vh - 24px); overflow-y: auto;
+}
+.panel h1 { font-size: 18px; color: #4fc3f7; margin-bottom: 4px; }
+.panel .subtitle { font-size: 12px; color: #78909c; margin-bottom: 12px; }
+
+.stat-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.stat-box {
+  flex: 1; background: rgba(30, 58, 95, 0.6); border-radius: 8px;
+  padding: 8px 10px; text-align: center;
+}
+.stat-box .val { font-size: 20px; font-weight: 700; color: #4fc3f7; }
+.stat-box .label { font-size: 10px; color: #90a4ae; }
+
+.species-filter { margin: 10px 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.species-btn {
+  padding: 5px 10px; border-radius: 16px; border: 1px solid #1e3a5f;
+  background: rgba(30, 58, 95, 0.4); color: #b0bec5; cursor: pointer;
+  font-size: 12px; transition: all 0.2s;
+}
+.species-btn.active { background: rgba(79, 195, 247, 0.3); border-color: #4fc3f7; color: #fff; }
+.species-btn:hover { border-color: #4fc3f7; }
+
+.hotspot-list { margin-top: 10px; }
+.hotspot-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px; margin: 4px 0; border-radius: 8px;
+  background: rgba(30, 58, 95, 0.3); cursor: pointer;
+  transition: background 0.2s;
+}
+.hotspot-item:hover { background: rgba(79, 195, 247, 0.15); }
+.hotspot-rank {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 13px; flex-shrink: 0;
+}
+.rank-high { background: #e53935; color: #fff; }
+.rank-med { background: #ff9800; color: #fff; }
+.rank-low { background: #fdd835; color: #333; }
+.hotspot-info { flex: 1; }
+.hotspot-info .name { font-size: 13px; font-weight: 600; }
+.hotspot-info .detail { font-size: 11px; color: #78909c; }
+.hotspot-score { font-size: 16px; font-weight: 700; }
+
+.legend {
+  position: absolute; bottom: 24px; right: 12px; z-index: 1000;
+  background: rgba(10, 22, 40, 0.92); border: 1px solid #1e3a5f;
+  border-radius: 8px; padding: 12px 14px;
+}
+.legend h3 { font-size: 12px; color: #78909c; margin-bottom: 6px; }
+.legend-item { display: flex; align-items: center; gap: 8px; margin: 3px 0; font-size: 12px; }
+.legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+
+.note {
+  margin-top: 12px; padding: 8px; background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3); border-radius: 6px;
+  font-size: 11px; color: #ffb74d;
+}
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="panel">
+  <h1>OceanMaster v8.0</h1>
+  <div class="subtitle">AI 漁場預測系統 | 模擬數據展示</div>
+  
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="val" id="total-hotspots">20</div>
+      <div class="label">漁場熱點</div>
+    </div>
+    <div class="stat-box">
+      <div class="val" id="best-score">100%</div>
+      <div class="label">最高評分</div>
+    </div>
+    <div class="stat-box">
+      <div class="val">4</div>
+      <div class="label">目標物種</div>
+    </div>
+  </div>
+
+  <div class="species-filter" id="species-filter">
+    <div class="species-btn active" data-species="all">全部</div>
+    <div class="species-btn active" data-species="bigeye">大目鮪</div>
+    <div class="species-btn active" data-species="skipjack">鰹魚</div>
+    <div class="species-btn active" data-species="yellowfin">黃鰭鮪</div>
+    <div class="species-btn active" data-species="squid">魷魚</div>
+  </div>
+
+  <div class="hotspot-list" id="hotspot-list"></div>
+
+  <div class="note">
+    ⚠ 此為模擬數據展示。部署到伺服器後接入真實 NOAA/HYCOM 數據，
+    熱點位置將反映實際海洋狀況。KML 檔案請用 Google Earth 或 OpenCPN 開啟。
+  </div>
+</div>
+
+<div class="legend">
+  <h3>圖例</h3>
+  <div class="legend-item"><div class="legend-dot" style="background:#e53935"></div> 最佳漁場 (>80%)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ff9800"></div> 良好漁場 (60-80%)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fdd835"></div> 一般漁場 (50-60%)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:rgba(79,195,247,0.3);border:1px solid #4fc3f7"></div> 分析範圍</div>
+</div>
+
+<script>
+const HOTSPOTS = [
+  {"lat":15.0,"lon":131.75,"score":1.0,"species":"skipjack","rank":1,"distance_nm":749.2,"travel_hours":74.9},
+  {"lat":15.0,"lon":131.75,"score":1.0,"species":"yellowfin","rank":1,"distance_nm":749.2,"travel_hours":74.9},
+  {"lat":15.0,"lon":127.25,"score":1.0,"species":"bigeye","rank":1,"distance_nm":916.9,"travel_hours":91.7},
+  {"lat":15.0,"lon":127.75,"score":1.0,"species":"bigeye","rank":2,"distance_nm":896.5,"travel_hours":89.7},
+  {"lat":15.0,"lon":126.25,"score":0.959,"species":"bigeye","rank":3,"distance_nm":958.7,"travel_hours":95.9},
+  {"lat":15.75,"lon":128.75,"score":0.944,"species":"bigeye","rank":4,"distance_nm":826.0,"travel_hours":82.6},
+  {"lat":15.25,"lon":125.0,"score":0.881,"species":"bigeye","rank":5,"distance_nm":1003.8,"travel_hours":100.4},
+  {"lat":15.25,"lon":129.0,"score":0.872,"species":"bigeye","rank":6,"distance_nm":836.7,"travel_hours":83.7},
+  {"lat":15.5,"lon":131.5,"score":0.853,"species":"bigeye","rank":7,"distance_nm":733.9,"travel_hours":73.4},
+  {"lat":16.0,"lon":130.5,"score":0.850,"species":"bigeye","rank":8,"distance_nm":747.3,"travel_hours":74.7},
+  {"lat":15.75,"lon":131.0,"score":0.832,"species":"bigeye","rank":9,"distance_nm":740.0,"travel_hours":74.0},
+  {"lat":17.5,"lon":126.5,"score":0.831,"species":"skipjack","rank":2,"distance_nm":861.1,"travel_hours":86.1},
+  {"lat":16.0,"lon":127.75,"score":0.824,"species":"bigeye","rank":10,"distance_nm":857.5,"travel_hours":85.8},
+  {"lat":16.75,"lon":125.75,"score":0.821,"species":"skipjack","rank":3,"distance_nm":919.5,"travel_hours":92.0},
+  {"lat":17.75,"lon":126.0,"score":0.812,"species":"yellowfin","rank":2,"distance_nm":876.8,"travel_hours":87.7},
+  {"lat":15.0,"lon":129.0,"score":0.811,"species":"yellowfin","rank":3,"distance_nm":847.2,"travel_hours":84.7},
+  {"lat":15.0,"lon":125.0,"score":0.802,"species":"yellowfin","rank":4,"distance_nm":1012.6,"travel_hours":101.3},
+  {"lat":17.25,"lon":125.75,"score":0.801,"species":"skipjack","rank":4,"distance_nm":903.7,"travel_hours":90.4},
+  {"lat":15.0,"lon":125.0,"score":0.774,"species":"skipjack","rank":5,"distance_nm":1012.6,"travel_hours":101.3},
+  {"lat":18.5,"lon":131.5,"score":0.772,"species":"yellowfin","rank":5,"distance_nm":604.8,"travel_hours":60.5}
+];
+
+const SPECIES_MAP = {
+  bigeye: { zh: '大目鮪', color: '#e53935', icon: '🐟' },
+  skipjack: { zh: '鰹魚', color: '#ff9800', icon: '🐟' },
+  yellowfin: { zh: '黃鰭鮪', color: '#4caf50', icon: '🐟' },
+  squid: { zh: '魷魚', color: '#ab47bc', icon: '🦑' },
+};
+
+// Initialize map
+const map = L.map('map', {
+  center: [20, 138],
+  zoom: 5,
+  zoomControl: false,
+});
+
+L.control.zoom({ position: 'topright' }).addTo(map);
+
+// Dark ocean tile
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; CartoDB',
+  maxZoom: 19,
+}).addTo(map);
+
+// Analysis area rectangle
+L.rectangle([[15, 125], [30, 155]], {
+  color: '#4fc3f7', weight: 1, fillColor: '#4fc3f7',
+  fillOpacity: 0.05, dashArray: '8 4',
+}).addTo(map);
+
+// Add hotspot markers
+const markers = [];
+let activeSpecies = new Set(['bigeye', 'skipjack', 'yellowfin', 'squid']);
+
+HOTSPOTS.forEach((h, idx) => {
+  const sp = SPECIES_MAP[h.species] || { zh: h.species, color: '#999', icon: '📍' };
+  const size = 12 + h.score * 16;
+  const opacity = 0.5 + h.score * 0.5;
+
+  const icon = L.divIcon({
+    className: '',
+    html: `<div style="
+      width:${size}px; height:${size}px; border-radius:50%;
+      background:${sp.color}; opacity:${opacity};
+      border: 2px solid rgba(255,255,255,0.7);
+      box-shadow: 0 0 ${size}px ${sp.color}80;
+      display:flex; align-items:center; justify-content:center;
+      font-size:${size*0.5}px; color:#fff; font-weight:700;
+    ">${h.rank}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size/2, size/2],
+  });
+
+  const marker = L.marker([h.lat, h.lon], { icon })
+    .bindPopup(`
+      <div style="font-family:'Segoe UI',sans-serif; min-width:200px;">
+        <div style="font-size:16px; font-weight:700; color:${sp.color}; margin-bottom:4px;">
+          #${h.rank} ${sp.zh}
+        </div>
+        <div style="font-size:22px; font-weight:700; margin:4px 0;">
+          ${Math.round(h.score * 100)}%
+        </div>
+        <hr style="border:none; border-top:1px solid #ddd; margin:6px 0;">
+        <div style="font-size:13px; line-height:1.6;">
+          <b>座標:</b> ${h.lat.toFixed(2)}°N, ${h.lon.toFixed(2)}°E<br>
+          <b>距離:</b> ${h.distance_nm.toFixed(0)} 海浬<br>
+          <b>航時:</b> ${h.travel_hours.toFixed(0)} 小時 (10節)<br>
+        </div>
+      </div>
+    `);
+  
+  marker._hotspot = h;
+  marker._idx = idx;
+  markers.push(marker);
+  marker.addTo(map);
+});
+
+// Build hotspot list
+function renderList() {
+  const list = document.getElementById('hotspot-list');
+  list.innerHTML = '';
+  
+  const filtered = HOTSPOTS.filter(h => activeSpecies.has(h.species));
+  
+  filtered.forEach((h, i) => {
+    const sp = SPECIES_MAP[h.species] || { zh: h.species, color: '#999' };
+    const rankClass = h.score >= 0.8 ? 'rank-high' : h.score >= 0.6 ? 'rank-med' : 'rank-low';
+    
+    const item = document.createElement('div');
+    item.className = 'hotspot-item';
+    item.innerHTML = `
+      <div class="hotspot-rank ${rankClass}">${i+1}</div>
+      <div class="hotspot-info">
+        <div class="name">${sp.zh}</div>
+        <div class="detail">${h.lat.toFixed(2)}°N ${h.lon.toFixed(2)}°E | ${h.distance_nm.toFixed(0)}nm</div>
+      </div>
+      <div class="hotspot-score" style="color:${sp.color}">${Math.round(h.score*100)}%</div>
+    `;
+    item.onclick = () => {
+      map.flyTo([h.lat, h.lon], 7);
+      const m = markers.find(mk => mk._hotspot === h);
+      if (m) m.openPopup();
+    };
+    list.appendChild(item);
+  });
+}
+
+// Species filter
+document.querySelectorAll('.species-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const sp = btn.dataset.species;
+    
+    if (sp === 'all') {
+      const allActive = document.querySelectorAll('.species-btn.active').length === 5;
+      document.querySelectorAll('.species-btn').forEach(b => {
+        if (allActive) {
+          b.classList.remove('active');
+          activeSpecies.clear();
+        } else {
+          b.classList.add('active');
+          activeSpecies = new Set(['bigeye', 'skipjack', 'yellowfin', 'squid']);
+        }
+      });
+    } else {
+      btn.classList.toggle('active');
+      if (activeSpecies.has(sp)) activeSpecies.delete(sp);
+      else activeSpecies.add(sp);
+    }
+    
+    // Update markers visibility
+    markers.forEach(m => {
+      if (activeSpecies.has(m._hotspot.species)) {
+        m.addTo(map);
+      } else {
+        map.removeLayer(m);
+      }
+    });
+    
+    renderList();
+  });
+});
+
+renderList();
+</script>
+</body>
+</html>

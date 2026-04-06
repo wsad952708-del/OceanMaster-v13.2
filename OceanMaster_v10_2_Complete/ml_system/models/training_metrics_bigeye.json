@@ -1,0 +1,129 @@
+{
+  "species": "bigeye",
+  "n_samples": 106,
+  "n_features": 26,
+  "train_r2": 0.9947052371066867,
+  "train_rmse": 0.594043160191495,
+  "cv_mae": 1.3286211513230637,
+  "cv_mae_std": 0.08715025271236315,
+  "cv_r2": 0.9548541597481632,
+  "cv_r2_std": 0.010711066429232077,
+  "feature_importance": [
+    {
+      "name": "lat_norm",
+      "importance": 0.6799368971424518
+    },
+    {
+      "name": "lon_norm",
+      "importance": 0.08085511213165175
+    },
+    {
+      "name": "month_cos",
+      "importance": 0.05806580929274662
+    },
+    {
+      "name": "sst_chl_interaction",
+      "importance": 0.05595549087817532
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.03374967303445053
+    },
+    {
+      "name": "chl",
+      "importance": 0.030248164552310705
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.025580599460081364
+    },
+    {
+      "name": "current_speed",
+      "importance": 0.015083605691365238
+    },
+    {
+      "name": "do",
+      "importance": 0.004348857014957991
+    },
+    {
+      "name": "eddy_strength",
+      "importance": 0.004158187231170475
+    },
+    {
+      "name": "phi_hsi_product",
+      "importance": 0.0028521514302369978
+    },
+    {
+      "name": "phi_over_crit",
+      "importance": 0.002436256150371374
+    },
+    {
+      "name": "phi",
+      "importance": 0.0019373854386725126
+    },
+    {
+      "name": "ssh",
+      "importance": 0.0012098035491839916
+    },
+    {
+      "name": "hsi",
+      "importance": 0.0008595266375161626
+    },
+    {
+      "name": "thermal_stress",
+      "importance": 0.0007610171873360954
+    },
+    {
+      "name": "sst_squared",
+      "importance": 0.0006735720121717492
+    },
+    {
+      "name": "sst",
+      "importance": 0.0006320835945591143
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.00019305537024673803
+    },
+    {
+      "name": "month_sin",
+      "importance": 0.0001429784685071113
+    },
+    {
+      "name": "front_eddy_interaction",
+      "importance": 0.0001246579561893759
+    },
+    {
+      "name": "lat_lon_interaction",
+      "importance": 0.00010532350548707251
+    },
+    {
+      "name": "front_strength",
+      "importance": 8.979227015993735e-05
+    },
+    {
+      "name": "region_kuroshio",
+      "importance": 0.0
+    },
+    {
+      "name": "region_warm_pool",
+      "importance": 0.0
+    },
+    {
+      "name": "region_subtropical",
+      "importance": 0.0
+    }
+  ],
+  "timestamp": "2026-02-13T18:34:43.702151",
+  "config": {
+    "species": "bigeye",
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "random_state": 42,
+    "n_estimators_rf": 200,
+    "n_estimators_gbr": 150,
+    "max_depth_rf": 12,
+    "max_depth_gbr": 6,
+    "learning_rate_gbr": 0.05
+  }
+}

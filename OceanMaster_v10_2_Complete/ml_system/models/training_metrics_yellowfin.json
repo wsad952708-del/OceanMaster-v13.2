@@ -1,0 +1,129 @@
+{
+  "species": "yellowfin",
+  "n_samples": 115,
+  "n_features": 26,
+  "train_r2": 0.9918456002897991,
+  "train_rmse": 1.3109073287058683,
+  "cv_mae": 2.657537263743984,
+  "cv_mae_std": 0.3434941480841959,
+  "cv_r2": 0.9400481128168302,
+  "cv_r2_std": 0.023972725385686844,
+  "feature_importance": [
+    {
+      "name": "lon_norm",
+      "importance": 0.2713408699825376
+    },
+    {
+      "name": "lat_norm",
+      "importance": 0.21320260501880234
+    },
+    {
+      "name": "sst_chl_interaction",
+      "importance": 0.1922938467626484
+    },
+    {
+      "name": "eddy_strength",
+      "importance": 0.0675390208477731
+    },
+    {
+      "name": "chl",
+      "importance": 0.055520495527110275
+    },
+    {
+      "name": "month_cos",
+      "importance": 0.05047493024576702
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.042109289520934984
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.023670789882920387
+    },
+    {
+      "name": "do",
+      "importance": 0.019064481283081247
+    },
+    {
+      "name": "lat_lon_interaction",
+      "importance": 0.015944804038653792
+    },
+    {
+      "name": "region_warm_pool",
+      "importance": 0.013923473126769231
+    },
+    {
+      "name": "ssh",
+      "importance": 0.012306595557898429
+    },
+    {
+      "name": "current_speed",
+      "importance": 0.006161795745255198
+    },
+    {
+      "name": "sst_squared",
+      "importance": 0.004788450976507549
+    },
+    {
+      "name": "front_eddy_interaction",
+      "importance": 0.004689116557713968
+    },
+    {
+      "name": "front_strength",
+      "importance": 0.0024551739321844565
+    },
+    {
+      "name": "thermal_stress",
+      "importance": 0.0017181180271150364
+    },
+    {
+      "name": "hsi",
+      "importance": 0.0007312678329297769
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.0006987414466610359
+    },
+    {
+      "name": "sst",
+      "importance": 0.0003957235439310933
+    },
+    {
+      "name": "phi_over_crit",
+      "importance": 0.0003043717789802408
+    },
+    {
+      "name": "phi",
+      "importance": 0.0002996303318103932
+    },
+    {
+      "name": "phi_hsi_product",
+      "importance": 0.0002163765287702391
+    },
+    {
+      "name": "month_sin",
+      "importance": 0.0001188101368366734
+    },
+    {
+      "name": "region_subtropical",
+      "importance": 3.1221366407457914e-05
+    },
+    {
+      "name": "region_kuroshio",
+      "importance": 0.0
+    }
+  ],
+  "timestamp": "2026-02-13T18:34:30.097647",
+  "config": {
+    "species": "yellowfin",
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "random_state": 42,
+    "n_estimators_rf": 200,
+    "n_estimators_gbr": 150,
+    "max_depth_rf": 12,
+    "max_depth_gbr": 6,
+    "learning_rate_gbr": 0.05
+  }
+}

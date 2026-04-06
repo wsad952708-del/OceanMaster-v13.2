@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>🎣 OceanMaster v10.2 漁場預測</name>
+<description>生成: 2026-02-10 19:13 UTC
+⚠️ 本預測僅供參考，實際作業請依據船長經驗和即時觀測</description>
+<Style id="s_best"><IconStyle><scale>1.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_good"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_fair"><IconStyle><scale>0.9</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_low"><IconStyle><scale>0.7</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_area"><PolyStyle><color>20ffffff</color><outline>1</outline></PolyStyle><LineStyle><color>ff0088ff</color><width>1</width></LineStyle></Style>
+<LookAt><longitude>147.5</longitude><latitude>23.5</latitude><range>2500000</range></LookAt>
+<Folder><name>🎯 v10.2 漁場熱點</name><open>1</open>
+<description>Φ(Deutsch2015真實計算) + SEAPODYM棲息地 + 營養鏈
+Φ不截斷 + EEZ地理校正 + HSI幾何平均
+生成: 2026-02-10 19:13 UTC</description>
+<Folder><name>長鰭鮪</name>
+<Placemark><name>#1 長鰭鮪 (70%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 70% ═══
+🧬 代謝指數Φ: 3.48 ⚠️偏低 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 20.9°C (適宜: 94%)
+🌿 NPP: 994 mgC/m²/d | Chl: 1.080 | DO: 5.8 ml/L
+🌊 鋒面: 14% | 渦旋: 39% | 海流匯聚: 27%
+🏔️ 深度: 3103m
+⚓ 水域: 公海
+📍 距離: 1256 nm (125.5hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>142.52,34.29,0</coordinates></Point></Placemark>
+<Placemark><name>#2 長鰭鮪 (65%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 65% ═══
+🧬 代謝指數Φ: 3.60 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 20.4°C (適宜: 98%)
+🌿 NPP: 204 mgC/m²/d | Chl: 0.153 | DO: 5.9 ml/L
+🌊 鋒面: 28% | 渦旋: 86% | 海流匯聚: 0%
+🏔️ 深度: 4175m
+⚓ 水域: 日本EEZ
+EEZ驗證: 需日本政府許可證
+📍 距離: 1212 nm (121.2hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>141.41,34.66,0</coordinates></Point></Placemark>
+<Placemark><name>#3 長鰭鮪 (61%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 61% ═══
+🧬 代謝指數Φ: 3.66 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 19.0°C (適宜: 99%)
+🌿 NPP: 329 mgC/m²/d | Chl: 0.090 | DO: 5.7 ml/L
+🌊 鋒面: 51% | 渦旋: 27% | 海流匯聚: 0%
+🏔️ 深度: 5210m
+⚓ 水域: 公海
+📍 距離: 1618 nm (161.8hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>149.92,33.89,0</coordinates></Point></Placemark>
+<Placemark><name>#4 長鰭鮪 (61%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 61% ═══
+🧬 代謝指數Φ: 4.43 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 15.7°C (適宜: 64%)
+🌿 NPP: 433 mgC/m²/d | Chl: 0.256 | DO: 6.1 ml/L
+🌊 鋒面: 8% | 渦旋: 37% | 海流匯聚: 0%
+🏔️ 深度: 5242m
+⚓ 水域: 公海
+📍 距離: 1805 nm (180.5hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>153.72,33.28,0</coordinates></Point></Placemark>
+<Placemark><name>#5 長鰭鮪 (38%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 38% ═══
+🧬 代謝指數Φ: 3.19 ⚠️偏低 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 23.7°C (適宜: 58%)
+🌿 NPP: 425 mgC/m²/d | Chl: 0.241 | DO: 5.9 ml/L
+🌊 鋒面: 18% | 渦旋: 3% | 海流匯聚: 0%
+🏔️ 深度: 957m
+⚓ 水域: 公海
+📍 距離: 1815 nm (181.5hr)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>154.64,30.42,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>黃鰭鮪</name>
+<Placemark><name>#1 黃鰭鮪 (81%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 81% ═══
+🧬 代謝指數Φ: 5.33 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 26.2°C (適宜: 97%)
+🌿 NPP: 368 mgC/m²/d | Chl: 0.134 | DO: 5.7 ml/L
+🌊 鋒面: 62% | 渦旋: 28% | 海流匯聚: 10%
+🏔️ 深度: 441m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 771 nm (77.1hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>122.16,12.29,0</coordinates></Point></Placemark>
+<Placemark><name>#2 黃鰭鮪 (80%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 80% ═══
+🧬 代謝指數Φ: 5.71 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 23.7°C (適宜: 97%)
+🌿 NPP: 411 mgC/m²/d | Chl: 0.106 | DO: 5.8 ml/L
+🌊 鋒面: 84% | 渦旋: 29% | 海流匯聚: 29%
+🏔️ 深度: 4247m
+⚓ 水域: 公海
+📍 距離: 942 nm (94.2hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>131.73,12.29,0</coordinates></Point></Placemark>
+<Placemark><name>#3 黃鰭鮪 (86%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 86% ═══
+🧬 代謝指數Φ: 5.19 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 26.6°C (適宜: 95%)
+🌿 NPP: 941 mgC/m²/d | Chl: 1.058 | DO: 5.6 ml/L
+🌊 鋒面: 96% | 渦旋: 80% | 海流匯聚: 7%
+🏔️ 深度: 2153m
+⚓ 水域: 公海
+📍 距離: 1831 nm (183.1hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>154.31,17.25,0</coordinates></Point></Placemark>
+<Placemark><name>#4 黃鰭鮪 (72%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 72% ═══
+🧬 代謝指數Φ: 4.82 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 27.5°C (適宜: 88%)
+🌿 NPP: 119 mgC/m²/d | Chl: 0.101 | DO: 5.3 ml/L
+🌊 鋒面: 4% | 渦旋: 40% | 海流匯聚: 0%
+🏔️ 深度: 5438m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 722 nm (72.2hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>122.46,13.12,0</coordinates></Point></Placemark>
+<Placemark><name>#5 黃鰭鮪 (68%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 68% ═══
+🧬 代謝指數Φ: 5.73 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 21.8°C (適宜: 81%)
+🌿 NPP: 324 mgC/m²/d | Chl: 0.097 | DO: 5.6 ml/L
+🌊 鋒面: 80% | 渦旋: 80% | 海流匯聚: 32%
+🏔️ 深度: 4357m
+⚓ 水域: 公海
+📍 距離: 713 nm (71.3hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>134.87,24.89,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>大目鮪</name>
+<Placemark><name>#1 大目鮪 (77%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 77% ═══
+🧬 代謝指數Φ: 4.11 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 19.9°C (適宜: 93%)
+🌿 NPP: 163 mgC/m²/d | Chl: 0.246 | DO: 5.8 ml/L
+🌊 鋒面: 96% | 渦旋: 98% | 海流匯聚: 0%
+🏔️ 深度: 4898m
+⚓ 水域: 美國EEZ(關島/北馬里亞納)
+EEZ驗證: 美國聯邦漁業法規
+📍 距離: 1427 nm (142.7hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>147.27,19.51,0</coordinates></Point></Placemark>
+<Placemark><name>#2 大目鮪 (74%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 74% ═══
+🧬 代謝指數Φ: 4.31 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.7°C (適宜: 99%)
+🌿 NPP: 227 mgC/m²/d | Chl: 0.174 | DO: 5.8 ml/L
+🌊 鋒面: 92% | 渦旋: 26% | 海流匯聚: 25%
+🏔️ 深度: 472m
+⚓ 水域: 公海
+📍 距離: 608 nm (60.8hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>132.15,21.4,0</coordinates></Point></Placemark>
+<Placemark><name>#3 大目鮪 (78%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 78% ═══
+🧬 代謝指數Φ: 4.82 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 16.8°C (適宜: 97%)
+🌿 NPP: 407 mgC/m²/d | Chl: 0.160 | DO: 6.0 ml/L
+🌊 鋒面: 93% | 渦旋: 48% | 海流匯聚: 61%
+🏔️ 深度: 4201m
+⚓ 水域: 密克羅尼西亞EEZ
+EEZ驗證: 需FSM入漁許可
+📍 距離: 1630 nm (163.0hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>145.46,8.49,0</coordinates></Point></Placemark>
+<Placemark><name>#4 大目鮪 (75%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 75% ═══
+🧬 代謝指數Φ: 5.31 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 16.4°C (適宜: 95%)
+🌿 NPP: 349 mgC/m²/d | Chl: 0.180 | DO: 6.5 ml/L
+🌊 鋒面: 14% | 渦旋: 64% | 海流匯聚: 24%
+🏔️ 深度: 4179m
+⚓ 水域: 密克羅尼西亞EEZ
+EEZ驗證: 需FSM入漁許可
+📍 距離: 1904 nm (190.4hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>151.4,8.23,0</coordinates></Point></Placemark>
+<Placemark><name>#5 大目鮪 (70%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 70% ═══
+🧬 代謝指數Φ: 5.32 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 14.4°C (適宜: 77%)
+🌿 NPP: 274 mgC/m²/d | Chl: 0.111 | DO: 6.0 ml/L
+🌊 鋒面: 61% | 渦旋: 11% | 海流匯聚: 19%
+🏔️ 深度: 3149m
+⚓ 水域: 公海
+📍 距離: 1273 nm (127.3hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>138.58,10.38,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>鰹魚</name>
+<Placemark><name>#1 鰹魚 (75%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 75% ═══
+🧬 代謝指數Φ: 5.60 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 22.5°C (適宜: 68%)
+🌿 NPP: 332 mgC/m²/d | Chl: 0.091 | DO: 5.2 ml/L
+🌊 鋒面: 73% | 渦旋: 94% | 海流匯聚: 59%
+🏔️ 深度: 4026m
+⚓ 水域: 公海
+📍 距離: 912 nm (91.2hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.41,23.33,0</coordinates></Point></Placemark>
+<Placemark><name>#2 鰹魚 (78%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 78% ═══
+🧬 代謝指數Φ: 5.86 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 23.3°C (適宜: 80%)
+🌿 NPP: 384 mgC/m²/d | Chl: 0.059 | DO: 5.5 ml/L
+🌊 鋒面: 43% | 渦旋: 34% | 海流匯聚: 60%
+🏔️ 深度: 931m
+⚓ 水域: 帛琉EEZ
+EEZ驗證: 嚴格保護區，部分禁漁
+📍 距離: 1157 nm (115.7hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>133.45,9.03,0</coordinates></Point></Placemark>
+<Placemark><name>#3 鰹魚 (84%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 84% ═══
+🧬 代謝指數Φ: 5.75 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 27.2°C (適宜: 96%)
+🌿 NPP: 759 mgC/m²/d | Chl: 0.632 | DO: 5.7 ml/L
+🌊 鋒面: 20% | 渦旋: 100% | 海流匯聚: 0%
+🏔️ 深度: 4374m
+⚓ 水域: 美國EEZ(關島/北馬里亞納)
+EEZ驗證: 美國聯邦漁業法規
+📍 距離: 1377 nm (137.7hr)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>145.78,17.84,0</coordinates></Point></Placemark>
+<Placemark><name>#4 鰹魚 (63%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 63% ═══
+🧬 代謝指數Φ: 5.06 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 29.7°C (適宜: 65%)
+🌿 NPP: 280 mgC/m²/d | Chl: 0.062 | DO: 5.2 ml/L
+🌊 鋒面: 88% | 渦旋: 89% | 海流匯聚: 13%
+🏔️ 深度: 3632m
+⚓ 水域: 公海
+📍 距離: 1010 nm (101.0hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>140.06,22.22,0</coordinates></Point></Placemark>
+<Placemark><name>#5 鰹魚 (60%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 60% ═══
+🧬 代謝指數Φ: 5.67 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 26.9°C (適宜: 98%)
+🌿 NPP: 310 mgC/m²/d | Chl: 0.193 | DO: 5.6 ml/L
+🌊 鋒面: 100% | 渦旋: 66% | 海流匯聚: 2%
+🏔️ 深度: 928m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 687 nm (68.7hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>128.42,15.4,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>劍尖魷</name>
+<Placemark><name>#1 劍尖魷 (58%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 58% ═══
+🧬 代謝指數Φ: 2.25 ⚠️偏低 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 17.9°C (適宜: 71%)
+🌿 NPP: 289 mgC/m²/d | Chl: 0.220 | DO: 6.2 ml/L
+🌊 鋒面: 44% | 渦旋: 57% | 海流匯聚: 19%
+🏔️ 深度: 5083m
+⚓ 水域: 公海
+📍 距離: 1263 nm (126.3hr)]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>142.42,34.74,0</coordinates></Point></Placemark>
+<Placemark><name>#2 劍尖魷 (72%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 72% ═══
+🧬 代謝指數Φ: 2.56 ⚠️偏低 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 15.6°C (適宜: 99%)
+🌿 NPP: 640 mgC/m²/d | Chl: 0.486 | DO: 6.3 ml/L
+🌊 鋒面: 11% | 渦旋: 84% | 海流匯聚: 47%
+🏔️ 深度: 1874m
+⚓ 水域: 日本EEZ
+EEZ驗證: 需日本政府許可證
+📍 距離: 1026 nm (102.6hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>135.68,36.66,0</coordinates></Point></Placemark>
+<Placemark><name>#3 劍尖魷 (52%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 52% ═══
+🧬 代謝指數Φ: 2.25 ⚠️偏低 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 16.2°C (適宜: 94%)
+🌿 NPP: 238 mgC/m²/d | Chl: 0.120 | DO: 5.7 ml/L
+🌊 鋒面: 90% | 渦旋: 98% | 海流匯聚: 56%
+🏔️ 深度: 4184m
+⚓ 水域: 公海
+📍 距離: 1475 nm (147.5hr)]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>148.63,28.5,0</coordinates></Point></Placemark>
+<Placemark><name>#4 劍尖魷 (63%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 63% ═══
+🧬 代謝指數Φ: 2.63 ⚠️偏低 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 14.7°C (適宜: 100%)
+🌿 NPP: 537 mgC/m²/d | Chl: 0.204 | DO: 6.2 ml/L
+🌊 鋒面: 72% | 渦旋: 67% | 海流匯聚: 34%
+🏔️ 深度: 3219m
+⚓ 水域: 公海
+📍 距離: 1802 nm (180.2hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>154.22,31.21,0</coordinates></Point></Placemark>
+<Placemark><name>#5 劍尖魷 (61%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 61% ═══
+🧬 代謝指數Φ: 2.89 ✅充足 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 14.0°C (適宜: 96%)
+🌿 NPP: 440 mgC/m²/d | Chl: 0.076 | DO: 6.6 ml/L
+🌊 鋒面: 75% | 渦旋: 23% | 海流匯聚: 31%
+🏔️ 深度: 3344m
+⚓ 水域: 公海
+📍 距離: 1649 nm (164.9hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>149.89,35.4,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>赤魷</name>
+<Placemark><name>#1 赤魷 (71%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 71% ═══
+🧬 代謝指數Φ: 3.59 ✅充足 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 17.7°C (適宜: 88%)
+🌿 NPP: 391 mgC/m²/d | Chl: 0.289 | DO: 5.9 ml/L
+🌊 鋒面: 87% | 渦旋: 63% | 海流匯聚: 21%
+🏔️ 深度: 3223m
+⚓ 水域: 公海
+📍 距離: 1499 nm (149.9hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>146.71,35.75,0</coordinates></Point></Placemark>
+<Placemark><name>#2 赤魷 (60%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟠優秀
+═══ 綜合 HSI: 60% ═══
+🧬 代謝指數Φ: 3.12 ✅充足 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 22.2°C (適宜: 89%)
+🌿 NPP: 595 mgC/m²/d | Chl: 0.432 | DO: 5.9 ml/L
+🌊 鋒面: 10% | 渦旋: 33% | 海流匯聚: 29%
+🏔️ 深度: 1740m
+⚓ 水域: 日本EEZ
+EEZ驗證: 需日本政府許可證
+📍 距離: 872 nm (87.2hr)]]></description>
+<styleUrl>#s_good</styleUrl>
+<Point><coordinates>135.86,32.06,0</coordinates></Point></Placemark>
+<Placemark><name>#3 赤魷 (57%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 57% ═══
+🧬 代謝指數Φ: 3.22 ✅充足 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 20.6°C (適宜: 99%)
+🌿 NPP: 258 mgC/m²/d | Chl: 0.232 | DO: 5.8 ml/L
+🌊 鋒面: 83% | 渦旋: 80% | 海流匯聚: 10%
+🏔️ 深度: 1199m
+⚓ 水域: 公海
+📍 距離: 1522 nm (152.2hr)]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>146.38,37.21,0</coordinates></Point></Placemark>
+<Placemark><name>#4 赤魷 (48%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 48% ═══
+🧬 代謝指數Φ: 3.01 ✅充足 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 21.7°C (適宜: 93%)
+🌿 NPP: 300 mgC/m²/d | Chl: 0.176 | DO: 5.6 ml/L
+🌊 鋒面: 47% | 渦旋: 66% | 海流匯聚: 100%
+🏔️ 深度: 5183m
+⚓ 水域: 公海
+📍 距離: 1594 nm (159.4hr)]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>150.48,30.48,0</coordinates></Point></Placemark>
+<Placemark><name>#5 赤魷 (33%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 33% ═══
+🧬 代謝指數Φ: 2.90 ✅充足 (Φ_crit=2.8)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 25.1°C (適宜: 53%)
+🌿 NPP: 123 mgC/m²/d | Chl: 0.064 | DO: 6.0 ml/L
+🌊 鋒面: 5% | 渦旋: 41% | 海流匯聚: 42%
+🏔️ 深度: 4226m
+⚓ 水域: 日本EEZ
+EEZ驗證: 需日本政府許可證
+📍 距離: 1204 nm (120.4hr)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>140.87,35.28,0</coordinates></Point></Placemark>
+</Folder>
+</Folder>
+<Folder><name>分析範圍</name><Placemark><styleUrl>#s_area</styleUrl>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>
+120.0,5.0,0 175.0,5.0,0 175.0,42.0,0 120.0,42.0,0 120.0,5.0,0
+</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder>
+</Document>
+</kml>

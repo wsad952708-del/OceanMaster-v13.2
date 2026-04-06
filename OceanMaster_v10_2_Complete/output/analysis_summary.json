@@ -1,0 +1,31 @@
+{
+  "version": "10.3",
+  "elapsed": "7622.0s",
+  "hotspots": 20,
+  "commercial_core": true,
+  "accuracy_booster": true,
+  "greenfish_lite": true,
+  "ml_ensemble": true,
+  "ml_species": [
+    "yellowfin",
+    "bigeye",
+    "skipjack",
+    "albacore"
+  ],
+  "enhanced": true,
+  "enso_oni": -0.55,
+  "lunar": "上弦月",
+  "data_sources": {
+    "SST": "WOA-CLIM",
+    "CHL": "WOA-climatology",
+    "CURRENTS": "CLIM",
+    "HYCOM": "OK(6/6)",
+    "VIIRS": "OK(0)",
+    "WIND": "Open-Meteo",
+    "DO": "WOA-CLIM"
+  },
+  "wind_speed": 36.4,
+  "wind_dir": 92.0,
+  "current_speed": 0.12,
+  "current_dir": 75.0
+}

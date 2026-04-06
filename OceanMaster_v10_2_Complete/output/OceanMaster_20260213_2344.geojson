@@ -1,0 +1,472 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.75,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#1 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 607.8,
+        "travel_hours": 60.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.25,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#2 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 613.3,
+        "travel_hours": 61.3,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.75,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#3 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 617.5,
+        "travel_hours": 61.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5,
+          15.5
+        ]
+      },
+      "properties": {
+        "name": "#4 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 577.9,
+        "travel_hours": 57.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.0,
+          15.5
+        ]
+      },
+      "properties": {
+        "name": "#5 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 581.8,
+        "travel_hours": 58.2,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#1 yellowfin",
+        "score": 100,
+        "species": "yellowfin",
+        "distance_nm": 613.2,
+        "travel_hours": 61.3,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.25,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#2 yellowfin",
+        "score": 100,
+        "species": "yellowfin",
+        "distance_nm": 608.4,
+        "travel_hours": 60.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.75,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#3 yellowfin",
+        "score": 100,
+        "species": "yellowfin",
+        "distance_nm": 607.8,
+        "travel_hours": 60.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.75,
+          15.5
+        ]
+      },
+      "properties": {
+        "name": "#4 yellowfin",
+        "score": 100,
+        "species": "yellowfin",
+        "distance_nm": 577.8,
+        "travel_hours": 57.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5,
+          16.0
+        ]
+      },
+      "properties": {
+        "name": "#5 yellowfin",
+        "score": 100,
+        "species": "yellowfin",
+        "distance_nm": 548.0,
+        "travel_hours": 54.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          23.5
+        ]
+      },
+      "properties": {
+        "name": "#1 bigeye",
+        "score": 100,
+        "species": "bigeye",
+        "distance_nm": 126.9,
+        "travel_hours": 12.7,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          24.0
+        ]
+      },
+      "properties": {
+        "name": "#2 bigeye",
+        "score": 100,
+        "species": "bigeye",
+        "distance_nm": 105.6,
+        "travel_hours": 10.6,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.75,
+          24.75
+        ]
+      },
+      "properties": {
+        "name": "#3 bigeye",
+        "score": 100,
+        "species": "bigeye",
+        "distance_nm": 22.8,
+        "travel_hours": 2.3,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.25,
+          25.0
+        ]
+      },
+      "properties": {
+        "name": "#4 bigeye",
+        "score": 100,
+        "species": "bigeye",
+        "distance_nm": 28.8,
+        "travel_hours": 2.9,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5,
+          25.25
+        ]
+      },
+      "properties": {
+        "name": "#5 bigeye",
+        "score": 100,
+        "species": "bigeye",
+        "distance_nm": 14.9,
+        "travel_hours": 1.5,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.75,
+          28.0
+        ]
+      },
+      "properties": {
+        "name": "#1 albacore",
+        "score": 16,
+        "species": "albacore",
+        "distance_nm": 180.4,
+        "travel_hours": 18.0,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#fdd835",
+        "marker-size": "medium",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5,
+          27.5
+        ]
+      },
+      "properties": {
+        "name": "#2 albacore",
+        "score": 16,
+        "species": "albacore",
+        "distance_nm": 157.3,
+        "travel_hours": 15.7,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#fdd835",
+        "marker-size": "medium",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0,
+          27.25
+        ]
+      },
+      "properties": {
+        "name": "#3 albacore",
+        "score": 16,
+        "species": "albacore",
+        "distance_nm": 158.5,
+        "travel_hours": 15.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#fdd835",
+        "marker-size": "medium",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0,
+          26.75
+        ]
+      },
+      "properties": {
+        "name": "#4 albacore",
+        "score": 16,
+        "species": "albacore",
+        "distance_nm": 135.6,
+        "travel_hours": 13.6,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#fdd835",
+        "marker-size": "medium",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.75,
+          28.0
+        ]
+      },
+      "properties": {
+        "name": "#5 albacore",
+        "score": 16,
+        "species": "albacore",
+        "distance_nm": 727.4,
+        "travel_hours": 72.7,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#fdd835",
+        "marker-size": "medium",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.75,
+            25.25
+          ]
+        ]
+      },
+      "properties": {
+        "name": "建議航線",
+        "type": "fuel_optimal",
+        "distance_nm": 7.2,
+        "time_hours": Infinity,
+        "fuel_savings_pct": 0,
+        "stroke": "#4fc3f7",
+        "stroke-width": 3,
+        "stroke-opacity": 0.8
+      }
+    }
+  ],
+  "properties": {
+    "generator": "OceanMaster v9.0",
+    "timestamp": "2026-02-13T23:44:41.439276+00:00",
+    "n_hotspots": 20
+  }
+}

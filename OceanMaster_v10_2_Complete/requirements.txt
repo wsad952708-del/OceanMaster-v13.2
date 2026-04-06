@@ -1,0 +1,47 @@
+# OceanMaster v11 — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core Scientific ──
+numpy>=2.0.0
+scipy==1.13.1
+pandas==2.2.2
+
+# ── Async HTTP ──
+httpx==0.27.2
+
+# ── FastAPI Server ──
+fastapi==0.115.0
+uvicorn==0.30.6
+
+# ── ML Training ──
+scikit-learn>=1.6.0
+joblib==1.4.2
+lightgbm==4.3.0
+xgboost==2.0.3
+
+# ── ML Explainability ──
+shap>=0.46.0
+
+# ── Ocean Data ──
+netCDF4==1.7.1
+xarray==2024.7.0
+
+# ── Visualization ──
+matplotlib==3.9.2
+folium==0.17.0
+
+# ── Output ──
+simplekml==1.3.6
+geojson==3.1.0
+
+# ── Utilities ──
+requests==2.32.3
+aiohttp==3.10.5
+apscheduler==3.10.4
+
+# ── v11 新增 ──
+tenacity>=8.2.0          # 重試裝飾器 (retry with backoff)
+
+# ── v11 Optional ML (可選) ──
+# catboost>=1.2           # CatBoost 梯度提升 (pip install catboost)
+# tabpfn>=0.1.10          # Zero-shot 表格預測 (pip install tabpfn)

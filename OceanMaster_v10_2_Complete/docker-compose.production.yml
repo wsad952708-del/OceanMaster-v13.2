@@ -1,0 +1,41 @@
+# OceanMaster v12 — Production Docker Compose  # [v12-phase10]
+# Usage: docker-compose -f docker-compose.production.yml up -d --build
+
+services:
+  oceanmaster:
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    image: oceanmaster:12-prod
+    container_name: oceanmaster-prod
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Taipei
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./data:/home/appuser/app/data:ro # Satellite data (read-only)
+      - ./models:/home/appuser/app/models # Trained ML models (persist)
+      - ./output:/home/appuser/app/output # Prediction outputs
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2.0'
+        reservations:
+          memory: 1G
+    healthcheck:
+      test: [ "CMD", "curl", "-sf", "--max-time", "5", "http://localhost:8000/health" ]
+      interval: 60s
+      timeout: 30s
+      retries: 5
+      start_period: 60s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"

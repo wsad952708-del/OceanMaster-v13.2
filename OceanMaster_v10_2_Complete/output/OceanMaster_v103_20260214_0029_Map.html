@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>OceanMaster v10.2 漁場地圖</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif}
+#map{height:100vh;width:100%}
+.info-box{position:absolute;top:10px;left:50px;z-index:1000;background:rgba(0,0,0,.85);color:#fff;
+  padding:12px 18px;border-radius:8px;font-size:13px;max-width:400px}
+.info-box h3{margin:0 0 6px;color:#3498db}
+.legend{position:absolute;bottom:30px;left:50px;z-index:1000;background:rgba(0,0,0,.8);color:#fff;
+  padding:8px 14px;border-radius:6px;font-size:12px}
+.grade-bar{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:4px}
+</style></head><body>
+<div id="map"></div>
+<div class="info-box">
+  <h3>🎣 OceanMaster v10.2</h3>
+  <div>分析時間: 2026-02-14T00:29:32</div>
+  <div style="margin-top:4px"><span style='color:#2ecc71;font-weight:bold'>●</span> 鰹魚 (20)</div>
+  <div style="margin-top:4px;color:#aaa;font-size:11px">Φ=Deutsch 2015 代謝指數(真實計算) | SEAPODYM 棲息地</div>
+</div>
+<div class="legend">
+  <span class="grade-bar" style="background:#e74c3c"></span>最佳(≥75%)
+  <span class="grade-bar" style="background:#f39c12;margin-left:8px"></span>優秀(60-75%)
+  <span class="grade-bar" style="background:#f1c40f;margin-left:8px"></span>良好(45-60%)
+  <span class="grade-bar" style="background:#95a5a6;margin-left:8px"></span>偏低(&lt;45%)
+</div>
+<script>
+const data = [
+{lat:15.00,lng:120.25,name:'#1 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:7.47,sst:0.0,npp:5000,chl:0.000,do_:4.8,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:-132.0,eez:'菲律賓EEZ',popup:`<b>#1 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 7.47 | SST: 0.0°C<br>NPP: 5000 | Chl: 0.000 | DO: 4.8<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 613 nm (61.3hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:15.00,lng:121.25,name:'#2 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:7.41,sst:0.0,npp:5000,chl:0.000,do_:4.8,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:-457.0,eez:'菲律賓EEZ',popup:`<b>#2 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 7.41 | SST: 0.0°C<br>NPP: 5000 | Chl: 0.000 | DO: 4.8<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 608 nm (60.8hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:15.00,lng:121.75,name:'#3 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.85,sst:0.0,npp:3997,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:257.0,eez:'菲律賓EEZ',popup:`<b>#3 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.85 | SST: 0.0°C<br>NPP: 3997 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 608 nm (60.8hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:16.25,lng:120.25,name:'#4 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.63,sst:0.0,npp:5000,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:10.0,eez:'菲律賓EEZ',popup:`<b>#4 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.63 | SST: 0.0°C<br>NPP: 5000 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 539 nm (53.9hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:16.75,lng:120.25,name:'#5 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.39,sst:0.0,npp:5000,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:328.0,eez:'菲律賓EEZ',popup:`<b>#5 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.39 | SST: 0.0°C<br>NPP: 5000 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 509 nm (50.9hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:17.00,lng:122.50,name:'#6 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.10,sst:0.0,npp:914,chl:0.000,do_:4.8,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:14.0,eez:'菲律賓EEZ',popup:`<b>#6 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.10 | SST: 0.0°C<br>NPP: 914 | Chl: 0.000 | DO: 4.8<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 490 nm (49.0hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:17.25,lng:120.25,name:'#7 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.44,sst:0.0,npp:830,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:1215.0,eez:'菲律賓EEZ',popup:`<b>#7 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.44 | SST: 0.0°C<br>NPP: 830 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 480 nm (48.0hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:17.50,lng:122.50,name:'#8 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.88,sst:0.0,npp:966,chl:0.000,do_:4.5,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:2339.0,eez:'菲律賓EEZ',popup:`<b>#8 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.88 | SST: 0.0°C<br>NPP: 966 | Chl: 0.000 | DO: 4.5<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 460 nm (46.0hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:17.75,lng:120.25,name:'#9 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.30,sst:0.0,npp:862,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:1117.0,eez:'菲律賓EEZ',popup:`<b>#9 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.30 | SST: 0.0°C<br>NPP: 862 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 450 nm (45.0hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:18.00,lng:122.25,name:'#10 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.96,sst:0.0,npp:943,chl:0.000,do_:4.6,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:1053.0,eez:'菲律賓EEZ',popup:`<b>#10 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.96 | SST: 0.0°C<br>NPP: 943 | Chl: 0.000 | DO: 4.6<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 429 nm (42.9hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:18.25,lng:120.50,name:'#11 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.32,sst:0.0,npp:856,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:36.0,eez:'菲律賓EEZ',popup:`<b>#11 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.32 | SST: 0.0°C<br>NPP: 856 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 418 nm (41.8hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:18.50,lng:122.00,name:'#12 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.75,sst:0.0,npp:992,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:207.0,eez:'菲律賓EEZ',popup:`<b>#12 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.75 | SST: 0.0°C<br>NPP: 992 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 398 nm (39.8hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:18.75,lng:120.25,name:'#13 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.01,sst:0.0,npp:928,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:2950.0,eez:'菲律賓EEZ',popup:`<b>#13 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.01 | SST: 0.0°C<br>NPP: 928 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 391 nm (39.1hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:19.00,lng:121.50,name:'#14 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.61,sst:0.0,npp:1022,chl:0.000,do_:4.6,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:598.0,eez:'菲律賓EEZ',popup:`<b>#14 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.61 | SST: 0.0°C<br>NPP: 1022 | Chl: 0.000 | DO: 4.6<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 368 nm (36.8hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:19.00,lng:122.00,name:'#15 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:9.03,sst:0.0,npp:923,chl:0.000,do_:4.6,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:88.0,eez:'菲律賓EEZ',popup:`<b>#15 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 9.03 | SST: 0.0°C<br>NPP: 923 | Chl: 0.000 | DO: 4.6<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 368 nm (36.8hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:19.25,lng:120.25,name:'#16 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.39,sst:0.0,npp:1076,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:3164.0,eez:'菲律賓EEZ',popup:`<b>#16 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.39 | SST: 0.0°C<br>NPP: 1076 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 362 nm (36.2hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:19.50,lng:121.25,name:'#17 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.40,sst:0.0,npp:1070,chl:0.000,do_:4.6,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:1868.0,eez:'菲律賓EEZ',popup:`<b>#17 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.40 | SST: 0.0°C<br>NPP: 1070 | Chl: 0.000 | DO: 4.6<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 339 nm (33.9hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:20.00,lng:120.75,name:'#18 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.62,sst:0.0,npp:1016,chl:0.000,do_:4.6,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:3038.0,eez:'菲律賓EEZ',popup:`<b>#18 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.62 | SST: 0.0°C<br>NPP: 1016 | Chl: 0.000 | DO: 4.6<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 312 nm (31.2hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:20.50,lng:120.25,name:'#19 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.43,sst:0.0,npp:1828,chl:0.000,do_:4.6,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:3929.0,eez:'菲律賓EEZ',popup:`<b>#19 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.43 | SST: 0.0°C<br>NPP: 1828 | Chl: 0.000 | DO: 4.6<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 菲律賓EEZ<br>📍 距離: 289 nm (28.9hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'},
+{lat:21.75,lng:120.75,name:'#20 鰹魚 (100%)',species:'鰹魚',hsi:100,phi:8.33,sst:0.0,npp:3006,chl:0.000,do_:4.7,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:479.0,eez:'台灣EEZ',popup:`<b>#20 鰹魚 (100%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 100%<br>Φ: 8.33 | SST: 0.0°C<br>NPP: 3006 | Chl: 0.000 | DO: 4.7<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 台灣EEZ<br>📍 距離: 210 nm (21.0hr @10kn)`,spColor:'#2ecc71',gradeColor:'#e74c3c'}
+];
+
+const map = L.map('map').setView([18.00,121.05], 5);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',{
+  attribution:'&copy; CARTO',maxZoom:18
+}).addTo(map);
+
+data.forEach(d => {
+  const marker = L.circleMarker([d.lat, d.lng], {
+    radius: Math.max(5, d.hsi / 8),
+    fillColor: d.gradeColor,
+    color: d.spColor,
+    weight: 2,
+    opacity: 0.9,
+    fillOpacity: 0.7
+  }).addTo(map);
+  marker.bindPopup(d.popup, {maxWidth:300});
+});
+
+// Vessel position
+L.marker([25.13,121.74], {
+  icon: L.divIcon({html:'⛵',className:'',iconSize:[20,20]})
+}).addTo(map).bindPopup('母港 / 船位');
+</script></body></html>

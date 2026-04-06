@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+
+# IDE
+.vscode
+.idea
+*.swp
+
+# Environment (secrets)
+.env
+.env.*
+!.env.example
+
+# Output (mounted as volume)
+output/
+data/cache/
+data/woa_do_cache/
+
+# Tests
+tests/
+test_*.py
+*.test.*
+
+# Docker
+Dockerfile
+Dockerfile.production
+docker-compose.yml
+docker-compose.production.yml
+.dockerignore
+
+# Docs (not needed in image)
+*.md
+!requirements.txt
+!requirements_v102.txt
+
+# Temp & audit files
+temp_run*.txt
+dry_run_report.json
+pre_commercial_report.json
+compliance/
+
+# Large data (not needed at build time)
+data/raw/
+data/wcpfc/

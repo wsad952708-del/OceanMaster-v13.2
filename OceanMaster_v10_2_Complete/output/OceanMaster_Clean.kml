@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name> OceanMaster 漁場預測</name>
+  <description>
+    生成時間: 2026-02-09T17:07:01.564481+00:00
+    分析範圍: 15.0°~29.8°N, 125.0°~154.8°E
+     本預測僅供參考，實際作業請依據船長經驗和即時觀測
+  </description>
+
+  <!-- 樣式定義 -->
+  <Style id="hot_red">
+    <IconStyle><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="orange">
+    <IconStyle><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle>
+    <LabelStyle><scale>0.8</scale></LabelStyle>
+  </Style>
+  <Style id="yellow">
+    <IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle>
+    <LabelStyle><scale>0.7</scale></LabelStyle>
+  </Style>
+  <Style id="front_line">
+    <LineStyle><color>ffff8800</color><width>2</width></LineStyle>
+  </Style>
+  <Style id="route_line">
+    <LineStyle><color>ff00ff00</color><width>3</width></LineStyle>
+  </Style>
+  <Style id="zone_poly">
+    <PolyStyle><color>440000ff</color><outline>1</outline></PolyStyle>
+    <LineStyle><color>ff0000ff</color><width>1</width></LineStyle>
+  </Style>
+  <Style id="zone_poly_med">
+    <PolyStyle><color>330080ff</color><outline>1</outline></PolyStyle>
+    <LineStyle><color>ff0080ff</color><width>1</width></LineStyle>
+  </Style>
+
+  <LookAt>
+    <longitude>139.875</longitude>
+    <latitude>22.375</latitude>
+    <altitude>0</altitude>
+    <range>2000000</range>
+    <tilt>0</tilt>
+  </LookAt>
+  <Folder><name> 漁場熱點</name><open>1</open>
+    <Folder><name> 鰹魚</name>
+      <description>平均分數: 0.09, 適合區: 0.5%</description>
+      <Placemark>
+        <name>#1  鰹魚 (80%)</name>
+        <description><![CDATA[評分: 80%
+等級:  最佳
+座標: 16.0000°N, 125.0000°E
+距離: 978 海浬
+預估航時: 97.8 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>125.0,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#2  鰹魚 (80%)</name>
+        <description><![CDATA[評分: 80%
+等級:  良好
+座標: 15.7500°N, 129.5000°E
+距離: 796 海浬
+預估航時: 79.6 小時
+安全:  注意]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>129.5,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#3  鰹魚 (77%)</name>
+        <description><![CDATA[評分: 77%
+等級:  良好
+座標: 15.7500°N, 130.7500°E
+距離: 749 海浬
+預估航時: 74.9 小時
+安全:  注意]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>130.75,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#4  鰹魚 (76%)</name>
+        <description><![CDATA[評分: 76%
+等級:  良好
+座標: 15.0000°N, 129.2500°E
+距離: 838 海浬
+預估航時: 83.8 小時
+安全:  注意]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>129.25,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#5  鰹魚 (75%)</name>
+        <description><![CDATA[評分: 75%
+等級:  良好
+座標: 15.0000°N, 125.5000°E
+距離: 991 海浬
+預估航時: 99.1 小時
+安全:  注意]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.5,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#6  鰹魚 (72%)</name>
+        <description><![CDATA[評分: 72%
+等級:  良好
+座標: 15.0000°N, 131.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>131.0,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#7  鰹魚 (72%)</name>
+        <description><![CDATA[評分: 72%
+等級:  良好
+座標: 16.0000°N, 128.7500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>128.75,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#8  鰹魚 (72%)</name>
+        <description><![CDATA[評分: 72%
+等級:  良好
+座標: 17.5000°N, 126.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>126.5,17.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#9  鰹魚 (71%)</name>
+        <description><![CDATA[評分: 71%
+等級:  良好
+座標: 16.5000°N, 128.7500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>128.75,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#10  鰹魚 (70%)</name>
+        <description><![CDATA[評分: 70%
+等級:  良好
+座標: 15.0000°N, 126.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>126.5,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#11  鰹魚 (70%)</name>
+        <description><![CDATA[評分: 70%
+等級:  良好
+座標: 16.7500°N, 130.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>130.5,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#12  鰹魚 (69%)</name>
+        <description><![CDATA[評分: 69%
+等級:  良好
+座標: 18.0000°N, 125.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.0,18.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#13  鰹魚 (68%)</name>
+        <description><![CDATA[評分: 68%
+等級:  良好
+座標: 15.7500°N, 127.7500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>127.75,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#14  鰹魚 (68%)</name>
+        <description><![CDATA[評分: 68%
+等級:  良好
+座標: 18.5000°N, 131.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>131.25,18.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#15  鰹魚 (67%)</name>
+        <description><![CDATA[評分: 67%
+等級:  良好
+座標: 16.5000°N, 132.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>132.25,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#16  鰹魚 (67%)</name>
+        <description><![CDATA[評分: 67%
+等級:  良好
+座標: 18.5000°N, 127.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>127.25,18.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#17  鰹魚 (66%)</name>
+        <description><![CDATA[評分: 66%
+等級:  良好
+座標: 16.7500°N, 128.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>128.25,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#18  鰹魚 (66%)</name>
+        <description><![CDATA[評分: 66%
+等級:  良好
+座標: 16.5000°N, 131.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>131.25,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#19  鰹魚 (66%)</name>
+        <description><![CDATA[評分: 66%
+等級:  良好
+座標: 15.0000°N, 127.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>127.0,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#20  鰹魚 (64%)</name>
+        <description><![CDATA[評分: 64%
+等級:  良好
+座標: 15.0000°N, 130.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>130.5,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (74%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,15.0,0 125.49791666666667,15.0,0 125.49791666666667,15.245833333333334,0 125.25,15.245833333333334,0 125.25,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (75%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.5,15.0,0 125.74791666666667,15.0,0 125.74791666666667,15.245833333333334,0 125.5,15.245833333333334,0 125.5,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (70%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.5,15.0,0 126.74791666666667,15.0,0 126.74791666666667,15.245833333333334,0 126.5,15.245833333333334,0 126.5,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (66%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.0,15.0,0 127.24791666666667,15.0,0 127.24791666666667,15.245833333333334,0 127.0,15.245833333333334,0 127.0,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (76%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.25,15.0,0 129.49791666666667,15.0,0 129.49791666666667,15.245833333333334,0 129.25,15.245833333333334,0 129.25,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (64%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.5,15.0,0 130.74791666666667,15.0,0 130.74791666666667,15.245833333333334,0 130.5,15.245833333333334,0 130.5,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (72%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          131.0,15.0,0 131.24791666666667,15.0,0 131.24791666666667,15.245833333333334,0 131.0,15.245833333333334,0 131.0,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (66%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.25,15.25,0 129.49791666666667,15.25,0 129.49791666666667,15.495833333333334,0 129.25,15.495833333333334,0 129.25,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.5,15.5,0 127.74791666666667,15.5,0 127.74791666666667,15.745833333333334,0 127.5,15.745833333333334,0 127.5,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (73%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,15.75,0 125.49791666666667,15.75,0 125.49791666666667,15.995833333333334,0 125.25,15.995833333333334,0 125.25,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.5,15.75,0 127.74791666666667,15.75,0 127.74791666666667,15.995833333333334,0 127.5,15.995833333333334,0 127.5,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.75,15.75,0 127.99791666666667,15.75,0 127.99791666666667,15.995833333333334,0 127.75,15.995833333333334,0 127.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (80%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.5,15.75,0 129.74791666666667,15.75,0 129.74791666666667,15.995833333333334,0 129.5,15.995833333333334,0 129.5,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.75,15.75,0 129.99791666666667,15.75,0 129.99791666666667,15.995833333333334,0 129.75,15.995833333333334,0 129.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (77%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.75,15.75,0 130.99791666666667,15.75,0 130.99791666666667,15.995833333333334,0 130.75,15.995833333333334,0 130.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (80%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.0,16.0,0 125.24791666666667,16.0,0 125.24791666666667,16.245833333333334,0 125.0,16.245833333333334,0 125.0,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (67%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,16.0,0 125.49791666666667,16.0,0 125.49791666666667,16.245833333333334,0 125.25,16.245833333333334,0 125.25,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (63%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.25,16.0,0 128.49791666666667,16.0,0 128.49791666666667,16.245833333333334,0 128.25,16.245833333333334,0 128.25,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (64%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.5,16.0,0 128.74791666666667,16.0,0 128.74791666666667,16.245833333333334,0 128.5,16.245833333333334,0 128.5,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (72%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.75,16.0,0 128.99791666666667,16.0,0 128.99791666666667,16.245833333333334,0 128.75,16.245833333333334,0 128.75,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.0,16.25,0 125.24791666666667,16.25,0 125.24791666666667,16.495833333333334,0 125.0,16.495833333333334,0 125.0,16.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,16.25,0 125.49791666666667,16.25,0 125.49791666666667,16.495833333333334,0 125.25,16.495833333333334,0 125.25,16.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (71%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.75,16.5,0 128.99791666666667,16.5,0 128.99791666666667,16.745833333333334,0 128.75,16.745833333333334,0 128.75,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (69%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.5,16.5,0 130.74791666666667,16.5,0 130.74791666666667,16.745833333333334,0 130.5,16.745833333333334,0 130.5,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (66%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          131.25,16.5,0 131.49791666666667,16.5,0 131.49791666666667,16.745833333333334,0 131.25,16.745833333333334,0 131.25,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (67%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          132.25,16.5,0 132.49791666666667,16.5,0 132.49791666666667,16.745833333333334,0 132.25,16.745833333333334,0 132.25,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (66%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.25,16.75,0 128.49791666666667,16.75,0 128.49791666666667,16.995833333333334,0 128.25,16.995833333333334,0 128.25,16.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.75,16.75,0 128.99791666666667,16.75,0 128.99791666666667,16.995833333333334,0 128.75,16.995833333333334,0 128.75,16.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (67%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.0,16.75,0 129.24791666666667,16.75,0 129.24791666666667,16.995833333333334,0 129.0,16.995833333333334,0 129.0,16.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>skipjack 適合區 (70%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.5,16.75,0 130.74791666666667,16.75,0 130.74791666666667,16.995833333333334,0 130.5,16.995833333333334,0 130.5,16.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+    </Folder>
+    <Folder><name> 黃鰭鮪</name>
+      <description>平均分數: 0.07, 適合區: 0.2%</description>
+      <Placemark>
+        <name>#1  黃鰭鮪 (83%)</name>
+        <description><![CDATA[評分: 83%
+等級:  最佳
+座標: 15.7500°N, 130.7500°E
+距離: 749 海浬
+預估航時: 74.9 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>130.75,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#2  黃鰭鮪 (73%)</name>
+        <description><![CDATA[評分: 73%
+等級:  良好
+座標: 15.7500°N, 127.7500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>127.75,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#3  黃鰭鮪 (72%)</name>
+        <description><![CDATA[評分: 72%
+等級:  良好
+座標: 16.0000°N, 125.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.0,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#4  黃鰭鮪 (71%)</name>
+        <description><![CDATA[評分: 71%
+等級:  良好
+座標: 16.5000°N, 131.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>131.25,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#5  黃鰭鮪 (68%)</name>
+        <description><![CDATA[評分: 68%
+等級:  良好
+座標: 15.0000°N, 125.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.5,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#6  黃鰭鮪 (64%)</name>
+        <description><![CDATA[評分: 64%
+等級:  良好
+座標: 18.0000°N, 129.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>129.5,18.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#7  黃鰭鮪 (64%)</name>
+        <description><![CDATA[評分: 64%
+等級:  良好
+座標: 17.7500°N, 125.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.25,17.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#8  黃鰭鮪 (62%)</name>
+        <description><![CDATA[評分: 62%
+等級:  良好
+座標: 15.0000°N, 131.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>131.0,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#9  黃鰭鮪 (62%)</name>
+        <description><![CDATA[評分: 62%
+等級:  良好
+座標: 15.0000°N, 126.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>126.5,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#10  黃鰭鮪 (61%)</name>
+        <description><![CDATA[評分: 61%
+等級:  良好
+座標: 16.7500°N, 128.7500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>128.75,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#11  黃鰭鮪 (60%)</name>
+        <description><![CDATA[評分: 60%
+等級:  良好
+座標: 17.5000°N, 126.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>126.25,17.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#12  黃鰭鮪 (60%)</name>
+        <description><![CDATA[評分: 60%
+等級:  一般
+座標: 18.5000°N, 131.2500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>131.25,18.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#13  黃鰭鮪 (60%)</name>
+        <description><![CDATA[評分: 60%
+等級:  一般
+座標: 16.7500°N, 128.2500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>128.25,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#14  黃鰭鮪 (59%)</name>
+        <description><![CDATA[評分: 59%
+等級:  一般
+座標: 16.5000°N, 130.5000°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>130.5,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#15  黃鰭鮪 (58%)</name>
+        <description><![CDATA[評分: 58%
+等級:  一般
+座標: 16.0000°N, 128.5000°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>128.5,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#16  黃鰭鮪 (57%)</name>
+        <description><![CDATA[評分: 57%
+等級:  一般
+座標: 18.0000°N, 126.7500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>126.75,18.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#17  黃鰭鮪 (56%)</name>
+        <description><![CDATA[評分: 56%
+等級:  一般
+座標: 15.7500°N, 129.7500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>129.75,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#18  黃鰭鮪 (56%)</name>
+        <description><![CDATA[評分: 56%
+等級:  一般
+座標: 15.2500°N, 129.2500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>129.25,15.25,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#19  黃鰭鮪 (53%)</name>
+        <description><![CDATA[評分: 53%
+等級:  一般
+座標: 17.0000°N, 126.2500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>126.25,17.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#20  黃鰭鮪 (52%)</name>
+        <description><![CDATA[評分: 52%
+等級:  一般
+座標: 18.5000°N, 127.7500°E]]></description>
+        <styleUrl>#yellow</styleUrl>
+        <Point><coordinates>127.75,18.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.5,15.0,0 125.74791666666667,15.0,0 125.74791666666667,15.245833333333334,0 125.5,15.245833333333334,0 125.5,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.5,15.0,0 126.74791666666667,15.0,0 126.74791666666667,15.245833333333334,0 126.5,15.245833333333334,0 126.5,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          131.0,15.0,0 131.24791666666667,15.0,0 131.24791666666667,15.245833333333334,0 131.0,15.245833333333334,0 131.0,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,15.75,0 125.49791666666667,15.75,0 125.49791666666667,15.995833333333334,0 125.25,15.995833333333334,0 125.25,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (73%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.75,15.75,0 127.99791666666667,15.75,0 127.99791666666667,15.995833333333334,0 127.75,15.995833333333334,0 127.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (83%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.75,15.75,0 130.99791666666667,15.75,0 130.99791666666667,15.995833333333334,0 130.75,15.995833333333334,0 130.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (72%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.0,16.0,0 125.24791666666667,16.0,0 125.24791666666667,16.245833333333334,0 125.0,16.245833333333334,0 125.0,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.0,16.25,0 125.24791666666667,16.25,0 125.24791666666667,16.495833333333334,0 125.0,16.495833333333334,0 125.0,16.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (71%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          131.25,16.5,0 131.49791666666667,16.5,0 131.49791666666667,16.745833333333334,0 131.25,16.745833333333334,0 131.25,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.75,16.75,0 128.99791666666667,16.75,0 128.99791666666667,16.995833333333334,0 128.75,16.995833333333334,0 128.75,16.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (60%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.25,17.5,0 126.49791666666667,17.5,0 126.49791666666667,17.745833333333334,0 126.25,17.745833333333334,0 126.25,17.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (64%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,17.75,0 125.49791666666667,17.75,0 125.49791666666667,17.995833333333334,0 125.25,17.995833333333334,0 125.25,17.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.0,18.0,0 125.24791666666667,18.0,0 125.24791666666667,18.245833333333334,0 125.0,18.245833333333334,0 125.0,18.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>yellowfin 適合區 (64%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.5,18.0,0 129.74791666666667,18.0,0 129.74791666666667,18.245833333333334,0 129.5,18.245833333333334,0 129.5,18.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+    </Folder>
+    <Folder><name> 大目鮪</name>
+      <description>平均分數: 0.29, 適合區: 0.6%</description>
+      <Placemark>
+        <name>#1  大目鮪 (98%)</name>
+        <description><![CDATA[評分: 98%
+等級:  最佳
+座標: 15.0000°N, 127.7500°E
+距離: 896 海浬
+預估航時: 89.7 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>127.75,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#2  大目鮪 (97%)</name>
+        <description><![CDATA[評分: 97%
+等級:  最佳
+座標: 15.2500°N, 129.2500°E
+距離: 827 海浬
+預估航時: 82.7 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>129.25,15.25,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#3  大目鮪 (91%)</name>
+        <description><![CDATA[評分: 91%
+等級:  最佳
+座標: 15.7500°N, 125.2500°E
+距離: 975 海浬
+預估航時: 97.5 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>125.25,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#4  大目鮪 (88%)</name>
+        <description><![CDATA[評分: 88%
+等級:  最佳
+座標: 15.7500°N, 130.0000°E
+距離: 777 海浬
+預估航時: 77.7 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>130.0,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#5  大目鮪 (87%)</name>
+        <description><![CDATA[評分: 87%
+等級:  最佳
+座標: 15.5000°N, 132.0000°E
+距離: 717 海浬
+預估航時: 71.7 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>132.0,15.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#6  大目鮪 (86%)</name>
+        <description><![CDATA[評分: 86%
+等級:  最佳
+座標: 15.7500°N, 126.7500°E
+距離: 910 海浬
+預估航時: 90.9 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>126.75,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#7  大目鮪 (86%)</name>
+        <description><![CDATA[評分: 86%
+等級:  最佳
+座標: 15.2500°N, 130.2500°E
+距離: 790 海浬
+預估航時: 79.0 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>130.25,15.25,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#8  大目鮪 (85%)</name>
+        <description><![CDATA[評分: 85%
+等級:  最佳
+座標: 15.0000°N, 126.7500°E
+距離: 938 海浬
+預估航時: 93.8 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>126.75,15.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#9  大目鮪 (84%)</name>
+        <description><![CDATA[評分: 84%
+等級:  最佳
+座標: 16.0000°N, 130.7500°E
+距離: 738 海浬
+預估航時: 73.8 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>130.75,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#10  大目鮪 (84%)</name>
+        <description><![CDATA[評分: 84%
+等級:  最佳
+座標: 16.0000°N, 127.5000°E
+距離: 868 海浬
+預估航時: 86.8 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>127.5,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#11  大目鮪 (83%)</name>
+        <description><![CDATA[評分: 83%
+等級:  最佳
+座標: 15.5000°N, 128.5000°E
+距離: 846 海浬
+預估航時: 84.6 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>128.5,15.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#12  大目鮪 (81%)</name>
+        <description><![CDATA[評分: 81%
+等級:  最佳
+座標: 15.5000°N, 127.5000°E
+距離: 887 海浬
+預估航時: 88.7 小時
+安全:  注意]]></description>
+        <styleUrl>#hot_red</styleUrl>
+        <Point><coordinates>127.5,15.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#13  大目鮪 (79%)</name>
+        <description><![CDATA[評分: 79%
+等級:  良好
+座標: 16.5000°N, 130.5000°E
+距離: 726 海浬
+預估航時: 72.6 小時
+安全:  注意]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>130.5,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#14  大目鮪 (75%)</name>
+        <description><![CDATA[評分: 75%
+等級:  良好
+座標: 15.7500°N, 131.2500°E
+距離: 731 海浬
+預估航時: 73.1 小時
+安全:  注意]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>131.25,15.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#15  大目鮪 (75%)</name>
+        <description><![CDATA[評分: 75%
+等級:  良好
+座標: 16.7500°N, 125.2500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.25,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#16  大目鮪 (75%)</name>
+        <description><![CDATA[評分: 75%
+等級:  良好
+座標: 16.7500°N, 130.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>130.0,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#17  大目鮪 (74%)</name>
+        <description><![CDATA[評分: 74%
+等級:  良好
+座標: 15.2500°N, 125.5000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>125.5,15.25,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#18  大目鮪 (72%)</name>
+        <description><![CDATA[評分: 72%
+等級:  良好
+座標: 16.5000°N, 128.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>128.0,16.5,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#19  大目鮪 (72%)</name>
+        <description><![CDATA[評分: 72%
+等級:  良好
+座標: 16.7500°N, 126.7500°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>126.75,16.75,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>#20  大目鮪 (71%)</name>
+        <description><![CDATA[評分: 71%
+等級:  良好
+座標: 16.0000°N, 126.0000°E]]></description>
+        <styleUrl>#orange</styleUrl>
+        <Point><coordinates>126.0,16.0,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.75,15.0,0 125.99791666666667,15.0,0 125.99791666666667,15.245833333333334,0 125.75,15.245833333333334,0 125.75,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (85%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.75,15.0,0 126.99791666666667,15.0,0 126.99791666666667,15.245833333333334,0 126.75,15.245833333333334,0 126.75,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (63%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.5,15.0,0 127.74791666666667,15.0,0 127.74791666666667,15.245833333333334,0 127.5,15.245833333333334,0 127.5,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (98%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.75,15.0,0 127.99791666666667,15.0,0 127.99791666666667,15.245833333333334,0 127.75,15.245833333333334,0 127.75,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.25,15.0,0 129.49791666666667,15.0,0 129.49791666666667,15.245833333333334,0 129.25,15.245833333333334,0 129.25,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.25,15.0,0 130.49791666666667,15.0,0 130.49791666666667,15.245833333333334,0 130.25,15.245833333333334,0 130.25,15.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (74%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.5,15.25,0 125.74791666666667,15.25,0 125.74791666666667,15.495833333333334,0 125.5,15.495833333333334,0 125.5,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (68%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.25,15.25,0 126.49791666666667,15.25,0 126.49791666666667,15.495833333333334,0 126.25,15.495833333333334,0 126.25,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (81%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.0,15.25,0 127.24791666666667,15.25,0 127.24791666666667,15.495833333333334,0 127.0,15.495833333333334,0 127.0,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (90%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.5,15.25,0 127.74791666666667,15.25,0 127.74791666666667,15.495833333333334,0 127.5,15.495833333333334,0 127.5,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (97%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.25,15.25,0 129.49791666666667,15.25,0 129.49791666666667,15.495833333333334,0 129.25,15.495833333333334,0 129.25,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (86%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.25,15.25,0 130.49791666666667,15.25,0 130.49791666666667,15.495833333333334,0 130.25,15.495833333333334,0 130.25,15.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (86%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.0,15.5,0 125.24791666666667,15.5,0 125.24791666666667,15.745833333333334,0 125.0,15.745833333333334,0 125.0,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (81%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.5,15.5,0 127.74791666666667,15.5,0 127.74791666666667,15.745833333333334,0 127.5,15.745833333333334,0 127.5,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (83%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          128.5,15.5,0 128.74791666666667,15.5,0 128.74791666666667,15.745833333333334,0 128.5,15.745833333333334,0 128.5,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (78%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          129.5,15.5,0 129.74791666666667,15.5,0 129.74791666666667,15.745833333333334,0 129.5,15.745833333333334,0 129.5,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (83%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.25,15.5,0 130.49791666666667,15.5,0 130.49791666666667,15.745833333333334,0 130.25,15.745833333333334,0 130.25,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (87%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          132.0,15.5,0 132.24791666666667,15.5,0 132.24791666666667,15.745833333333334,0 132.0,15.745833333333334,0 132.0,15.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (91%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          125.25,15.75,0 125.49791666666667,15.75,0 125.49791666666667,15.995833333333334,0 125.25,15.995833333333334,0 125.25,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (86%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.75,15.75,0 126.99791666666667,15.75,0 126.99791666666667,15.995833333333334,0 126.75,15.995833333333334,0 126.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (88%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.0,15.75,0 130.24791666666667,15.75,0 130.24791666666667,15.995833333333334,0 130.0,15.995833333333334,0 130.0,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.75,15.75,0 130.99791666666667,15.75,0 130.99791666666667,15.995833333333334,0 130.75,15.995833333333334,0 130.75,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (63%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          131.0,15.75,0 131.24791666666667,15.75,0 131.24791666666667,15.995833333333334,0 131.0,15.995833333333334,0 131.0,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (75%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          131.25,15.75,0 131.49791666666667,15.75,0 131.49791666666667,15.995833333333334,0 131.25,15.995833333333334,0 131.25,15.75,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (71%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.0,16.0,0 126.24791666666667,16.0,0 126.24791666666667,16.245833333333334,0 126.0,16.245833333333334,0 126.0,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (84%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.5,16.0,0 127.74791666666667,16.0,0 127.74791666666667,16.245833333333334,0 127.5,16.245833333333334,0 127.5,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (84%)</name>
+        <styleUrl>#zone_poly</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          130.75,16.0,0 130.99791666666667,16.0,0 130.99791666666667,16.245833333333334,0 130.75,16.245833333333334,0 130.75,16.0,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (62%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.0,16.25,0 127.24791666666667,16.25,0 127.24791666666667,16.495833333333334,0 127.0,16.495833333333334,0 127.0,16.25,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (61%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          126.75,16.5,0 126.99791666666667,16.5,0 126.99791666666667,16.745833333333334,0 126.75,16.745833333333334,0 126.75,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+      <Placemark>
+        <name>bigeye 適合區 (66%)</name>
+        <styleUrl>#zone_poly_med</styleUrl>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          127.75,16.5,0 127.99791666666667,16.5,0 127.99791666666667,16.745833333333334,0 127.75,16.745833333333334,0 127.75,16.5,0
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </Placemark>
+    </Folder>
+  </Folder>
+  <Folder><name> SST 鋒面</name><open>0</open>
+    <Placemark>
+      <name>鋒面 (0.077°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>154.75,18.75,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.077°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>154.5,19.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.082°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>154.75,19.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.092°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>154.5,19.25,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.082°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>141.25,24.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.080°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>142.0,24.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.090°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>141.25,24.25,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.072°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.0,25.5,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.073°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.25,25.75,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.079°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.5,25.75,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.128°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.0,26.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.066°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.5,26.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.085°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.75,26.0,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>鋒面 (0.111°C/km)</name>
+      <styleUrl>#front_line</styleUrl>
+      <Point><coordinates>125.25,26.5,0</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder><name>ℹ 分析資訊</name>
+    <Placemark>
+      <name>OceanMaster 分析摘要</name>
+      <description><![CDATA[生成時間: 2026-02-09T17:07:01.564481+00:00\nskipjack: 熱點20個, 最高80%\nyellowfin: 熱點20個, 最高83%\nbigeye: 熱點20個, 最高98%\nsquid: 熱點0個, 最高44%]]></description>
+      <Point><coordinates>139.875,22.375,0</coordinates></Point>
+    </Placemark>
+  </Folder>
+</Document>
+</kml>

@@ -1,0 +1,50 @@
+{
+  "rmse": 0.08232435340151004,
+  "r2": 0.694536351905324,
+  "n_samples": 5079,
+  "n_features": 12,
+  "species": "bigeye",
+  "timestamp": "2026-02-13T20:38:25.709885+00:00",
+  "top_features": [
+    {
+      "name": "bathy_depth",
+      "importance": 0.46412026107611626
+    },
+    {
+      "name": "bathy_slope",
+      "importance": 0.21096232087741065
+    },
+    {
+      "name": "bathy_dist_to_shelf_break",
+      "importance": 0.1014462795515711
+    },
+    {
+      "name": "bathy_dist_to_seamount",
+      "importance": 0.06442322913260895
+    },
+    {
+      "name": "month_cos",
+      "importance": 0.033007883956450296
+    },
+    {
+      "name": "month_sin",
+      "importance": 0.02865126071476667
+    },
+    {
+      "name": "current_speed",
+      "importance": 0.020203151789753727
+    },
+    {
+      "name": "sst_chl_interaction",
+      "importance": 0.01976933445344722
+    },
+    {
+      "name": "eke",
+      "importance": 0.01957948859174456
+    },
+    {
+      "name": "chl",
+      "importance": 0.017345340721329015
+    }
+  ]
+}

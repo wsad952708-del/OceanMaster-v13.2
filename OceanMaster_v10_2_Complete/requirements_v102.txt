@@ -1,0 +1,18 @@
+# OceanMaster v10.2.2 — 生產依賴
+# Core
+numpy>=1.24
+scipy>=1.10
+httpx>=0.25         # 非同步HTTP (取代 requests)
+# CMEMS
+copernicusmarine>=1.0  # Copernicus 官方庫 (pip install copernicusmarine)
+xarray>=2023.1
+netCDF4>=1.6
+# EEZ (可選: 有 GeoJSON 時自動用 Shapely 精確判定)
+shapely>=2.0        # pip install shapely (可選)
+# API
+fastapi>=0.100
+uvicorn>=0.23
+# Legacy (v8-v10.1 保留)
+requests>=2.28
+scikit-learn>=1.2
+lightgbm>=4.0

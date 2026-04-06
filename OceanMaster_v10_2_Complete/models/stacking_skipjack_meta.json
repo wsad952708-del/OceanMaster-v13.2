@@ -1,0 +1,50 @@
+{
+  "rmse": 0.06829863673374506,
+  "r2": 0.900755513062346,
+  "n_samples": 1200,
+  "n_features": 44,
+  "species": "skipjack",
+  "timestamp": "2026-02-20T17:01:01.217561+00:00",
+  "top_features": [
+    {
+      "name": "sst",
+      "importance": 0.8001525672030603
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.05016317004633554
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.036881456043089504
+    },
+    {
+      "name": "season_sin",
+      "importance": 0.03640325161473708
+    },
+    {
+      "name": "chl_local_mean",
+      "importance": 0.027531974783539935
+    },
+    {
+      "name": "sst_x_chl",
+      "importance": 0.013709336764437125
+    },
+    {
+      "name": "ais_fishing_density",
+      "importance": 0.00374582508341848
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.002505803895443432
+    },
+    {
+      "name": "season_cos",
+      "importance": 0.002428331535628238
+    },
+    {
+      "name": "moon_phase",
+      "importance": 0.0021320619882485912
+    }
+  ]
+}

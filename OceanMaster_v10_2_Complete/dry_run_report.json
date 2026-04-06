@@ -1,0 +1,195 @@
+{
+  "test_date": "2026-02-14T16:02:32.822222+00:00",
+  "gfw_records": 542,
+  "grid_cells": 542,
+  "training_samples": 542,
+  "feature_count": 12,
+  "feature_names": [
+    "sst",
+    "chl",
+    "ssh",
+    "do",
+    "current_speed",
+    "front_strength",
+    "eddy_strength",
+    "phi",
+    "bathy_depth",
+    "bathy_slope",
+    "bathy_dist_to_seamount",
+    "bathy_dist_to_shelf_break"
+  ],
+  "feature_coverage": {
+    "sst": "100%",
+    "chl": "100%",
+    "ssh": "100%",
+    "do": "100%",
+    "current_speed": "100%",
+    "front_strength": "100%",
+    "eddy_strength": "100%",
+    "phi": "100%",
+    "bathy_depth": "100%",
+    "bathy_slope": "100%",
+    "bathy_dist_to_seamount": "100%",
+    "bathy_dist_to_shelf_break": "100%"
+  },
+  "models_trained": {
+    "yellowfin": {
+      "rmse": 0.2597346699866245,
+      "r2": -0.0029093852036674583,
+      "n_samples": 542,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "eddy_strength",
+          "importance": 0.17321025569333084
+        },
+        {
+          "name": "phi",
+          "importance": 0.1616133143311352
+        },
+        {
+          "name": "front_strength",
+          "importance": 0.1471433546068081
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.0930212728148269
+        },
+        {
+          "name": "chl",
+          "importance": 0.07852402550136514
+        }
+      ],
+      "status": "trained"
+    },
+    "bigeye": {
+      "rmse": 0.2597346699866245,
+      "r2": -0.0029093852036674583,
+      "n_samples": 542,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "eddy_strength",
+          "importance": 0.17321025569333084
+        },
+        {
+          "name": "phi",
+          "importance": 0.1616133143311352
+        },
+        {
+          "name": "front_strength",
+          "importance": 0.1471433546068081
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.0930212728148269
+        },
+        {
+          "name": "chl",
+          "importance": 0.07852402550136514
+        }
+      ],
+      "status": "trained"
+    },
+    "skipjack": {
+      "rmse": 0.2597346699866245,
+      "r2": -0.0029093852036674583,
+      "n_samples": 542,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "eddy_strength",
+          "importance": 0.17321025569333084
+        },
+        {
+          "name": "phi",
+          "importance": 0.1616133143311352
+        },
+        {
+          "name": "front_strength",
+          "importance": 0.1471433546068081
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.0930212728148269
+        },
+        {
+          "name": "chl",
+          "importance": 0.07852402550136514
+        }
+      ],
+      "status": "trained"
+    },
+    "albacore": {
+      "rmse": 0.2597346699866245,
+      "r2": -0.0029093852036674583,
+      "n_samples": 542,
+      "n_features": 12,
+      "top_features": [
+        {
+          "name": "eddy_strength",
+          "importance": 0.17321025569333084
+        },
+        {
+          "name": "phi",
+          "importance": 0.1616133143311352
+        },
+        {
+          "name": "front_strength",
+          "importance": 0.1471433546068081
+        },
+        {
+          "name": "bathy_slope",
+          "importance": 0.0930212728148269
+        },
+        {
+          "name": "chl",
+          "importance": 0.07852402550136514
+        }
+      ],
+      "status": "trained"
+    }
+  },
+  "spatial_cv": {
+    "mean_r2": -0.03944007687420122,
+    "std_r2": 0.029946103497197302,
+    "n_folds": 7,
+    "per_fold": [
+      -0.05862852235616178,
+      -0.025724171765054926,
+      -0.06374292805116011,
+      -0.05701359201927669,
+      0.005639366913006483,
+      -0.0009765842791074064,
+      -0.07563410656165415
+    ]
+  },
+  "temporal_holdout": {
+    "r2": -0.0941457553690157,
+    "rmse": 0.27022795166215025,
+    "train_months": "Jan-Feb",
+    "test_months": "Mar",
+    "train_n": 92,
+    "test_n": 450
+  },
+  "obis_validation": {},
+  "physical_sanity": {
+    "sst_range_ok": "100%",
+    "chl_range_ok": "100%",
+    "non_zero_effort": "100%",
+    "passed": true
+  },
+  "status": "READY_FOR_PRODUCTION_DATA",
+  "elapsed_seconds": 106.9,
+  "pkl_files": [
+    "models\\scaler_albacore.pkl",
+    "models\\scaler_bigeye.pkl",
+    "models\\scaler_skipjack.pkl",
+    "models\\scaler_yellowfin.pkl",
+    "models\\stacking_albacore.pkl",
+    "models\\stacking_bigeye.pkl",
+    "models\\stacking_skipjack.pkl",
+    "models\\stacking_yellowfin.pkl"
+  ],
+  "pkl_count": 8
+}

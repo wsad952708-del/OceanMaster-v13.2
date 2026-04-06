@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>OceanMaster v10.1 — 13項商業核心技術</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI','Microsoft JhengHei',sans-serif;background:#0a1628;color:#e0e8f0}
+#map{width:100%;height:100vh}
+.panel{position:absolute;top:10px;left:10px;z-index:1000;background:rgba(10,22,40,0.97);border:1px solid #1e3a5f;border-radius:12px;padding:14px;width:370px;box-shadow:0 4px 30px rgba(0,0,0,0.6);max-height:calc(100vh - 20px);overflow-y:auto}
+.panel::-webkit-scrollbar{width:4px}.panel::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:4px}
+h1{font-size:18px;color:#4fc3f7;display:inline}.ver{font-size:11px;color:#ff9800;font-weight:700}
+.sub{font-size:10px;color:#78909c;margin:2px 0 10px}
+.sr{display:flex;gap:5px;margin-bottom:8px}.sb{flex:1;background:rgba(30,58,95,0.5);border-radius:8px;padding:6px;text-align:center}
+.sb .v{font-size:17px;font-weight:700;color:#4fc3f7}.sb .l{font-size:8px;color:#90a4ae}
+.tech{display:flex;gap:3px;flex-wrap:wrap;margin:6px 0}
+.tt{padding:2px 5px;border-radius:8px;font-size:8px;background:rgba(79,195,247,0.12);color:#4fc3f7;border:1px solid rgba(79,195,247,0.25)}
+.tt.n{background:rgba(255,152,0,0.15);color:#ffb74d;border-color:rgba(255,152,0,0.3)}
+.tt.n2{background:rgba(233,30,99,0.15);color:#f48fb1;border-color:rgba(233,30,99,0.3)}
+.sf{margin:6px 0;display:flex;flex-wrap:wrap;gap:3px}
+.sb2{padding:3px 8px;border-radius:12px;border:1px solid #1e3a5f;background:rgba(30,58,95,0.3);color:#b0bec5;cursor:pointer;font-size:10px}
+.sb2.a{border-color:#4fc3f7;color:#fff;background:rgba(79,195,247,0.15)}
+.tabs{display:flex;gap:2px;margin:8px 0 4px}
+.tab{flex:1;padding:5px;text-align:center;font-size:10px;background:rgba(30,58,95,0.25);border-radius:5px 5px 0 0;cursor:pointer;color:#78909c}
+.tab.a{background:rgba(79,195,247,0.15);color:#4fc3f7}
+.hl{}.hi{display:flex;align-items:center;gap:6px;padding:7px;margin:2px 0;border-radius:7px;background:rgba(30,58,95,0.2);cursor:pointer;border-left:3px solid transparent;transition:all 0.15s}
+.hi:hover{background:rgba(79,195,247,0.1)}.hi.sel{border-left-color:#4fc3f7;background:rgba(79,195,247,0.12)}
+.rk{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;color:#fff}
+.inf{flex:1;min-width:0}.inf .nm{font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inf .dt{font-size:9px;color:#78909c}.sc{font-size:14px;font-weight:700}
+.ep{position:absolute;top:10px;right:10px;z-index:1000;background:rgba(10,22,40,0.97);border:1px solid #1e3a5f;border-radius:12px;padding:14px;width:310px;display:none;box-shadow:0 4px 30px rgba(0,0,0,0.6);max-height:calc(100vh - 20px);overflow-y:auto}
+.ep h3{font-size:13px;color:#4fc3f7;margin-bottom:6px}.cls{position:absolute;top:6px;right:10px;cursor:pointer;color:#78909c;font-size:16px}
+.er{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(30,58,95,0.4)}
+.er .el{font-size:10px;color:#90a4ae}.er .ev{font-size:11px;font-weight:600}
+.es{margin-top:6px;padding-top:4px;border-top:1px solid #1e3a5f}.es h4{font-size:10px;color:#ff9800;margin-bottom:3px}
+.bb{height:5px;background:rgba(30,58,95,0.5);border-radius:3px;margin:2px 0}.bf{height:100%;border-radius:3px}
+.leg{position:absolute;bottom:20px;right:10px;z-index:1000;background:rgba(10,22,40,0.92);border:1px solid #1e3a5f;border-radius:7px;padding:8px 12px}
+.leg h3{font-size:10px;color:#78909c;margin-bottom:3px}.li{display:flex;align-items:center;gap:5px;margin:2px 0;font-size:10px}
+.ld{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.note{margin-top:8px;padding:5px 7px;background:rgba(255,152,0,0.06);border:1px solid rgba(255,152,0,0.2);border-radius:5px;font-size:9px;color:#ffb74d;line-height:1.4}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="panel">
+<h1>🐟 OceanMaster</h1> <span class="ver">v10.1</span>
+<div class="sub">13項逆向推理商業核心 | 完整生態鏈 | 代謝指數Φ</div>
+<div class="sr">
+<div class="sb"><div class="v" id="st-n">30</div><div class="l">漁場</div></div>
+<div class="sb"><div class="v" id="st-s">—</div><div class="l">最高分</div></div>
+<div class="sb"><div class="v">13</div><div class="l">核心技術</div></div>
+<div class="sb"><div class="v">6</div><div class="l">物種</div></div>
+</div>
+<div class="tech">
+<span class="tt">SST鋒面</span><span class="tt">FTLE</span><span class="tt">SSH渦旋</span>
+<span class="tt n">代謝指數Φ</span><span class="tt n">SEAPODYM棲息地</span>
+<span class="tt n">VGPM營養鏈</span><span class="tt n">溶解氧DO</span>
+<span class="tt n">渦旋邊緣</span><span class="tt n">鋒面持續性</span>
+<span class="tt n2">SST異常</span><span class="tt n2">Chl爆發</span>
+<span class="tt n2">時間滯後</span><span class="tt n2">海流匯聚</span>
+<span class="tt n2">ENSO調整</span><span class="tt n2">SHAP歸因</span>
+<span class="tt">EKE</span><span class="tt">ML-Stack</span><span class="tt">AIS</span>
+</div>
+<div class="sf" id="sf"></div>
+<div class="tabs">
+<div class="tab a" data-s="score">評分</div>
+<div class="tab" data-s="dist">距離</div>
+<div class="tab" data-s="phi">代謝Φ</div>
+<div class="tab" data-s="npp">NPP</div>
+</div>
+<div class="hl" id="hl"></div>
+<div class="note">
+⚠ 模擬數據。部署後接入 NOAA/HYCOM/CMEMS/WOA23/VGPM/Argo<br>
+🔬 v10.1: 代謝指數Φ(Deutsch 2015) + SEAPODYM棲息地 + 異常偵測<br>
+📊 Φ = pO₂/[Pcrit×exp(Eo/kB×(1/T-1/Tref))] → 比單獨SST/DO準確50%+
+</div>
+</div>
+<div class="ep" id="ep">
+<span class="cls" onclick="document.getElementById('ep').style.display='none'">&times;</span>
+<h3 id="et">—</h3><div id="ec"></div>
+</div>
+<div class="leg">
+<h3>v10.1 圖例</h3>
+<div class="li"><div class="ld" style="background:#e53935"></div>最佳 (≥75%)</div>
+<div class="li"><div class="ld" style="background:#ff9800"></div>良好 (55-75%)</div>
+<div class="li"><div class="ld" style="background:#fdd835"></div>一般 (30-55%)</div>
+</div>
+<script>
+const H=[{"species": "albacore", "species_zh": "長鰭鮪", "species_en": "Albacore Tuna", "color": "#2196f3", "rank": 5, "lat": 34.29, "lon": 142.52, "score": 0.978, "distance_nm": 1223.3, "travel_hours": 122.3, "sst": 20.9, "chl": 1.08, "npp": 994.0, "do_surface": 5.8, "phi": 8.0, "phi_viable": 0.999, "h_thermal": 0.893, "h_feeding": 0.929, "isoxygen_depth": 424.0, "hci": 1.76, "eke": 372.0, "depth_m": 3103.0, "forage_index": 0.93, "sst_anomaly": 0.4, "chl_anomaly": 0.18, "convergence": 0.27, "front_persist": 0.14, "eddy_edge": 0.39, "explain": "🫧代謝指數(100%) > 🍤餌料(93%) > 🌡️水溫(89%) > 📊SST異常(87%)", "eez": "公海", "global_rank": 1}, {"species": "yellowfin", "species_zh": "黃鰭鮪", "species_en": "Yellowfin Tuna", "color": "#4caf50", "rank": 2, "lat": 12.29, "lon": 122.16, "score": 0.97, "distance_nm": 765.7, "travel_hours": 76.6, "sst": 26.2, "chl": 0.134, "npp": 368.0, "do_surface": 5.7, "phi": 8.0, "phi_viable": 0.996, "h_thermal": 0.86, "h_feeding": 0.827, "isoxygen_depth": 437.0, "hci": 1.16, "eke": 189.0, "depth_m": 441.0, "forage_index": 0.83, "sst_anomaly": -2.5, "chl_anomaly": 0.07, "convergence": 0.1, "front_persist": 0.62, "eddy_edge": 0.28, "explain": "⛰️地形(100%) > 🫧代謝指數(100%) > 🌡️水溫(86%) > 🍤餌料(83%)", "eez": "台灣EEZ", "global_rank": 2}, {"species": "bigeye", "species_zh": "大目鮪", "species_en": "Bigeye Tuna", "color": "#e53935", "rank": 4, "lat": 19.51, "lon": 147.27, "score": 0.969, "distance_nm": 1463.9, "travel_hours": 146.4, "sst": 19.9, "chl": 0.246, "npp": 163.0, "do_surface": 5.8, "phi": 8.0, "phi_viable": 1.0, "h_thermal": 0.893, "h_feeding": 0.84, "isoxygen_depth": 444.0, "hci": 0.86, "eke": 154.0, "depth_m": 4898.0, "forage_index": 0.84, "sst_anomaly": -1.6, "chl_anomaly": -0.29, "convergence": 0, "front_persist": 0.96, "eddy_edge": 0.98, "explain": "🫧代謝指數(100%) > 🌀渦旋邊(98%) > 🌊鋒面(96%) > 🌡️水溫(89%)", "eez": "日本EEZ", "global_rank": 3}, {"species": "skipjack", "species_zh": "鰹魚", "species_en": "Skipjack Tuna", "color": "#ff9800", "rank": 1, "lat": 23.33, "lon": 138.41, "score": 0.965, "distance_nm": 927.9, "travel_hours": 92.8, "sst": 22.5, "chl": 0.091, "npp": 332.0, "do_surface": 5.2, "phi": 8.0, "phi_viable": 0.993, "h_thermal": 0.682, "h_feeding": 0.914, "isoxygen_depth": 559.0, "hci": 1.04, "eke": 411.0, "depth_m": 4026.0, "forage_index": 0.92, "sst_anomaly": 0.7, "chl_anomaly": 0.17, "convergence": 0.59, "front_persist": 0.73, "eddy_edge": 0.94, "explain": "🫧代謝指數(99%) > 🌀渦旋邊(94%) > 🍤餌料(91%) > 📊SST異常(77%)", "eez": "日本EEZ", "global_rank": 4}, {"species": "skipjack", "species_zh": "鰹魚", "species_en": "Skipjack Tuna", "color": "#ff9800", "rank": 4, "lat": 9.03, "lon": 133.45, "score": 0.964, "distance_nm": 1176.7, "travel_hours": 117.7, "sst": 23.3, "chl": 0.059, "npp": 384.0, "do_surface": 5.5, "phi": 8.0, "phi_viable": 0.993, "h_thermal": 0.796, "h_feeding": 0.904, "isoxygen_depth": 499.0, "hci": 1.44, "eke": 314.0, "depth_m": 931.0, "forage_index": 0.91, "sst_anomaly": 1.1, "chl_anomaly": 0.28, "convergence": 0.6, "front_persist": 0.43, "eddy_edge": 0.34, "explain": "⛰️地形(100%) > 🫧代謝指數(99%) > 🍤餌料(90%) > 🌡️水溫(80%)", "eez": "台灣EEZ", "global_rank": 5}, {"species": "albacore", "species_zh": "長鰭鮪", "species_en": "Albacore Tuna", "color": "#2196f3", "rank": 3, "lat": 34.66, "lon": 141.41, "score": 0.963, "distance_nm": 1181.2, "travel_hours": 118.1, "sst": 20.4, "chl": 0.153, "npp": 204.0, "do_surface": 5.9, "phi": 8.0, "phi_viable": 0.999, "h_thermal": 0.941, "h_feeding": 0.849, "isoxygen_depth": 267.0, "hci": 1.62, "eke": 161.0, "depth_m": 4175.0, "forage_index": 0.85, "sst_anomaly": 1.8, "chl_anomaly": 0.13, "convergence": 0, "front_persist": 0.28, "eddy_edge": 0.86, "explain": "🫧代謝指數(100%) > 🌡️水溫(94%) > 🌀渦旋邊(86%) > 🍤餌料(85%)", "eez": "日本EEZ", "global_rank": 6}, {"species": "squid_todarodes", "species_zh": "日本魷魚", "species_en": "Japanese Squid", "color": "#ab47bc", "rank": 4, "lat": 34.74, "lon": 142.42, "score": 0.948, "distance_nm": 1228.9, "travel_hours": 122.9, "sst": 17.9, "chl": 0.22, "npp": 289.0, "do_surface": 6.2, "phi": 8.0, "phi_viable": 0.979, "h_thermal": 0.893, "h_feeding": 0.754, "isoxygen_depth": 512.0, "hci": 1.16, "eke": 783.0, "depth_m": 5083.0, "forage_index": 0.77, "sst_anomaly": 1.6, "chl_anomaly": -0.23, "convergence": 0.19, "front_persist": 0.44, "eddy_edge": 0.57, "explain": "🫧代謝指數(98%) > 🌡️水溫(89%) > 🍤餌料(75%) > 🌀渦旋邊(57%)", "eez": "日本EEZ", "global_rank": 7}, {"species": "yellowfin", "species_zh": "黃鰭鮪", "species_en": "Yellowfin Tuna", "color": "#4caf50", "rank": 3, "lat": 12.29, "lon": 131.73, "score": 0.945, "distance_nm": 958.0, "travel_hours": 95.8, "sst": 23.7, "chl": 0.106, "npp": 411.0, "do_surface": 5.8, "phi": 8.0, "phi_viable": 0.996, "h_thermal": 0.997, "h_feeding": 0.737, "isoxygen_depth": 408.0, "hci": 0.94, "eke": 626.0, "depth_m": 4247.0, "forage_index": 0.74, "sst_anomaly": -0.3, "chl_anomaly": -0.32, "convergence": 0.29, "front_persist": 0.84, "eddy_edge": 0.29, "explain": "🌡️水溫(100%) > 🫧代謝指數(100%) > 📊SST異常(90%) > 🌊鋒面(84%)", "eez": "公海", "global_rank": 8}, {"species": "bigeye", "species_zh": "大目鮪", "species_en": "Bigeye Tuna", "color": "#e53935", "rank": 5, "lat": 21.4, "lon": 132.15, "score": 0.942, "distance_nm": 623.4, "travel_hours": 62.3, "sst": 18.7, "chl": 0.174, "npp": 227.0, "do_surface": 5.8, "phi": 8.0, "phi_viable": 1.0, "h_thermal": 0.985, "h_feeding": 0.69, "isoxygen_depth": 318.0, "hci": 1.48, "eke": 264.0, "depth_m": 472.0, "forage_index": 0.69, "sst_anomaly": 0.5, "chl_anomaly": -0.46, "convergence": 0.25, "front_persist": 0.92, "eddy_edge": 0.26, "explain": "🫧代謝指數(100%) > ⛰️地形(100%) > 🌡️水溫(98%) > 🌊鋒面(92%)", "eez": "菲律賓EEZ", "global_rank": 9}, {"species": "bigeye", "species_zh": "大目鮪", "species_en": "Bigeye Tuna", "color": "#e53935", "rank": 3, "lat": 8.49, "lon": 145.46, "score": 0.934, "distance_nm": 1689.7, "travel_hours": 169.0, "sst": 16.8, "chl": 0.16, "npp": 407.0, "do_surface": 6.0, "phi": 8.0, "phi_viable": 1.0, "h_thermal": 0.956, "h_feeding": 0.65, "isoxygen_depth": 557.0, "hci": 1.34, "eke": 471.0, "depth_m": 4201.0, "forage_index": 0.65, "sst_anomaly": 0.0, "chl_anomaly": -0.02, "convergence": 0.61, "front_persist": 0.93, "eddy_edge": 0.48, "explain": "🫧代謝指數(100%) > 📊SST異常(100%) > 🌡️水溫(96%) > 🌊鋒面(93%)", "eez": "公海", "global_rank": 10}, {"species": "skipjack", "species_zh": "鰹魚", "species_en": "Skipjack Tuna", "color": "#ff9800", "rank": 3, "lat": 17.84, "lon": 145.78, "score": 0.923, "distance_nm": 1418.2, "travel_hours": 141.8, "sst": 27.2, "chl": 0.632, "npp": 759.0, "do_surface": 5.7, "phi": 8.0, "phi_viable": 0.993, "h_thermal": 0.956, "h_feeding": 0.884, "isoxygen_depth": 294.0, "hci": 1.1, "eke": 843.0, "depth_m": 4374.0, "forage_index": 0.89, "sst_anomaly": 1.1, "chl_anomaly": 0.17, "convergence": 0, "front_persist": 0.2, "eddy_edge": 0.01, "explain": "🫧代謝指數(99%) > 🌡️水溫(96%) > 🍤餌料(88%) > 📊SST異常(63%)", "eez": "公海", "global_rank": 11}, {"species": "bigeye", "species_zh": "大目鮪", "species_en": "Bigeye Tuna", "color": "#e53935", "rank": 2, "lat": 8.23, "lon": 151.4, "score": 0.92, "distance_nm": 1982.9, "travel_hours": 198.3, "sst": 16.4, "chl": 0.18, "npp": 349.0, "do_surface": 6.5, "phi": 8.0, "phi_viable": 1.0, "h_thermal": 0.923, "h_feeding": 0.68, "isoxygen_depth": 127.0, "hci": 1.64, "eke": 357.0, "depth_m": 4179.0, "forage_index": 0.68, "sst_anomaly": -0.0, "chl_anomaly": -0.32, "convergence": 0.24, "front_persist": 0.14, "eddy_edge": 0.64, "explain": "🫧代謝指數(100%) > 📊SST異常(100%) > 🌡️水溫(92%) > 🍤餌料(68%)", "eez": "公海", "global_rank": 12}, {"species": "albacore", "species_zh": "長鰭鮪", "species_en": "Albacore Tuna", "color": "#2196f3", "rank": 2, "lat": 33.89, "lon": 149.92, "score": 0.92, "distance_nm": 1568.9, "travel_hours": 156.9, "sst": 19.0, "chl": 0.09, "npp": 329.0, "do_surface": 5.7, "phi": 8.0, "phi_viable": 0.999, "h_thermal": 1.0, "h_feeding": 0.649, "isoxygen_depth": 368.0, "hci": 1.79, "eke": 304.0, "depth_m": 5210.0, "forage_index": 0.65, "sst_anomaly": 0.2, "chl_anomaly": -0.6, "convergence": 0, "front_persist": 0.51, "eddy_edge": 0.27, "explain": "🌡️水溫(100%) > 🫧代謝指數(100%) > 📊SST異常(93%) > 🍤餌料(65%)", "eez": "帛琉EEZ", "global_rank": 13}, {"species": "yellowfin", "species_zh": "黃鰭鮪", "species_en": "Yellowfin Tuna", "color": "#4caf50", "rank": 5, "lat": 17.25, "lon": 154.31, "score": 0.897, "distance_nm": 1887.3, "travel_hours": 188.7, "sst": 26.6, "chl": 1.058, "npp": 941.0, "do_surface": 5.6, "phi": 8.0, "phi_viable": 0.996, "h_thermal": 0.81, "h_feeding": 0.747, "isoxygen_depth": 92.0, "hci": 1.27, "eke": 854.0, "depth_m": 2153.0, "forage_index": 0.75, "sst_anomaly": -0.7, "chl_anomaly": -0.11, "convergence": 0.07, "front_persist": 0.96, "eddy_edge": 0.8, "explain": "🫧代謝指數(100%) > 🌊鋒面(96%) > 🌡️水溫(81%) > 🌀渦旋邊(80%)", "eez": "帛琉EEZ", "global_rank": 14}, {"species": "albacore", "species_zh": "長鰭鮪", "species_en": "Albacore Tuna", "color": "#2196f3", "rank": 4, "lat": 33.28, "lon": 153.72, "score": 0.895, "distance_nm": 1749.6, "travel_hours": 175.0, "sst": 15.7, "chl": 0.256, "npp": 433.0, "do_surface": 6.1, "phi": 8.0, "phi_viable": 0.999, "h_thermal": 0.712, "h_feeding": 0.809, "isoxygen_depth": 445.0, "hci": 1.79, "eke": 808.0, "depth_m": 5242.0, "forage_index": 0.81, "sst_anomaly": -0.6, "chl_anomaly": 0.16, "convergence": 0, "front_persist": 0.08, "eddy_edge": 0.37, "explain": "🫧代謝指數(100%) > 🍤餌料(81%) > 📊SST異常(80%) > 🌡️水溫(71%)", "eez": "公海", "global_rank": 15}, {"species": "squid_ommastrephes", "species_zh": "赤魷", "species_en": "Neon Flying Squid", "color": "#e91e63", "rank": 5, "lat": 35.75, "lon": 146.71, "score": 0.895, "distance_nm": 1447.0, "travel_hours": 144.7, "sst": 17.7, "chl": 0.289, "npp": 391.0, "do_surface": 5.9, "phi": 8.0, "phi_viable": 0.989, "h_thermal": 0.561, "h_feeding": 0.791, "isoxygen_depth": 581.0, "hci": 1.69, "eke": 98.0, "depth_m": 3223.0, "forage_index": 0.8, "sst_anomaly": -1.2, "chl_anomaly": 0.48, "convergence": 0.21, "front_persist": 0.87, "eddy_edge": 0.63, "explain": "🫧代謝指數(99%) > 🌊鋒面(87%) > 🍤餌料(79%) > 🌿Chl爆發(69%)", "eez": "公海", "global_rank": 16}, {"species": "bigeye", "species_zh": "大目鮪", "species_en": "Bigeye Tuna", "color": "#e53935", "rank": 1, "lat": 10.38, "lon": 138.58, "score": 0.887, "distance_nm": 1309.2, "travel_hours": 130.9, "sst": 14.4, "chl": 0.111, "npp": 274.0, "do_surface": 6.0, "phi": 8.0, "phi_viable": 1.0, "h_thermal": 0.667, "h_feeding": 0.75, "isoxygen_depth": 471.0, "hci": 1.7, "eke": 712.0, "depth_m": 3149.0, "forage_index": 0.75, "sst_anomaly": -1.1, "chl_anomaly": -0.25, "convergence": 0.19, "front_persist": 0.61, "eddy_edge": 0.11, "explain": "🫧代謝指數(100%) > 🍤餌料(75%) > 🌡️水溫(67%) > 📊SST異常(63%)", "eez": "日本EEZ", "global_rank": 17}, {"species": "yellowfin", "species_zh": "黃鰭鮪", "species_en": "Yellowfin Tuna", "color": "#4caf50", "rank": 4, "lat": 13.12, "lon": 122.46, "score": 0.882, "distance_nm": 716.9, "travel_hours": 71.7, "sst": 27.5, "chl": 0.101, "npp": 119.0, "do_surface": 5.3, "phi": 8.0, "phi_viable": 0.996, "h_thermal": 0.682, "h_feeding": 0.837, "isoxygen_depth": 317.0, "hci": 1.11, "eke": 518.0, "depth_m": 5438.0, "forage_index": 0.84, "sst_anomaly": 0.6, "chl_anomaly": -0.45, "convergence": 0, "front_persist": 0.04, "eddy_edge": 0.4, "explain": "🫧代謝指數(100%) > 🍤餌料(84%) > 📊SST異常(80%) > 🌡️水溫(68%)", "eez": "菲律賓EEZ", "global_rank": 18}, {"species": "squid_ommastrephes", "species_zh": "赤魷", "species_en": "Neon Flying Squid", "color": "#e91e63", "rank": 2, "lat": 32.06, "lon": 135.86, "score": 0.874, "distance_nm": 863.1, "travel_hours": 86.3, "sst": 22.2, "chl": 0.432, "npp": 595.0, "do_surface": 5.9, "phi": 8.0, "phi_viable": 0.989, "h_thermal": 0.999, "h_feeding": 0.663, "isoxygen_depth": 440.0, "hci": 0.8, "eke": 428.0, "depth_m": 1740.0, "forage_index": 0.67, "sst_anomaly": 0.1, "chl_anomaly": -0.06, "convergence": 0.29, "front_persist": 0.1, "eddy_edge": 0.33, "explain": "🌡️水溫(100%) > 🫧代謝指數(99%) > 📊SST異常(97%) > 🍤餌料(66%)", "eez": "日本EEZ", "global_rank": 19}, {"species": "yellowfin", "species_zh": "黃鰭鮪", "species_en": "Yellowfin Tuna", "color": "#4caf50", "rank": 1, "lat": 24.89, "lon": 134.87, "score": 0.867, "distance_nm": 724.3, "travel_hours": 72.4, "sst": 21.8, "chl": 0.097, "npp": 324.0, "do_surface": 5.6, "phi": 8.0, "phi_viable": 0.996, "h_thermal": 0.86, "h_feeding": 0.508, "isoxygen_depth": 249.0, "hci": 1.31, "eke": 463.0, "depth_m": 4357.0, "forage_index": 0.51, "sst_anomaly": 1.0, "chl_anomaly": -0.2, "convergence": 0.32, "front_persist": 0.8, "eddy_edge": 0.8, "explain": "🫧代謝指數(100%) > 🌡️水溫(86%) > 🌊鋒面(80%) > 🌀渦旋邊(80%)", "eez": "帛琉EEZ", "global_rank": 20}, {"species": "squid_todarodes", "species_zh": "日本魷魚", "species_en": "Japanese Squid", "color": "#ab47bc", "rank": 2, "lat": 36.66, "lon": 135.68, "score": 0.831, "distance_nm": 1006.4, "travel_hours": 100.6, "sst": 15.6, "chl": 0.486, "npp": 640.0, "do_surface": 6.3, "phi": 7.03, "phi_viable": 0.954, "h_thermal": 0.995, "h_feeding": 0.572, "isoxygen_depth": 209.0, "hci": 1.48, "eke": 85.0, "depth_m": 1874.0, "forage_index": 0.6, "sst_anomaly": -2.9, "chl_anomaly": 0.28, "convergence": 0.47, "front_persist": 0.11, "eddy_edge": 0.84, "explain": "🌡️水溫(100%) > 🫧代謝指數(95%) > 🌀渦旋邊(84%) > 🍤餌料(57%)", "eez": "公海", "global_rank": 21}, {"species": "squid_ommastrephes", "species_zh": "赤魷", "species_en": "Neon Flying Squid", "color": "#e91e63", "rank": 1, "lat": 37.21, "lon": 146.38, "score": 0.822, "distance_nm": 1463.7, "travel_hours": 146.4, "sst": 20.6, "chl": 0.232, "npp": 258.0, "do_surface": 5.8, "phi": 8.0, "phi_viable": 0.989, "h_thermal": 0.941, "h_feeding": 0.396, "isoxygen_depth": 148.0, "hci": 1.61, "eke": 378.0, "depth_m": 1199.0, "forage_index": 0.4, "sst_anomaly": -0.4, "chl_anomaly": -0.48, "convergence": 0.1, "front_persist": 0.83, "eddy_edge": 0.8, "explain": "🫧代謝指數(99%) > 🌡️水溫(94%) > 📊SST異常(87%) > ⛰️地形(83%)", "eez": "日本EEZ", "global_rank": 22}, {"species": "skipjack", "species_zh": "鰹魚", "species_en": "Skipjack Tuna", "color": "#ff9800", "rank": 5, "lat": 22.22, "lon": 140.06, "score": 0.778, "distance_nm": 1030.7, "travel_hours": 103.1, "sst": 29.7, "chl": 0.062, "npp": 280.0, "do_surface": 5.2, "phi": 8.0, "phi_viable": 0.993, "h_thermal": 0.652, "h_feeding": 0.556, "isoxygen_depth": 91.0, "hci": 1.58, "eke": 785.0, "depth_m": 3632.0, "forage_index": 0.56, "sst_anomaly": -0.2, "chl_anomaly": -0.17, "convergence": 0.13, "front_persist": 0.88, "eddy_edge": 0.89, "explain": "🫧代謝指數(99%) > 📊SST異常(93%) > 🌀渦旋邊(89%) > 🌊鋒面(88%)", "eez": "台灣EEZ", "global_rank": 23}, {"species": "albacore", "species_zh": "長鰭鮪", "species_en": "Albacore Tuna", "color": "#2196f3", "rank": 1, "lat": 30.42, "lon": 154.64, "score": 0.709, "distance_nm": 1781.1, "travel_hours": 178.1, "sst": 23.7, "chl": 0.241, "npp": 425.0, "do_surface": 5.9, "phi": 8.0, "phi_viable": 0.999, "h_thermal": 0.501, "h_feeding": 0.509, "isoxygen_depth": 484.0, "hci": 1.19, "eke": 400.0, "depth_m": 957.0, "forage_index": 0.51, "sst_anomaly": -0.2, "chl_anomaly": -0.36, "convergence": 0, "front_persist": 0.18, "eddy_edge": 0.03, "explain": "⛰️地形(100%) > 🫧代謝指數(100%) > 📊SST異常(93%) > 🍤餌料(51%)", "eez": "菲律賓EEZ", "global_rank": 24}, {"species": "squid_todarodes", "species_zh": "日本魷魚", "species_en": "Japanese Squid", "color": "#ab47bc", "rank": 1, "lat": 28.5, "lon": 148.63, "score": 0.689, "distance_nm": 1462.9, "travel_hours": 146.3, "sst": 16.2, "chl": 0.12, "npp": 238.0, "do_surface": 5.7, "phi": 6.71, "phi_viable": 0.94, "h_thermal": 0.999, "h_feeding": 0.197, "isoxygen_depth": 330.0, "hci": 1.49, "eke": 194.0, "depth_m": 4184.0, "forage_index": 0.21, "sst_anomaly": 3.1, "chl_anomaly": -0.65, "convergence": 0.56, "front_persist": 0.9, "eddy_edge": 0.98, "explain": "🌡️水溫(100%) > 🌀渦旋邊(98%) > 🫧代謝指數(94%) > 🌊鋒面(90%)", "eez": "公海", "global_rank": 25}, {"species": "squid_todarodes", "species_zh": "日本魷魚", "species_en": "Japanese Squid", "color": "#ab47bc", "rank": 5, "lat": 31.21, "lon": 154.22, "score": 0.681, "distance_nm": 1762.1, "travel_hours": 176.2, "sst": 14.7, "chl": 0.204, "npp": 537.0, "do_surface": 6.2, "phi": 6.38, "phi_viable": 0.922, "h_thermal": 0.949, "h_feeding": 0.267, "isoxygen_depth": 318.0, "hci": 1.08, "eke": 876.0, "depth_m": 3219.0, "forage_index": 0.29, "sst_anomaly": -0.8, "chl_anomaly": -0.07, "convergence": 0.34, "front_persist": 0.72, "eddy_edge": 0.67, "explain": "🌡️水溫(95%) > 🫧代謝指數(92%) > 📊SST異常(73%) > 🌊鋒面(72%)", "eez": "台灣EEZ", "global_rank": 26}, {"species": "squid_ommastrephes", "species_zh": "赤魷", "species_en": "Neon Flying Squid", "color": "#e91e63", "rank": 3, "lat": 30.48, "lon": 150.48, "score": 0.669, "distance_nm": 1566.5, "travel_hours": 156.6, "sst": 21.7, "chl": 0.176, "npp": 300.0, "do_surface": 5.6, "phi": 8.0, "phi_viable": 0.989, "h_thermal": 0.997, "h_feeding": 0.227, "isoxygen_depth": 347.0, "hci": 1.42, "eke": 55.0, "depth_m": 5183.0, "forage_index": 0.23, "sst_anomaly": -0.4, "chl_anomaly": 0.11, "convergence": 1.01, "front_persist": 0.47, "eddy_edge": 0.66, "explain": "🔄匯聚(101%) > 🌡️水溫(100%) > 🫧代謝指數(99%) > 📊SST異常(87%)", "eez": "公海", "global_rank": 27}, {"species": "squid_ommastrephes", "species_zh": "赤魷", "species_en": "Neon Flying Squid", "color": "#e91e63", "rank": 4, "lat": 35.28, "lon": 140.87, "score": 0.659, "distance_nm": 1173.0, "travel_hours": 117.3, "sst": 25.1, "chl": 0.064, "npp": 123.0, "do_surface": 6.0, "phi": 8.0, "phi_viable": 0.989, "h_thermal": 0.741, "h_feeding": 0.346, "isoxygen_depth": 518.0, "hci": 1.06, "eke": 251.0, "depth_m": 4226.0, "forage_index": 0.35, "sst_anomaly": 0.4, "chl_anomaly": -0.23, "convergence": 0.42, "front_persist": 0.05, "eddy_edge": 0.41, "explain": "🫧代謝指數(99%) > 📊SST異常(87%) > 🌡️水溫(74%) > 🔄匯聚(42%)", "eez": "台灣EEZ", "global_rank": 28}, {"species": "skipjack", "species_zh": "鰹魚", "species_en": "Skipjack Tuna", "color": "#ff9800", "rank": 2, "lat": 15.4, "lon": 128.42, "score": 0.655, "distance_nm": 695.1, "travel_hours": 69.5, "sst": 26.9, "chl": 0.193, "npp": 310.0, "do_surface": 5.6, "phi": 8.0, "phi_viable": 0.993, "h_thermal": 0.975, "h_feeding": 0.228, "isoxygen_depth": 220.0, "hci": 1.41, "eke": 203.0, "depth_m": 928.0, "forage_index": 0.23, "sst_anomaly": -1.8, "chl_anomaly": 0.02, "convergence": 0.02, "front_persist": 0.01, "eddy_edge": 0.66, "explain": "⛰️地形(100%) > 🫧代謝指數(99%) > 🌡️水溫(98%) > 🌀渦旋邊(66%)", "eez": "帛琉EEZ", "global_rank": 29}, {"species": "squid_todarodes", "species_zh": "日本魷魚", "species_en": "Japanese Squid", "color": "#ab47bc", "rank": 3, "lat": 35.4, "lon": 149.89, "score": 0.638, "distance_nm": 1589.0, "travel_hours": 158.9, "sst": 14.0, "chl": 0.076, "npp": 440.0, "do_surface": 6.6, "phi": 6.37, "phi_viable": 0.921, "h_thermal": 0.882, "h_feeding": 0.239, "isoxygen_depth": 126.0, "hci": 1.71, "eke": 427.0, "depth_m": 3344.0, "forage_index": 0.26, "sst_anomaly": -2.0, "chl_anomaly": -0.35, "convergence": 0.31, "front_persist": 0.75, "eddy_edge": 0.23, "explain": "🫧代謝指數(92%) > 🌡️水溫(88%) > 🌊鋒面(75%) > 📊SST異常(33%)", "eez": "菲律賓EEZ", "global_rank": 30}];
+const SP={"bigeye": {"zh": "大目鮪", "color": "#e53935", "icon": "🐟", "do_min": 1.5, "Topt": 18, "phi_crit": 2.0}, "skipjack": {"zh": "鰹魚", "color": "#ff9800", "icon": "🐟", "do_min": 3.5, "Topt": 26, "phi_crit": 3.0}, "yellowfin": {"zh": "黃鰭鮪", "color": "#4caf50", "icon": "🐟", "do_min": 3.0, "Topt": 24, "phi_crit": 2.8}, "albacore": {"zh": "長鰭鮪", "color": "#2196f3", "icon": "🐟", "do_min": 2.5, "Topt": 19, "phi_crit": 2.5}, "squid_todarodes": {"zh": "日本魷魚", "color": "#ab47bc", "icon": "🦑", "do_min": 2.0, "Topt": 16, "phi_crit": 3.5}, "squid_ommastrephes": {"zh": "赤魷", "color": "#e91e63", "icon": "🦑", "do_min": 2.0, "Topt": 22, "phi_crit": 3.2}};
+const map=L.map('map',{center:[22,140],zoom:5,zoomControl:false});
+L.control.zoom({position:'topright'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(map);
+L.rectangle([[5,120],[42,175]],{color:'#4fc3f7',weight:1,fillColor:'#4fc3f7',fillOpacity:0.02,dashArray:'6 3'}).addTo(map);
+L.marker([25.03,121.56],{icon:L.divIcon({className:'',html:'<div style="font-size:22px;filter:drop-shadow(0 0 3px #000)">🚢</div>',iconSize:[24,24],iconAnchor:[12,12]})}).addTo(map).bindPopup('<b>🚢 基隆港</b>');
+const MK=[];let AS=new Set(Object.keys(SP)),SM='score',SI=-1;
+H.forEach((h,i)=>{const s=SP[h.species]||{zh:h.species,color:'#999'};const sz=12+h.score*14;
+const mk=L.marker([h.lat,h.lon],{icon:L.divIcon({className:'',
+html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;background:${s.color};opacity:${0.4+h.score*0.6};border:2px solid rgba(255,255,255,0.6);box-shadow:0 0 ${sz}px ${s.color}80;display:flex;align-items:center;justify-content:center;font-size:${sz*0.4}px;color:#fff;font-weight:700">${h.rank}</div>`,
+iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]})}
+).bindPopup(`<div style="font-family:'Segoe UI',sans-serif;min-width:260px">
+<div style="font-size:14px;font-weight:700;color:${s.color}">#${h.rank} ${s.zh} ${h.score>=0.75?'🔴':h.score>=0.55?'🟠':'🟡'}</div>
+<div style="font-size:22px;font-weight:700;margin:3px 0">${Math.round(h.score*100)}%</div>
+<hr style="border:none;border-top:1px solid #ddd;margin:5px 0">
+<div style="font-size:11px;line-height:1.7">
+<b>🧬 代謝指數Φ:</b> ${h.phi} ${h.phi>s.phi_crit?'✅':'⚠️'}<br>
+<b>🌡️ 溫度適宜:</b> ${(h.h_thermal*100).toFixed(0)}% (SST=${h.sst}°C, 最適${s.Topt}°C)<br>
+<b>🍤 餌料可及:</b> ${(h.h_feeding*100).toFixed(0)}%<br>
+<b>🫧 DO:</b> ${h.do_surface}ml/L | 等氧面${h.isoxygen_depth}m | HCI=${h.hci}<br>
+<b>🌿 NPP:</b> ${h.npp}mgC/m²/d | Chl=${h.chl}mg/m³<br>
+<b>📊 SST異常:</b> ${h.sst_anomaly>0?'+':''}${h.sst_anomaly}°C | Chl異常:${h.chl_anomaly>0?'+':''}${h.chl_anomaly}<br>
+<b>🌊 鋒面:</b> ${(h.front_persist*100).toFixed(0)}% | 🌀渦旋邊:${(h.eddy_edge*100).toFixed(0)}%<br>
+<b>🔄 匯聚:</b> ${(h.convergence*100).toFixed(0)}% | EKE:${h.eke}cm²/s²<br>
+<hr style="border:none;border-top:1px solid #ddd;margin:4px 0">
+<b>📍</b> ${h.lat}°N,${h.lon}°E | <b>🧭</b> ${h.distance_nm.toFixed(0)}nm/${h.travel_hours.toFixed(0)}h | ${h.eez}<br>
+<b>🔍 歸因:</b> ${h.explain}
+</div></div>`);
+mk._h=h;mk._i=i;MK.push(mk);mk.addTo(map)});
+document.getElementById('st-s').textContent=Math.round(Math.max(...H.map(h=>h.score))*100)+'%';
+// Species filter
+const sf=document.getElementById('sf');
+Object.entries(SP).forEach(([k,s])=>{const b=document.createElement('div');b.className='sb2 a';b.textContent=s.icon+' '+s.zh;b.dataset.sp=k;
+b.onclick=()=>{b.classList.toggle('a');if(AS.has(k))AS.delete(k);else AS.add(k);upd();rl()};sf.appendChild(b)});
+// Tabs
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('a'));t.classList.add('a');SM=t.dataset.s;rl()});
+function upd(){MK.forEach(m=>{if(AS.has(m._h.species))m.addTo(map);else map.removeLayer(m)});document.getElementById('st-n').textContent=H.filter(h=>AS.has(h.species)).length}
+function showE(h){const s=SP[h.species];const p=document.getElementById('ep');
+const pc=c=>c>0.7?'#4caf50':c>0.4?'#ff9800':'#f44336';
+document.getElementById('et').innerHTML=`<span style="color:${s.color}">${s.icon} ${s.zh}</span> #${h.rank} — ${Math.round(h.score*100)}%`;
+document.getElementById('ec').innerHTML=`
+<div class="es"><h4>🧬 核心三因子 (SEAPODYM式)</h4>
+<div class="er"><span class="el">代謝指數 Φ</span><span class="ev" style="color:${pc(h.phi_viable)}">${h.phi} (${h.phi>s.phi_crit?'✅可活動':'⚠️受限'})</span></div>
+<div class="bb"><div class="bf" style="width:${Math.min(h.phi_viable*100,100)}%;background:${pc(h.phi_viable)}"></div></div>
+<div class="er"><span class="el">溫度棲息 H_T</span><span class="ev">${(h.h_thermal*100).toFixed(0)}%</span></div>
+<div class="bb"><div class="bf" style="width:${h.h_thermal*100}%;background:${pc(h.h_thermal)}"></div></div>
+<div class="er"><span class="el">覓食棲息 H_F</span><span class="ev">${(h.h_feeding*100).toFixed(0)}%</span></div>
+<div class="bb"><div class="bf" style="width:${h.h_feeding*100}%;background:${pc(h.h_feeding)}"></div></div></div>
+<div class="es"><h4>🌊 環境場</h4>
+<div class="er"><span class="el">SST</span><span class="ev">${h.sst}°C (${h.sst_anomaly>0?'+':''}${h.sst_anomaly})</span></div>
+<div class="er"><span class="el">Chl-a</span><span class="ev">${h.chl}mg/m³ (${h.chl_anomaly>0?'+':''}${h.chl_anomaly})</span></div>
+<div class="er"><span class="el">NPP(VGPM)</span><span class="ev">${h.npp}mgC/m²/d</span></div>
+<div class="er"><span class="el">DO</span><span class="ev">${h.do_surface}ml/L (需≥${s.do_min})</span></div>
+<div class="er"><span class="el">EKE</span><span class="ev">${h.eke}cm²/s²</span></div>
+<div class="er"><span class="el">水深</span><span class="ev">${h.depth_m}m</span></div></div>
+<div class="es"><h4>📊 動態指標 (v10.1新增)</h4>
+<div class="er"><span class="el">鋒面持續性</span><span class="ev">${(h.front_persist*100).toFixed(0)}%</span></div>
+<div class="bb"><div class="bf" style="width:${h.front_persist*100}%;background:#ff9800"></div></div>
+<div class="er"><span class="el">渦旋邊緣</span><span class="ev">${(h.eddy_edge*100).toFixed(0)}%</span></div>
+<div class="er"><span class="el">海流匯聚</span><span class="ev">${(h.convergence*100).toFixed(0)}%</span></div>
+<div class="er"><span class="el">HCI壓縮</span><span class="ev" style="color:${h.hci>1.3?'#f44336':'#4caf50'}">${h.hci}</span></div></div>
+<div class="es"><h4>🔍 決策歸因 (SHAP式)</h4>
+<div style="font-size:10px;color:#b0bec5;line-height:1.5">${h.explain}</div></div>
+<div class="es"><h4>🧭 航行</h4>
+<div class="er"><span class="el">距離</span><span class="ev">${h.distance_nm.toFixed(0)}nm</span></div>
+<div class="er"><span class="el">航時 @10kn</span><span class="ev">${h.travel_hours.toFixed(0)}hr</span></div>
+<div class="er"><span class="el">水域</span><span class="ev">${h.eez}</span></div></div>`;
+p.style.display='block'}
+function rl(){const l=document.getElementById('hl');l.innerHTML='';
+let f=H.filter(h=>AS.has(h.species));
+if(SM==='dist')f.sort((a,b)=>a.distance_nm-b.distance_nm);
+else if(SM==='phi')f.sort((a,b)=>b.phi-a.phi);
+else if(SM==='npp')f.sort((a,b)=>b.npp-a.npp);
+else f.sort((a,b)=>b.score-a.score);
+f.forEach((h,i)=>{const s=SP[h.species]||{zh:h.species,color:'#999'};
+const d=document.createElement('div');d.className='hi'+(h._i===SI?' sel':'');
+const rb=h.score>=0.75?'#e53935':h.score>=0.55?'#ff9800':'#fdd835';
+const rc=h.score>=0.55?'#fff':'#333';
+d.innerHTML=`<div class="rk" style="background:${rb};color:${rc}">${i+1}</div>
+<div class="inf"><div class="nm">${s.icon} ${s.zh} #${h.rank}</div>
+<div class="dt">Φ=${h.phi} | ${h.distance_nm.toFixed(0)}nm | NPP:${h.npp.toFixed(0)}</div></div>
+<div class="sc" style="color:${s.color}">${Math.round(h.score*100)}%</div>`;
+d.onclick=()=>{SI=h._i;map.flyTo([h.lat,h.lon],7);const m=MK.find(x=>x._h===h);if(m)m.openPopup();showE(h);rl()};
+l.appendChild(d)})}
+rl();
+</script>
+</body></html>

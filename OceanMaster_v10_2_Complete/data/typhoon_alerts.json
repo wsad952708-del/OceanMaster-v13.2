@@ -1,0 +1,17 @@
+{
+  "alerts": [
+    {
+      "typhoon_id": "WPUNKNOWN26",
+      "name": "UNNAMED",
+      "lat": -21.0,
+      "lon": -2126.0,
+      "intensity_kt": 50,
+      "category": 0,
+      "timestamp": "2026-02-15T11:22:44.576131+00:00",
+      "basin": "WP",
+      "forecast_track": [],
+      "source": "JTWC"
+    }
+  ],
+  "timestamp": "2026-02-15T11:22:44.576564+00:00"
+}

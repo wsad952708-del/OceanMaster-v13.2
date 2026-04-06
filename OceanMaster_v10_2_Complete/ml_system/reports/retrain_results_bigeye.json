@@ -1,0 +1,82 @@
+{
+  "species": "bigeye",
+  "data_source": "REAL",
+  "data_path": "ml_system/data/simulated_cpue_bigeye.csv",
+  "n_records": 133,
+  "training": {
+    "species": "bigeye",
+    "n_samples": 106,
+    "n_features": 26,
+    "train_r2": 0.9947052371066867,
+    "train_rmse": 0.594043160191495,
+    "cv_mae": 1.3286211513230637,
+    "cv_mae_std": 0.08715025271236315,
+    "cv_r2": 0.9548541597481632,
+    "cv_r2_std": 0.010711066429232077,
+    "timestamp": "2026-02-13T18:34:43.702151",
+    "config": {
+      "species": "bigeye",
+      "test_size": 0.2,
+      "cv_folds": 5,
+      "random_state": 42,
+      "n_estimators_rf": 200,
+      "n_estimators_gbr": 150,
+      "max_depth_rf": 12,
+      "max_depth_gbr": 6,
+      "learning_rate_gbr": 0.05
+    }
+  },
+  "testing": {
+    "test_rmse": 2.361660021107027,
+    "test_mae": 1.6966123643411455,
+    "test_r2": 0.9233406748982408,
+    "test_median_ae": 1.3427819813435597,
+    "accuracy_within_10pct": 88.88888888888889,
+    "accuracy_within_20pct": 96.29629629629629,
+    "accuracy_within_30pct": 100.0,
+    "spearman_r": 0.9688644688644688,
+    "spearman_p": 1.1342840629605953e-16,
+    "residual_mean": 0.057446844568743854,
+    "residual_std": 2.360961226988774,
+    "n_test_samples": 27
+  },
+  "comparison": {
+    "rf": {
+      "rmse": 3.419369751199612,
+      "mae": 2.8680494901915488,
+      "r2": 0.8392975984919774
+    },
+    "gbr": {
+      "rmse": 2.5101198163785114,
+      "mae": 1.7703157772542137,
+      "r2": 0.9133997510505812
+    },
+    "et": {
+      "rmse": 2.911153844284305,
+      "mae": 2.2845081746483284,
+      "r2": 0.8835175357337031
+    },
+    "ridge": {
+      "rmse": 2.515673093192986,
+      "mae": 2.0281187933623417,
+      "r2": 0.9130161461492802
+    },
+    "xgb": {
+      "rmse": 2.7670540529483065,
+      "mae": 1.9596084877296729,
+      "r2": 0.8947637117692006
+    },
+    "lgb": {
+      "rmse": 2.480573251914462,
+      "mae": 1.7497321150910299,
+      "r2": 0.9154264912776893
+    },
+    "ensemble": {
+      "rmse": 2.3616600211070273,
+      "mae": 1.696612364341146,
+      "r2": 0.9233406748982408
+    }
+  },
+  "elapsed_seconds": 12.9,
+  "timestamp": "2026-02-14T02:34:46.884119"
+}

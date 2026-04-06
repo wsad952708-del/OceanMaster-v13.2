@@ -1,0 +1,50 @@
+{
+  "rmse": 0.07348332187841862,
+  "r2": 0.8952304590634338,
+  "n_samples": 1200,
+  "n_features": 44,
+  "species": "albacore",
+  "timestamp": "2026-02-20T17:00:22.528214+00:00",
+  "top_features": [
+    {
+      "name": "sst",
+      "importance": 0.8030560699727246
+    },
+    {
+      "name": "season_sin",
+      "importance": 0.029835315846627918
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.024846852085241716
+    },
+    {
+      "name": "season_cos",
+      "importance": 0.01835940822160446
+    },
+    {
+      "name": "sst_x_chl",
+      "importance": 0.01785623696437733
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.015719380414115133
+    },
+    {
+      "name": "chl_local_mean",
+      "importance": 0.01373403413748839
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.012232414955253259
+    },
+    {
+      "name": "moon_phase",
+      "importance": 0.01046883106871724
+    },
+    {
+      "name": "enso_oni",
+      "importance": 0.004897391577355217
+    }
+  ]
+}

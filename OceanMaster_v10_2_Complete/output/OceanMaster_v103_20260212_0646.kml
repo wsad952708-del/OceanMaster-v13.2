@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>🎣 OceanMaster v10.2 漁場預測</name>
+<description>生成: 2026-02-12 06:48 UTC
+⚠️ 本預測僅供參考，實際作業請依據船長經驗和即時觀測</description>
+<Style id="s_best"><IconStyle><scale>1.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_good"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_fair"><IconStyle><scale>0.9</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_low"><IconStyle><scale>0.7</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_area"><PolyStyle><color>20ffffff</color><outline>1</outline></PolyStyle><LineStyle><color>ff0088ff</color><width>1</width></LineStyle></Style>
+<LookAt><longitude>147.5</longitude><latitude>20.0</latitude><range>2500000</range></LookAt>
+<Folder><name>🎯 v10.2 漁場熱點</name><open>1</open>
+<description>Φ(Deutsch2015真實計算) + SEAPODYM棲息地 + 營養鏈
+Φ不截斷 + EEZ地理校正 + HSI幾何平均
+生成: 2026-02-12 06:48 UTC</description>
+<Folder><name>大目鮪</name>
+<Placemark><name>#1 大目鮪 (93%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 93% ═══
+🧬 代謝指數Φ: 13.88 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1764 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4562m
+⚓ 水域: 公海
+📍 距離: 884 nm (88.4hr)
+📊 【大目鮪】評分 93% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 56%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 39%
+  3. 🌊 穩定鋒面 (差) → 貢獻 2%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>137.75,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#2 大目鮪 (93%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 93% ═══
+🧬 代謝指數Φ: 13.91 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1763 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4770m
+⚓ 水域: 公海
+📍 距離: 916 nm (91.6hr)
+📊 【大目鮪】評分 93% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 56%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 39%
+  3. 🌊 穩定鋒面 (差) → 貢獻 3%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.25,22.0,0</coordinates></Point></Placemark>
+<Placemark><name>#3 大目鮪 (93%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 93% ═══
+🧬 代謝指數Φ: 14.32 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1697 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4377m
+⚓ 水域: 公海
+📍 距離: 890 nm (89.0hr)
+📊 【大目鮪】評分 93% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 58%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 36%
+  3. 🌊 穩定鋒面 (差) → 貢獻 3%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>137.75,22.0,0</coordinates></Point></Placemark>
+<Placemark><name>#4 大目鮪 (92%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 92% ═══
+🧬 代謝指數Φ: 14.07 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1735 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4846m
+⚓ 水域: 公海
+📍 距離: 937 nm (93.7hr)
+📊 【大目鮪】評分 92% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 58%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 38%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%
+  5. 🌊 穩定鋒面 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.75,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#5 大目鮪 (92%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 92% ═══
+🧬 代謝指數Φ: 13.85 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1769 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 5131m
+⚓ 水域: 公海
+📍 距離: 911 nm (91.1hr)
+📊 【大目鮪】評分 92% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 57%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 40%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.25,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#6 大目鮪 (92%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 92% ═══
+🧬 代謝指數Φ: 14.47 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1670 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4818m
+⚓ 水域: 公海
+📍 距離: 943 nm (94.3hr)
+📊 【大目鮪】評分 92% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 59%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 35%
+  3. 🌊 穩定鋒面 (差) → 貢獻 3%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.75,22.0,0</coordinates></Point></Placemark>
+<Placemark><name>#7 大目鮪 (91%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 91% ═══
+🧬 代謝指數Φ: 14.70 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1634 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 5046m
+⚓ 水域: 公海
+📍 距離: 936 nm (93.6hr)
+📊 【大目鮪】評分 91% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 59%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 33%
+  3. 🌊 穩定鋒面 (良) → 貢獻 5%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.5,21.5,0</coordinates></Point></Placemark>
+<Placemark><name>#8 大目鮪 (90%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 90% ═══
+🧬 代謝指數Φ: 13.91 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1762 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4826m
+⚓ 水域: 公海
+📍 距離: 860 nm (86.0hr)
+📊 【大目鮪】評分 90% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 55%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 38%
+  3. 🌊 穩定鋒面 (良) → 貢獻 4%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>137.25,22.25,0</coordinates></Point></Placemark>
+<Placemark><name>#9 大目鮪 (90%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 90% ═══
+🧬 代謝指數Φ: 14.84 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1609 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 4805m
+⚓ 水域: 公海
+📍 距離: 913 nm (91.3hr)
+📊 【大目鮪】評分 90% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 60%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 32%
+  3. 🌊 穩定鋒面 (良) → 貢獻 6%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>138.0,21.25,0</coordinates></Point></Placemark>
+<Placemark><name>#10 大目鮪 (89%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 14.89 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1599 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 4785m
+⚓ 水域: 公海
+📍 距離: 962 nm (96.3hr)
+📊 【大目鮪】評分 89% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 62%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 33%
+  3. 🌊 穩定鋒面 (差) → 貢獻 3%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>139.0,21.5,0</coordinates></Point></Placemark>
+<Placemark><name>#11 大目鮪 (89%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 14.24 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1708 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4513m
+⚓ 水域: 公海
+📍 距離: 1018 nm (101.8hr)
+📊 【大目鮪】評分 89% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 59%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 38%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>140.25,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#12 大目鮪 (89%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 14.62 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1642 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 5398m
+⚓ 水域: 公海
+📍 距離: 964 nm (96.4hr)
+📊 【大目鮪】評分 89% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 62%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 35%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>139.25,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#13 大目鮪 (88%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 14.23 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1708 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4305m
+⚓ 水域: 公海
+📍 距離: 830 nm (83.0hr)
+📊 【大目鮪】評分 88% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 56%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 36%
+  3. 🌊 穩定鋒面 (良) → 貢獻 6%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>136.75,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#14 大目鮪 (88%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 14.89 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1595 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 3901m
+⚓ 水域: 公海
+📍 距離: 970 nm (97.0hr)
+📊 【大目鮪】評分 88% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 64%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 33%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>139.25,22.0,0</coordinates></Point></Placemark>
+<Placemark><name>#15 大目鮪 (88%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 14.45 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1674 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4533m
+⚓ 水域: 公海
+📍 距離: 1023 nm (102.3hr)
+📊 【大目鮪】評分 88% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 61%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 37%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>140.25,22.0,0</coordinates></Point></Placemark>
+<Placemark><name>#16 大目鮪 (88%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 14.40 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1681 mgC/m²/d | DO: 6.2 ml/L
+🏔️ 深度: 4493m
+⚓ 水域: 公海
+📍 距離: 991 nm (99.1hr)
+📊 【大目鮪】評分 88% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 60%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 37%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>139.75,22.5,0</coordinates></Point></Placemark>
+<Placemark><name>#17 大目鮪 (87%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 14.99 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1579 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 4359m
+⚓ 水域: 公海
+📍 距離: 867 nm (86.7hr)
+📊 【大目鮪】評分 87% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 62%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 31%
+  3. 🌊 穩定鋒面 (差) → 貢獻 4%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>137.25,21.75,0</coordinates></Point></Placemark>
+<Placemark><name>#18 大目鮪 (87%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 14.02 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1753 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 5932m
+⚓ 水域: 公海
+📍 距離: 501 nm (50.1hr)
+📊 【大目鮪】評分 87% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 50%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 34%
+  3. 🌀 渦旋邊緣 (優) → 貢獻 9%
+  4. 🌊 穩定鋒面 (良) → 貢獻 6%
+  5. 🍤 餌料可及性 (差) → 貢獻 2%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>129.75,21.0,0</coordinates></Point></Placemark>
+<Placemark><name>#19 大目鮪 (87%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 14.49 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1672 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 4603m
+⚓ 水域: 公海
+📍 距離: 1032 nm (103.2hr)
+📊 【大目鮪】評分 87% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 60%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 36%
+  3. 🍤 餌料可及性 (差) → 貢獻 2%
+  4. 🌊 穩定鋒面 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 1%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>140.25,21.25,0</coordinates></Point></Placemark>
+<Placemark><name>#20 大目鮪 (87%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 15.25 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 1537 mgC/m²/d | DO: 6.1 ml/L
+🏔️ 深度: 4439m
+⚓ 水域: 公海
+📍 距離: 908 nm (90.9hr)
+📊 【大目鮪】評分 87% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 63%
+  2. 🌡️ 水溫適宜度 (良) → 貢獻 29%
+  3. 🌊 穩定鋒面 (良) → 貢獻 5%
+  4. 🍤 餌料可及性 (差) → 貢獻 2%
+  5. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>137.75,20.75,0</coordinates></Point></Placemark>
+</Folder>
+</Folder>
+<Folder><name>分析範圍</name><Placemark><styleUrl>#s_area</styleUrl>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>
+120.0,5.0,0 175.0,5.0,0 175.0,35.0,0 120.0,35.0,0 120.0,5.0,0
+</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder>
+</Document>
+</kml>

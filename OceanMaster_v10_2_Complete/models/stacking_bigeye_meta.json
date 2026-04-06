@@ -1,0 +1,50 @@
+{
+  "rmse": 0.07390965149529714,
+  "r2": 0.8898719738606187,
+  "n_samples": 1600,
+  "n_features": 44,
+  "species": "bigeye",
+  "timestamp": "2026-02-20T16:59:42.827070+00:00",
+  "top_features": [
+    {
+      "name": "sst",
+      "importance": 0.7246911905400325
+    },
+    {
+      "name": "season_sin",
+      "importance": 0.05399108781377963
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.04872740646545006
+    },
+    {
+      "name": "chl_local_mean",
+      "importance": 0.04808218043280981
+    },
+    {
+      "name": "sst_x_chl",
+      "importance": 0.027812285089538886
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.01881094076150214
+    },
+    {
+      "name": "season_cos",
+      "importance": 0.017545310091612216
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.015701964583214555
+    },
+    {
+      "name": "moon_phase",
+      "importance": 0.00605058930800002
+    },
+    {
+      "name": "dist_to_shelf_break",
+      "importance": 0.003889831810349563
+    }
+  ]
+}

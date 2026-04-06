@@ -1,0 +1,472 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#1 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 613.2,
+        "travel_hours": 61.3,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.25,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#2 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 608.4,
+        "travel_hours": 60.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.75,
+          15.0
+        ]
+      },
+      "properties": {
+        "name": "#3 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 607.8,
+        "travel_hours": 60.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          16.25
+        ]
+      },
+      "properties": {
+        "name": "#4 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 538.9,
+        "travel_hours": 53.9,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          16.75
+        ]
+      },
+      "properties": {
+        "name": "#5 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 509.3,
+        "travel_hours": 50.9,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.5,
+          17.0
+        ]
+      },
+      "properties": {
+        "name": "#6 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 489.5,
+        "travel_hours": 49.0,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          17.25
+        ]
+      },
+      "properties": {
+        "name": "#7 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 479.7,
+        "travel_hours": 48.0,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.5,
+          17.5
+        ]
+      },
+      "properties": {
+        "name": "#8 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 459.7,
+        "travel_hours": 46.0,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          17.75
+        ]
+      },
+      "properties": {
+        "name": "#9 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 450.1,
+        "travel_hours": 45.0,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.25,
+          18.0
+        ]
+      },
+      "properties": {
+        "name": "#10 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 428.7,
+        "travel_hours": 42.9,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5,
+          18.25
+        ]
+      },
+      "properties": {
+        "name": "#11 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 418.3,
+        "travel_hours": 41.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.0,
+          18.5
+        ]
+      },
+      "properties": {
+        "name": "#12 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 398.1,
+        "travel_hours": 39.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          18.75
+        ]
+      },
+      "properties": {
+        "name": "#13 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 391.3,
+        "travel_hours": 39.1,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5,
+          19.0
+        ]
+      },
+      "properties": {
+        "name": "#14 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 368.0,
+        "travel_hours": 36.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.0,
+          19.0
+        ]
+      },
+      "properties": {
+        "name": "#15 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 368.1,
+        "travel_hours": 36.8,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          19.25
+        ]
+      },
+      "properties": {
+        "name": "#16 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 362.0,
+        "travel_hours": 36.2,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.25,
+          19.5
+        ]
+      },
+      "properties": {
+        "name": "#17 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 338.8,
+        "travel_hours": 33.9,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.75,
+          20.0
+        ]
+      },
+      "properties": {
+        "name": "#18 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 312.5,
+        "travel_hours": 31.2,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.25,
+          20.5
+        ]
+      },
+      "properties": {
+        "name": "#19 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 289.4,
+        "travel_hours": 28.9,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.75,
+          21.75
+        ]
+      },
+      "properties": {
+        "name": "#20 skipjack",
+        "score": 100,
+        "species": "skipjack",
+        "distance_nm": 209.8,
+        "travel_hours": 21.0,
+        "eez": "公海",
+        "safety": "",
+        "marker-color": "#e53935",
+        "marker-size": "large",
+        "marker-symbol": "harbor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.75,
+            25.25
+          ]
+        ]
+      },
+      "properties": {
+        "name": "建議航線",
+        "type": "fuel_optimal",
+        "distance_nm": 7.2,
+        "time_hours": Infinity,
+        "fuel_savings_pct": 0,
+        "stroke": "#4fc3f7",
+        "stroke-width": 3,
+        "stroke-opacity": 0.8
+      }
+    }
+  ],
+  "properties": {
+    "generator": "OceanMaster v9.0",
+    "timestamp": "2026-02-14T00:33:17.799392+00:00",
+    "n_hotspots": 20
+  }
+}

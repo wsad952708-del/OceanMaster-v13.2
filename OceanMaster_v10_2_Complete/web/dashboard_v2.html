@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="api-key" content="dev-key-change-me">
+    <title>OceanMaster v12 — 專業漁場儀表板</title>
+    <meta name="description" content="OceanMaster v12 商業級遠洋鮪魚漁場預測系統 — 食物鏈級聯預測 + 即時海況分析">
+
+    <!-- Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet.heat -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="/dashboard_v2.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- ═══ HEADER ═══ -->
+        <header class="app-header">
+            <div class="app-logo">
+                <h1>🌊 OceanMaster</h1>
+                <span class="version-badge">v12 Phase 8</span>
+            </div>
+            <div class="header-controls">
+                <button class="header-btn mobile-toggle" id="btn-sidebar-toggle" title="熱點列表">
+                    📋 熱點
+                </button>
+                <select class="species-selector" id="species-select">
+                    <option value="yellowfin">🐟 黃鰭鮪 Yellowfin</option>
+                    <option value="bigeye">🐟 大目鮪 Bigeye</option>
+                    <option value="skipjack">🐟 正鰹 Skipjack</option>
+                    <option value="albacore">🐟 長鰭鮪 Albacore</option>
+                </select>
+                <input type="text" class="search-box" id="search-input" placeholder="搜尋 緯度,經度...">
+                <button class="header-btn" id="btn-refresh" title="刷新數據">
+                    🔄 刷新
+                </button>
+                <button class="header-btn mobile-toggle" id="btn-stats-toggle" title="統計面板">
+                    📊 統計
+                </button>
+            </div>
+        </header>
+
+        <!-- ═══ LEFT SIDEBAR ═══ -->
+        <aside class="left-sidebar" id="left-sidebar">
+            <div class="sidebar-header">
+                <h2>🎯 漁場熱點排名</h2>
+                <div class="subtitle" id="hotspot-count">載入中...</div>
+            </div>
+            <div id="hotspot-list">
+                <!-- 動態填充 -->
+            </div>
+            <!-- 詳細面板 (點擊熱點後顯示) -->
+            <div class="detail-panel" id="detail-panel" style="display:none;">
+                <button class="header-btn" id="btn-back-list" style="margin-bottom:12px;">← 返回列表</button>
+
+                <!-- 基本資訊 -->
+                <div class="detail-section">
+                    <div class="detail-section-title">📍 位置資訊</div>
+                    <div class="detail-row">
+                        <span class="label">位置</span>
+                        <span class="value" id="detail-position">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">HSI 分數</span>
+                        <span class="value" id="detail-hsi">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">信心度</span>
+                        <span class="value" id="detail-confidence">--</span>
+                    </div>
+                </div>
+
+                <!-- 海洋條件 -->
+                <div class="detail-section">
+                    <div class="detail-section-title">🌊 海洋條件</div>
+                    <div class="detail-row">
+                        <span class="label">SST</span>
+                        <span class="value" id="detail-sst">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Chl-a</span>
+                        <span class="value" id="detail-chl">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">DO</span>
+                        <span class="value" id="detail-do">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">SSH</span>
+                        <span class="value" id="detail-ssh">--</span>
+                    </div>
+                </div>
+
+                <!-- 代謝指數 -->
+                <div class="detail-section">
+                    <div class="detail-section-title">🧬 代謝指數</div>
+                    <div style="text-align:center;">
+                        <span class="phi-display" id="detail-phi">Φ = --</span>
+                    </div>
+                </div>
+
+                <!-- 食物鏈狀態 -->
+                <div class="detail-section">
+                    <div class="detail-section-title">🔬 食物鏈狀態</div>
+                    <div class="food-chain-status" id="food-chain-detail">
+                        <div class="trophic-level">
+                            <span class="trophic-icon">🌿</span>
+                            <span>浮游植物</span>
+                            <span class="value" id="fc-phyto">--</span>
+                        </div>
+                        <div class="trophic-arrow">↓</div>
+                        <div class="trophic-level">
+                            <span class="trophic-icon">🦐</span>
+                            <span>浮游動物</span>
+                            <span class="value" id="fc-zoo">--</span>
+                        </div>
+                        <div class="trophic-arrow">↓</div>
+                        <div class="trophic-level">
+                            <span class="trophic-icon">🐠</span>
+                            <span>餌料魚</span>
+                            <span class="value" id="fc-bait">--</span>
+                        </div>
+                        <div class="trophic-arrow">↓</div>
+                        <div class="trophic-level">
+                            <span class="trophic-icon">🐟</span>
+                            <span>鮪魚到達</span>
+                            <span class="value" id="fc-tuna">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 月相與DVM -->
+                <div class="detail-section">
+                    <div class="detail-section-title">🌙 月相 & DVM</div>
+                    <div class="detail-row">
+                        <span class="label">月相</span>
+                        <span class="value" id="detail-moon">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">DVM 深度</span>
+                        <span class="value" id="detail-dvm">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">進食窗口</span>
+                        <span class="value" id="detail-feeding-window">--</span>
+                    </div>
+                </div>
+
+                <!-- SHAP 按鈕 -->
+                <button class="header-btn" id="btn-shap" style="width:100%;justify-content:center;margin-top:8px;">
+                    📊 影響因子分析 (SHAP)
+                </button>
+            </div>
+        </aside>
+
+        <!-- ═══ MAP ═══ -->
+        <div class="map-container">
+            <div id="map"></div>
+
+            <!-- 圖層控制 -->
+            <div class="layer-controls" id="layer-panel">
+                <h3>圖層</h3>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-heatmap" checked>
+                    <span class="layer-dot" style="background:var(--accent-red)"></span>
+                    漁場熱力圖
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-sst">
+                    <span class="layer-dot" style="background:var(--accent-orange)"></span>
+                    海表溫度 SST
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-chl">
+                    <span class="layer-dot" style="background:var(--accent-green)"></span>
+                    葉綠素 Chl-a
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-fronts">
+                    <span class="layer-dot" style="background:var(--accent-yellow)"></span>
+                    鋒面線
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-eddies">
+                    <span class="layer-dot" style="background:var(--accent-purple)"></span>
+                    渦旋
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-hotspots" checked>
+                    <span class="layer-dot" style="background:var(--accent-blue)"></span>
+                    熱點標記
+                </label>
+            </div>
+
+            <!-- 時間滑桿 -->
+            <div class="time-slider-container">
+                <button class="play-btn" id="btn-play" title="播放">▶</button>
+                <span class="time-label" id="time-label">現在</span>
+                <input type="range" class="time-slider" id="time-slider" min="-24" max="192" value="0" step="3">
+                <span class="time-label" style="min-width:80px" id="time-range">-24h → +8d</span>
+            </div>
+        </div>
+
+        <!-- ═══ BOTTOM PANEL — Food Chain Timeline ═══ -->
+        <div class="bottom-panel" id="bottom-panel">
+            <div class="bottom-panel-header">
+                <h3>🔬 食物鏈級聯時間線</h3>
+                <span class="subtitle" id="timeline-species">黃鰭鮪</span>
+            </div>
+            <svg id="timeline-canvas"></svg>
+        </div>
+
+        <!-- ═══ RIGHT PANEL — Quick Stats ═══ -->
+        <aside class="right-panel" id="right-panel">
+            <!-- 今日概況 -->
+            <div class="stat-card">
+                <div class="stat-card-title">🎯 今日概況</div>
+                <div class="detail-row">
+                    <span class="label">熱點數量</span>
+                    <span class="value" id="stat-hotspot-count">--</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">最高 HSI</span>
+                    <span class="value" id="stat-max-hsi">--</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">推薦區域</span>
+                    <span class="value" id="stat-recommend">--</span>
+                </div>
+            </div>
+
+            <!-- 食物鏈指數 -->
+            <div class="stat-card">
+                <div class="stat-card-title">📊 食物鏈指數</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="fc-progress" style="width:0%"></div>
+                </div>
+                <div class="stat-label" id="fc-score-text">--</div>
+            </div>
+
+            <!-- 海況 -->
+            <div class="stat-card">
+                <div class="stat-card-title">🌊 海況</div>
+                <div class="detail-row">
+                    <span class="label">SST 範圍</span>
+                    <span class="value" id="stat-sst-range">--</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">風速</span>
+                    <span class="value" id="stat-wind">--</span>
+                </div>
+            </div>
+
+            <!-- 月相 -->
+            <div class="stat-card">
+                <div class="stat-card-title">🌙 月相</div>
+                <div class="moon-display" id="stat-moon-emoji">🌑</div>
+                <div class="stat-label" style="text-align:center" id="stat-moon-name">--</div>
+            </div>
+
+            <!-- 最佳漁獲評分 -->
+            <div class="stat-card">
+                <div class="stat-card-title">📅 最佳漁獲日</div>
+                <div class="detail-row">
+                    <span class="label">今日</span>
+                    <div class="star-rating" id="star-today"></div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">明日</span>
+                    <div class="star-rating" id="star-tomorrow"></div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">後天</span>
+                    <div class="star-rating" id="star-day3"></div>
+                </div>
+            </div>
+
+            <!-- 最後更新 -->
+            <div class="stat-card" style="border-color: rgba(56,189,248,0.2);">
+                <div class="stat-card-title">⏱ 系統狀態</div>
+                <div class="detail-row">
+                    <span class="label">最後更新</span>
+                    <span class="value" id="stat-last-update">--</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">數據新鮮度</span>
+                    <span class="value" id="stat-freshness">--</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ═══ SHAP Modal ═══ -->
+    <div class="modal-overlay" id="shap-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📊 影響因子分析 (SHAP)</h3>
+                <button class="modal-close" id="shap-close">✕</button>
+            </div>
+            <div class="modal-body" id="shap-body">
+                <!-- 動態填充 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard JS -->
+    <script src="/dashboard_v2.js"></script>
+</body>
+
+</html>

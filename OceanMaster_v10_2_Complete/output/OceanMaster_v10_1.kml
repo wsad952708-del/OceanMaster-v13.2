@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<n>OceanMaster v10.1 漁場預測 (2026-02-09 19:26 UTC)</n>
+<description><![CDATA[OceanMaster v10.1 商業級漁場預測
+技術: 13項逆向推理商業核心 + 5項原創
+核心: 代謝指數Φ + SEAPODYM棲息地 + 營養鏈 + 異常偵測
+生態鏈: Chl→PP(VGPM)→Zoo→MKN→Forage×DO×Φ→Fish HSI
+⚠️ 預測僅供參考]]></description>
+<Style id="s_red"><IconStyle><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_org"><IconStyle><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_ylw"><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_ves"><IconStyle><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon></IconStyle></Style>
+<Style id="s_area"><PolyStyle><color>220000ff</color></PolyStyle><LineStyle><color>ff4fc3f7</color><width>1</width></LineStyle></Style>
+<Placemark><n>🚢 基隆港</n><styleUrl>#s_ves</styleUrl><Point><coordinates>121.56,25.03,0</coordinates></Point></Placemark>
+<Folder><n>🐟 長鰭鮪</n>
+<Placemark><n>#5 長鰭鮪 (97%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 97% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 89% (SST=20.9°C)
+🍤 餌料可及: 93%
+═══ 環境場 ═══
+SST: 20.9°C (異常+0.4°C)
+Chl: 1.08 mg/m³ (異常+0.18)
+NPP(VGPM): 994 mgC/m²/d
+DO表層: 5.8 ml/L
+等氧面: 424.0m | HCI: 1.76 ⚠️壓縮
+EKE: 372.0 cm²/s² | 水深: 3103.0m
+═══ 動態指標 ═══
+鋒面持續性: 14%
+渦旋邊緣: 39%
+海流匯聚: 27%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🍤餌料(93%) > 🌡️水溫(89%) > 📊SST異常(87%)
+═══ 航行 ═══
+距離: 1223nm | 航時: 122h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>142.52,34.29,0</coordinates></Point></Placemark>
+<Placemark><n>#3 長鰭鮪 (96%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 96% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 94% (SST=20.4°C)
+🍤 餌料可及: 85%
+═══ 環境場 ═══
+SST: 20.4°C (異常+1.8°C)
+Chl: 0.153 mg/m³ (異常+0.13)
+NPP(VGPM): 204 mgC/m²/d
+DO表層: 5.9 ml/L
+等氧面: 267.0m | HCI: 1.62 ⚠️壓縮
+EKE: 161.0 cm²/s² | 水深: 4175.0m
+═══ 動態指標 ═══
+鋒面持續性: 28%
+渦旋邊緣: 86%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🌡️水溫(94%) > 🌀渦旋邊(86%) > 🍤餌料(85%)
+═══ 航行 ═══
+距離: 1181nm | 航時: 118h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>141.41,34.66,0</coordinates></Point></Placemark>
+<Placemark><n>#2 長鰭鮪 (92%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 92% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 100% (SST=19.0°C)
+🍤 餌料可及: 65%
+═══ 環境場 ═══
+SST: 19.0°C (異常+0.2°C)
+Chl: 0.09 mg/m³ (異常-0.60)
+NPP(VGPM): 329 mgC/m²/d
+DO表層: 5.7 ml/L
+等氧面: 368.0m | HCI: 1.79 ⚠️壓縮
+EKE: 304.0 cm²/s² | 水深: 5210.0m
+═══ 動態指標 ═══
+鋒面持續性: 51%
+渦旋邊緣: 27%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+🌡️水溫(100%) > 🫧代謝指數(100%) > 📊SST異常(93%) > 🍤餌料(65%)
+═══ 航行 ═══
+距離: 1569nm | 航時: 157h
+水域: 帛琉EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>149.92,33.89,0</coordinates></Point></Placemark>
+<Placemark><n>#4 長鰭鮪 (89%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 71% (SST=15.7°C)
+🍤 餌料可及: 81%
+═══ 環境場 ═══
+SST: 15.7°C (異常-0.6°C)
+Chl: 0.256 mg/m³ (異常+0.16)
+NPP(VGPM): 433 mgC/m²/d
+DO表層: 6.1 ml/L
+等氧面: 445.0m | HCI: 1.79 ⚠️壓縮
+EKE: 808.0 cm²/s² | 水深: 5242.0m
+═══ 動態指標 ═══
+鋒面持續性: 8%
+渦旋邊緣: 37%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🍤餌料(81%) > 📊SST異常(80%) > 🌡️水溫(71%)
+═══ 航行 ═══
+距離: 1750nm | 航時: 175h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>153.72,33.28,0</coordinates></Point></Placemark>
+<Placemark><n>#1 長鰭鮪 (70%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 70% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 50% (SST=23.7°C)
+🍤 餌料可及: 51%
+═══ 環境場 ═══
+SST: 23.7°C (異常-0.2°C)
+Chl: 0.241 mg/m³ (異常-0.36)
+NPP(VGPM): 425 mgC/m²/d
+DO表層: 5.9 ml/L
+等氧面: 484.0m | HCI: 1.19 ✅正常
+EKE: 400.0 cm²/s² | 水深: 957.0m
+═══ 動態指標 ═══
+鋒面持續性: 18%
+渦旋邊緣: 3%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+⛰️地形(100%) > 🫧代謝指數(100%) > 📊SST異常(93%) > 🍤餌料(51%)
+═══ 航行 ═══
+距離: 1781nm | 航時: 178h
+水域: 菲律賓EEZ]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>154.64,30.42,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><n>🐟 黃鰭鮪</n>
+<Placemark><n>#2 黃鰭鮪 (97%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 97% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 86% (SST=26.2°C)
+🍤 餌料可及: 83%
+═══ 環境場 ═══
+SST: 26.2°C (異常-2.5°C)
+Chl: 0.134 mg/m³ (異常+0.07)
+NPP(VGPM): 368 mgC/m²/d
+DO表層: 5.7 ml/L
+等氧面: 437.0m | HCI: 1.16 ✅正常
+EKE: 189.0 cm²/s² | 水深: 441.0m
+═══ 動態指標 ═══
+鋒面持續性: 62%
+渦旋邊緣: 28%
+海流匯聚: 10%
+═══ 決策歸因 ═══
+⛰️地形(100%) > 🫧代謝指數(100%) > 🌡️水溫(86%) > 🍤餌料(83%)
+═══ 航行 ═══
+距離: 766nm | 航時: 77h
+水域: 台灣EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>122.16,12.29,0</coordinates></Point></Placemark>
+<Placemark><n>#3 黃鰭鮪 (94%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 94% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 100% (SST=23.7°C)
+🍤 餌料可及: 74%
+═══ 環境場 ═══
+SST: 23.7°C (異常-0.3°C)
+Chl: 0.106 mg/m³ (異常-0.32)
+NPP(VGPM): 411 mgC/m²/d
+DO表層: 5.8 ml/L
+等氧面: 408.0m | HCI: 0.94 ✅正常
+EKE: 626.0 cm²/s² | 水深: 4247.0m
+═══ 動態指標 ═══
+鋒面持續性: 84%
+渦旋邊緣: 29%
+海流匯聚: 29%
+═══ 決策歸因 ═══
+🌡️水溫(100%) > 🫧代謝指數(100%) > 📊SST異常(90%) > 🌊鋒面(84%)
+═══ 航行 ═══
+距離: 958nm | 航時: 96h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>131.73,12.29,0</coordinates></Point></Placemark>
+<Placemark><n>#5 黃鰭鮪 (89%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 81% (SST=26.6°C)
+🍤 餌料可及: 75%
+═══ 環境場 ═══
+SST: 26.6°C (異常-0.7°C)
+Chl: 1.058 mg/m³ (異常-0.11)
+NPP(VGPM): 941 mgC/m²/d
+DO表層: 5.6 ml/L
+等氧面: 92.0m | HCI: 1.27 ✅正常
+EKE: 854.0 cm²/s² | 水深: 2153.0m
+═══ 動態指標 ═══
+鋒面持續性: 96%
+渦旋邊緣: 80%
+海流匯聚: 7%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🌊鋒面(96%) > 🌡️水溫(81%) > 🌀渦旋邊(80%)
+═══ 航行 ═══
+距離: 1887nm | 航時: 189h
+水域: 帛琉EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>154.31,17.25,0</coordinates></Point></Placemark>
+<Placemark><n>#4 黃鰭鮪 (88%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 68% (SST=27.5°C)
+🍤 餌料可及: 84%
+═══ 環境場 ═══
+SST: 27.5°C (異常+0.6°C)
+Chl: 0.101 mg/m³ (異常-0.45)
+NPP(VGPM): 119 mgC/m²/d
+DO表層: 5.3 ml/L
+等氧面: 317.0m | HCI: 1.11 ✅正常
+EKE: 518.0 cm²/s² | 水深: 5438.0m
+═══ 動態指標 ═══
+鋒面持續性: 4%
+渦旋邊緣: 40%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🍤餌料(84%) > 📊SST異常(80%) > 🌡️水溫(68%)
+═══ 航行 ═══
+距離: 717nm | 航時: 72h
+水域: 菲律賓EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>122.46,13.12,0</coordinates></Point></Placemark>
+<Placemark><n>#1 黃鰭鮪 (86%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 86% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 86% (SST=21.8°C)
+🍤 餌料可及: 51%
+═══ 環境場 ═══
+SST: 21.8°C (異常+1.0°C)
+Chl: 0.097 mg/m³ (異常-0.20)
+NPP(VGPM): 324 mgC/m²/d
+DO表層: 5.6 ml/L
+等氧面: 249.0m | HCI: 1.31 ⚠️壓縮
+EKE: 463.0 cm²/s² | 水深: 4357.0m
+═══ 動態指標 ═══
+鋒面持續性: 80%
+渦旋邊緣: 80%
+海流匯聚: 32%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🌡️水溫(86%) > 🌊鋒面(80%) > 🌀渦旋邊(80%)
+═══ 航行 ═══
+距離: 724nm | 航時: 72h
+水域: 帛琉EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>134.87,24.89,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><n>🐟 大目鮪</n>
+<Placemark><n>#4 大目鮪 (96%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 96% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 89% (SST=19.9°C)
+🍤 餌料可及: 84%
+═══ 環境場 ═══
+SST: 19.9°C (異常-1.6°C)
+Chl: 0.246 mg/m³ (異常-0.29)
+NPP(VGPM): 163 mgC/m²/d
+DO表層: 5.8 ml/L
+等氧面: 444.0m | HCI: 0.86 ✅正常
+EKE: 154.0 cm²/s² | 水深: 4898.0m
+═══ 動態指標 ═══
+鋒面持續性: 96%
+渦旋邊緣: 98%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🌀渦旋邊(98%) > 🌊鋒面(96%) > 🌡️水溫(89%)
+═══ 航行 ═══
+距離: 1464nm | 航時: 146h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>147.27,19.51,0</coordinates></Point></Placemark>
+<Placemark><n>#5 大目鮪 (94%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 94% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 98% (SST=18.7°C)
+🍤 餌料可及: 69%
+═══ 環境場 ═══
+SST: 18.7°C (異常+0.5°C)
+Chl: 0.174 mg/m³ (異常-0.46)
+NPP(VGPM): 227 mgC/m²/d
+DO表層: 5.8 ml/L
+等氧面: 318.0m | HCI: 1.48 ⚠️壓縮
+EKE: 264.0 cm²/s² | 水深: 472.0m
+═══ 動態指標 ═══
+鋒面持續性: 92%
+渦旋邊緣: 26%
+海流匯聚: 25%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > ⛰️地形(100%) > 🌡️水溫(98%) > 🌊鋒面(92%)
+═══ 航行 ═══
+距離: 623nm | 航時: 62h
+水域: 菲律賓EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>132.15,21.4,0</coordinates></Point></Placemark>
+<Placemark><n>#3 大目鮪 (93%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 93% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 96% (SST=16.8°C)
+🍤 餌料可及: 65%
+═══ 環境場 ═══
+SST: 16.8°C (異常+0.0°C)
+Chl: 0.16 mg/m³ (異常-0.02)
+NPP(VGPM): 407 mgC/m²/d
+DO表層: 6.0 ml/L
+等氧面: 557.0m | HCI: 1.34 ⚠️壓縮
+EKE: 471.0 cm²/s² | 水深: 4201.0m
+═══ 動態指標 ═══
+鋒面持續性: 93%
+渦旋邊緣: 48%
+海流匯聚: 61%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 📊SST異常(100%) > 🌡️水溫(96%) > 🌊鋒面(93%)
+═══ 航行 ═══
+距離: 1690nm | 航時: 169h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>145.46,8.49,0</coordinates></Point></Placemark>
+<Placemark><n>#2 大目鮪 (92%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 92% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 92% (SST=16.4°C)
+🍤 餌料可及: 68%
+═══ 環境場 ═══
+SST: 16.4°C (異常-0.0°C)
+Chl: 0.18 mg/m³ (異常-0.32)
+NPP(VGPM): 349 mgC/m²/d
+DO表層: 6.5 ml/L
+等氧面: 127.0m | HCI: 1.64 ⚠️壓縮
+EKE: 357.0 cm²/s² | 水深: 4179.0m
+═══ 動態指標 ═══
+鋒面持續性: 14%
+渦旋邊緣: 64%
+海流匯聚: 24%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 📊SST異常(100%) > 🌡️水溫(92%) > 🍤餌料(68%)
+═══ 航行 ═══
+距離: 1983nm | 航時: 198h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>151.4,8.23,0</coordinates></Point></Placemark>
+<Placemark><n>#1 大目鮪 (88%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 67% (SST=14.4°C)
+🍤 餌料可及: 75%
+═══ 環境場 ═══
+SST: 14.4°C (異常-1.1°C)
+Chl: 0.111 mg/m³ (異常-0.25)
+NPP(VGPM): 274 mgC/m²/d
+DO表層: 6.0 ml/L
+等氧面: 471.0m | HCI: 1.7 ⚠️壓縮
+EKE: 712.0 cm²/s² | 水深: 3149.0m
+═══ 動態指標 ═══
+鋒面持續性: 61%
+渦旋邊緣: 11%
+海流匯聚: 19%
+═══ 決策歸因 ═══
+🫧代謝指數(100%) > 🍤餌料(75%) > 🌡️水溫(67%) > 📊SST異常(63%)
+═══ 航行 ═══
+距離: 1309nm | 航時: 131h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>138.58,10.38,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><n>🐟 鰹魚</n>
+<Placemark><n>#1 鰹魚 (96%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 96% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 68% (SST=22.5°C)
+🍤 餌料可及: 91%
+═══ 環境場 ═══
+SST: 22.5°C (異常+0.7°C)
+Chl: 0.091 mg/m³ (異常+0.17)
+NPP(VGPM): 332 mgC/m²/d
+DO表層: 5.2 ml/L
+等氧面: 559.0m | HCI: 1.04 ✅正常
+EKE: 411.0 cm²/s² | 水深: 4026.0m
+═══ 動態指標 ═══
+鋒面持續性: 73%
+渦旋邊緣: 94%
+海流匯聚: 59%
+═══ 決策歸因 ═══
+🫧代謝指數(99%) > 🌀渦旋邊(94%) > 🍤餌料(91%) > 📊SST異常(77%)
+═══ 航行 ═══
+距離: 928nm | 航時: 93h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>138.41,23.33,0</coordinates></Point></Placemark>
+<Placemark><n>#4 鰹魚 (96%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 96% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 80% (SST=23.3°C)
+🍤 餌料可及: 90%
+═══ 環境場 ═══
+SST: 23.3°C (異常+1.1°C)
+Chl: 0.059 mg/m³ (異常+0.28)
+NPP(VGPM): 384 mgC/m²/d
+DO表層: 5.5 ml/L
+等氧面: 499.0m | HCI: 1.44 ⚠️壓縮
+EKE: 314.0 cm²/s² | 水深: 931.0m
+═══ 動態指標 ═══
+鋒面持續性: 43%
+渦旋邊緣: 34%
+海流匯聚: 60%
+═══ 決策歸因 ═══
+⛰️地形(100%) > 🫧代謝指數(99%) > 🍤餌料(90%) > 🌡️水溫(80%)
+═══ 航行 ═══
+距離: 1177nm | 航時: 118h
+水域: 台灣EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>133.45,9.03,0</coordinates></Point></Placemark>
+<Placemark><n>#3 鰹魚 (92%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 92% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 96% (SST=27.2°C)
+🍤 餌料可及: 88%
+═══ 環境場 ═══
+SST: 27.2°C (異常+1.1°C)
+Chl: 0.632 mg/m³ (異常+0.17)
+NPP(VGPM): 759 mgC/m²/d
+DO表層: 5.7 ml/L
+等氧面: 294.0m | HCI: 1.1 ✅正常
+EKE: 843.0 cm²/s² | 水深: 4374.0m
+═══ 動態指標 ═══
+鋒面持續性: 20%
+渦旋邊緣: 1%
+海流匯聚: 0%
+═══ 決策歸因 ═══
+🫧代謝指數(99%) > 🌡️水溫(96%) > 🍤餌料(88%) > 📊SST異常(63%)
+═══ 航行 ═══
+距離: 1418nm | 航時: 142h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>145.78,17.84,0</coordinates></Point></Placemark>
+<Placemark><n>#5 鰹魚 (77%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 77% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 65% (SST=29.7°C)
+🍤 餌料可及: 56%
+═══ 環境場 ═══
+SST: 29.7°C (異常-0.2°C)
+Chl: 0.062 mg/m³ (異常-0.17)
+NPP(VGPM): 280 mgC/m²/d
+DO表層: 5.2 ml/L
+等氧面: 91.0m | HCI: 1.58 ⚠️壓縮
+EKE: 785.0 cm²/s² | 水深: 3632.0m
+═══ 動態指標 ═══
+鋒面持續性: 88%
+渦旋邊緣: 89%
+海流匯聚: 13%
+═══ 決策歸因 ═══
+🫧代謝指數(99%) > 📊SST異常(93%) > 🌀渦旋邊(89%) > 🌊鋒面(88%)
+═══ 航行 ═══
+距離: 1031nm | 航時: 103h
+水域: 台灣EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>140.06,22.22,0</coordinates></Point></Placemark>
+<Placemark><n>#2 鰹魚 (65%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 65% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 98% (SST=26.9°C)
+🍤 餌料可及: 23%
+═══ 環境場 ═══
+SST: 26.9°C (異常-1.8°C)
+Chl: 0.193 mg/m³ (異常+0.02)
+NPP(VGPM): 310 mgC/m²/d
+DO表層: 5.6 ml/L
+等氧面: 220.0m | HCI: 1.41 ⚠️壓縮
+EKE: 203.0 cm²/s² | 水深: 928.0m
+═══ 動態指標 ═══
+鋒面持續性: 1%
+渦旋邊緣: 66%
+海流匯聚: 2%
+═══ 決策歸因 ═══
+⛰️地形(100%) > 🫧代謝指數(99%) > 🌡️水溫(98%) > 🌀渦旋邊(66%)
+═══ 航行 ═══
+距離: 695nm | 航時: 70h
+水域: 帛琉EEZ]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>128.42,15.4,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><n>🦑 日本魷魚</n>
+<Placemark><n>#4 日本魷魚 (94%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 94% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 89% (SST=17.9°C)
+🍤 餌料可及: 75%
+═══ 環境場 ═══
+SST: 17.9°C (異常+1.6°C)
+Chl: 0.22 mg/m³ (異常-0.23)
+NPP(VGPM): 289 mgC/m²/d
+DO表層: 6.2 ml/L
+等氧面: 512.0m | HCI: 1.16 ✅正常
+EKE: 783.0 cm²/s² | 水深: 5083.0m
+═══ 動態指標 ═══
+鋒面持續性: 44%
+渦旋邊緣: 57%
+海流匯聚: 19%
+═══ 決策歸因 ═══
+🫧代謝指數(98%) > 🌡️水溫(89%) > 🍤餌料(75%) > 🌀渦旋邊(57%)
+═══ 航行 ═══
+距離: 1229nm | 航時: 123h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>142.42,34.74,0</coordinates></Point></Placemark>
+<Placemark><n>#2 日本魷魚 (83%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 83% ═══
+🧬 代謝指數Φ: 7.03 ✅足夠
+🌡️ 水溫適宜: 100% (SST=15.6°C)
+🍤 餌料可及: 57%
+═══ 環境場 ═══
+SST: 15.6°C (異常-2.9°C)
+Chl: 0.486 mg/m³ (異常+0.28)
+NPP(VGPM): 640 mgC/m²/d
+DO表層: 6.3 ml/L
+等氧面: 209.0m | HCI: 1.48 ⚠️壓縮
+EKE: 85.0 cm²/s² | 水深: 1874.0m
+═══ 動態指標 ═══
+鋒面持續性: 11%
+渦旋邊緣: 84%
+海流匯聚: 47%
+═══ 決策歸因 ═══
+🌡️水溫(100%) > 🫧代謝指數(95%) > 🌀渦旋邊(84%) > 🍤餌料(57%)
+═══ 航行 ═══
+距離: 1006nm | 航時: 101h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>135.68,36.66,0</coordinates></Point></Placemark>
+<Placemark><n>#1 日本魷魚 (68%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 68% ═══
+🧬 代謝指數Φ: 6.71 ✅足夠
+🌡️ 水溫適宜: 100% (SST=16.2°C)
+🍤 餌料可及: 20%
+═══ 環境場 ═══
+SST: 16.2°C (異常+3.1°C)
+Chl: 0.12 mg/m³ (異常-0.65)
+NPP(VGPM): 238 mgC/m²/d
+DO表層: 5.7 ml/L
+等氧面: 330.0m | HCI: 1.49 ⚠️壓縮
+EKE: 194.0 cm²/s² | 水深: 4184.0m
+═══ 動態指標 ═══
+鋒面持續性: 90%
+渦旋邊緣: 98%
+海流匯聚: 56%
+═══ 決策歸因 ═══
+🌡️水溫(100%) > 🌀渦旋邊(98%) > 🫧代謝指數(94%) > 🌊鋒面(90%)
+═══ 航行 ═══
+距離: 1463nm | 航時: 146h
+水域: 公海]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>148.63,28.5,0</coordinates></Point></Placemark>
+<Placemark><n>#5 日本魷魚 (68%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 68% ═══
+🧬 代謝指數Φ: 6.38 ✅足夠
+🌡️ 水溫適宜: 95% (SST=14.7°C)
+🍤 餌料可及: 27%
+═══ 環境場 ═══
+SST: 14.7°C (異常-0.8°C)
+Chl: 0.204 mg/m³ (異常-0.07)
+NPP(VGPM): 537 mgC/m²/d
+DO表層: 6.2 ml/L
+等氧面: 318.0m | HCI: 1.08 ✅正常
+EKE: 876.0 cm²/s² | 水深: 3219.0m
+═══ 動態指標 ═══
+鋒面持續性: 72%
+渦旋邊緣: 67%
+海流匯聚: 34%
+═══ 決策歸因 ═══
+🌡️水溫(95%) > 🫧代謝指數(92%) > 📊SST異常(73%) > 🌊鋒面(72%)
+═══ 航行 ═══
+距離: 1762nm | 航時: 176h
+水域: 台灣EEZ]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>154.22,31.21,0</coordinates></Point></Placemark>
+<Placemark><n>#3 日本魷魚 (63%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 63% ═══
+🧬 代謝指數Φ: 6.37 ✅足夠
+🌡️ 水溫適宜: 88% (SST=14.0°C)
+🍤 餌料可及: 24%
+═══ 環境場 ═══
+SST: 14.0°C (異常-2.0°C)
+Chl: 0.076 mg/m³ (異常-0.35)
+NPP(VGPM): 440 mgC/m²/d
+DO表層: 6.6 ml/L
+等氧面: 126.0m | HCI: 1.71 ⚠️壓縮
+EKE: 427.0 cm²/s² | 水深: 3344.0m
+═══ 動態指標 ═══
+鋒面持續性: 75%
+渦旋邊緣: 23%
+海流匯聚: 31%
+═══ 決策歸因 ═══
+🫧代謝指數(92%) > 🌡️水溫(88%) > 🌊鋒面(75%) > 📊SST異常(33%)
+═══ 航行 ═══
+距離: 1589nm | 航時: 159h
+水域: 菲律賓EEZ]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>149.89,35.4,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><n>🦑 赤魷</n>
+<Placemark><n>#5 赤魷 (89%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 56% (SST=17.7°C)
+🍤 餌料可及: 79%
+═══ 環境場 ═══
+SST: 17.7°C (異常-1.2°C)
+Chl: 0.289 mg/m³ (異常+0.48)
+NPP(VGPM): 391 mgC/m²/d
+DO表層: 5.9 ml/L
+等氧面: 581.0m | HCI: 1.69 ⚠️壓縮
+EKE: 98.0 cm²/s² | 水深: 3223.0m
+═══ 動態指標 ═══
+鋒面持續性: 87%
+渦旋邊緣: 63%
+海流匯聚: 21%
+═══ 決策歸因 ═══
+🫧代謝指數(99%) > 🌊鋒面(87%) > 🍤餌料(79%) > 🌿Chl爆發(69%)
+═══ 航行 ═══
+距離: 1447nm | 航時: 145h
+水域: 公海]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>146.71,35.75,0</coordinates></Point></Placemark>
+<Placemark><n>#2 赤魷 (87%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 100% (SST=22.2°C)
+🍤 餌料可及: 66%
+═══ 環境場 ═══
+SST: 22.2°C (異常+0.1°C)
+Chl: 0.432 mg/m³ (異常-0.06)
+NPP(VGPM): 595 mgC/m²/d
+DO表層: 5.9 ml/L
+等氧面: 440.0m | HCI: 0.8 ✅正常
+EKE: 428.0 cm²/s² | 水深: 1740.0m
+═══ 動態指標 ═══
+鋒面持續性: 10%
+渦旋邊緣: 33%
+海流匯聚: 29%
+═══ 決策歸因 ═══
+🌡️水溫(100%) > 🫧代謝指數(99%) > 📊SST異常(97%) > 🍤餌料(66%)
+═══ 航行 ═══
+距離: 863nm | 航時: 86h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>135.86,32.06,0</coordinates></Point></Placemark>
+<Placemark><n>#1 赤魷 (82%)</n>
+<description><![CDATA[【v10.1 商業級分析】🔴最佳
+═══ 綜合 HSI: 82% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 94% (SST=20.6°C)
+🍤 餌料可及: 40%
+═══ 環境場 ═══
+SST: 20.6°C (異常-0.4°C)
+Chl: 0.232 mg/m³ (異常-0.48)
+NPP(VGPM): 258 mgC/m²/d
+DO表層: 5.8 ml/L
+等氧面: 148.0m | HCI: 1.61 ⚠️壓縮
+EKE: 378.0 cm²/s² | 水深: 1199.0m
+═══ 動態指標 ═══
+鋒面持續性: 83%
+渦旋邊緣: 80%
+海流匯聚: 10%
+═══ 決策歸因 ═══
+🫧代謝指數(99%) > 🌡️水溫(94%) > 📊SST異常(87%) > ⛰️地形(83%)
+═══ 航行 ═══
+距離: 1464nm | 航時: 146h
+水域: 日本EEZ]]></description>
+<styleUrl>#s_red</styleUrl>
+<Point><coordinates>146.38,37.21,0</coordinates></Point></Placemark>
+<Placemark><n>#3 赤魷 (66%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 66% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 100% (SST=21.7°C)
+🍤 餌料可及: 23%
+═══ 環境場 ═══
+SST: 21.7°C (異常-0.4°C)
+Chl: 0.176 mg/m³ (異常+0.11)
+NPP(VGPM): 300 mgC/m²/d
+DO表層: 5.6 ml/L
+等氧面: 347.0m | HCI: 1.42 ⚠️壓縮
+EKE: 55.0 cm²/s² | 水深: 5183.0m
+═══ 動態指標 ═══
+鋒面持續性: 47%
+渦旋邊緣: 66%
+海流匯聚: 101%
+═══ 決策歸因 ═══
+🔄匯聚(101%) > 🌡️水溫(100%) > 🫧代謝指數(99%) > 📊SST異常(87%)
+═══ 航行 ═══
+距離: 1566nm | 航時: 157h
+水域: 公海]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>150.48,30.48,0</coordinates></Point></Placemark>
+<Placemark><n>#4 赤魷 (65%)</n>
+<description><![CDATA[【v10.1 商業級分析】🟠良好
+═══ 綜合 HSI: 65% ═══
+🧬 代謝指數Φ: 8.0 ✅足夠
+🌡️ 水溫適宜: 74% (SST=25.1°C)
+🍤 餌料可及: 35%
+═══ 環境場 ═══
+SST: 25.1°C (異常+0.4°C)
+Chl: 0.064 mg/m³ (異常-0.23)
+NPP(VGPM): 123 mgC/m²/d
+DO表層: 6.0 ml/L
+等氧面: 518.0m | HCI: 1.06 ✅正常
+EKE: 251.0 cm²/s² | 水深: 4226.0m
+═══ 動態指標 ═══
+鋒面持續性: 5%
+渦旋邊緣: 41%
+海流匯聚: 42%
+═══ 決策歸因 ═══
+🫧代謝指數(99%) > 📊SST異常(87%) > 🌡️水溫(74%) > 🔄匯聚(42%)
+═══ 航行 ═══
+距離: 1173nm | 航時: 117h
+水域: 台灣EEZ]]></description>
+<styleUrl>#s_org</styleUrl>
+<Point><coordinates>140.87,35.28,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><n>分析範圍</n><Placemark><styleUrl>#s_area</styleUrl>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>
+120,5,0 175,5,0 175,42,0 120,42,0 120,5,0
+</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder>
+</Document></kml>

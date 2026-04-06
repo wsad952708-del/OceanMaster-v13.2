@@ -1,0 +1,129 @@
+{
+  "species": "albacore",
+  "n_samples": 105,
+  "n_features": 26,
+  "train_r2": 0.984227311392652,
+  "train_rmse": 0.7392425735536814,
+  "cv_mae": 1.5513564179823103,
+  "cv_mae_std": 0.29843523115625326,
+  "cv_r2": 0.8505151114103692,
+  "cv_r2_std": 0.057753182827153915,
+  "feature_importance": [
+    {
+      "name": "sst_chl_interaction",
+      "importance": 0.4864101894996853
+    },
+    {
+      "name": "ssh",
+      "importance": 0.19550390544414253
+    },
+    {
+      "name": "month_cos",
+      "importance": 0.06989378926389007
+    },
+    {
+      "name": "current_speed",
+      "importance": 0.062264984160797406
+    },
+    {
+      "name": "lat_norm",
+      "importance": 0.05527330801948798
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.02513479077553615
+    },
+    {
+      "name": "chl",
+      "importance": 0.01737460294765532
+    },
+    {
+      "name": "eddy_strength",
+      "importance": 0.012123115421107701
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.00960534188183245
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.009141620678930191
+    },
+    {
+      "name": "thermal_stress",
+      "importance": 0.007676731556950612
+    },
+    {
+      "name": "month_sin",
+      "importance": 0.007590632091117319
+    },
+    {
+      "name": "lat_lon_interaction",
+      "importance": 0.007465304729507741
+    },
+    {
+      "name": "front_strength",
+      "importance": 0.005939585717983027
+    },
+    {
+      "name": "lon_norm",
+      "importance": 0.005367534771204838
+    },
+    {
+      "name": "phi",
+      "importance": 0.005353105851709419
+    },
+    {
+      "name": "front_eddy_interaction",
+      "importance": 0.004188534068434411
+    },
+    {
+      "name": "phi_over_crit",
+      "importance": 0.0030259338771905925
+    },
+    {
+      "name": "phi_hsi_product",
+      "importance": 0.002370244817304851
+    },
+    {
+      "name": "sst",
+      "importance": 0.0020242689172564033
+    },
+    {
+      "name": "do",
+      "importance": 0.0018971888795677344
+    },
+    {
+      "name": "sst_squared",
+      "importance": 0.0018344528849386348
+    },
+    {
+      "name": "hsi",
+      "importance": 0.001748470384438809
+    },
+    {
+      "name": "region_kuroshio",
+      "importance": 0.0007923633593306564
+    },
+    {
+      "name": "region_warm_pool",
+      "importance": 0.0
+    },
+    {
+      "name": "region_subtropical",
+      "importance": 0.0
+    }
+  ],
+  "timestamp": "2026-02-13T18:35:07.696359",
+  "config": {
+    "species": "albacore",
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "random_state": 42,
+    "n_estimators_rf": 200,
+    "n_estimators_gbr": 150,
+    "max_depth_rf": 12,
+    "max_depth_gbr": 6,
+    "learning_rate_gbr": 0.05
+  }
+}

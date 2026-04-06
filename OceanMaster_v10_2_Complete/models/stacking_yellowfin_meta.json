@@ -1,0 +1,50 @@
+{
+  "rmse": 0.07693957393376304,
+  "r2": 0.8614487761100025,
+  "n_samples": 1600,
+  "n_features": 44,
+  "species": "yellowfin",
+  "timestamp": "2026-02-20T16:58:48.813213+00:00",
+  "top_features": [
+    {
+      "name": "sst",
+      "importance": 0.777849725895596
+    },
+    {
+      "name": "day_of_year_sin",
+      "importance": 0.049301994202804095
+    },
+    {
+      "name": "season_sin",
+      "importance": 0.039404691261345694
+    },
+    {
+      "name": "sst_x_chl",
+      "importance": 0.03249940192623156
+    },
+    {
+      "name": "chl_log",
+      "importance": 0.014393457679974665
+    },
+    {
+      "name": "chl_local_mean",
+      "importance": 0.012656371511175433
+    },
+    {
+      "name": "moon_phase",
+      "importance": 0.012597871373014944
+    },
+    {
+      "name": "season_cos",
+      "importance": 0.006631668192813233
+    },
+    {
+      "name": "chl_gradient",
+      "importance": 0.006195621189766295
+    },
+    {
+      "name": "day_of_year_cos",
+      "importance": 0.004693508183057165
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>🎣 OceanMaster v10.2 漁場預測</name>
+<description>生成: 2026-02-12 00:41 UTC
+⚠️ 本預測僅供參考，實際作業請依據船長經驗和即時觀測</description>
+<Style id="s_best"><IconStyle><scale>1.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_good"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_fair"><IconStyle><scale>0.9</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_low"><IconStyle><scale>0.7</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_area"><PolyStyle><color>20ffffff</color><outline>1</outline></PolyStyle><LineStyle><color>ff0088ff</color><width>1</width></LineStyle></Style>
+<LookAt><longitude>147.5</longitude><latitude>20.0</latitude><range>2500000</range></LookAt>
+<Folder><name>🎯 v10.2 漁場熱點</name><open>1</open>
+<description>Φ(Deutsch2015真實計算) + SEAPODYM棲息地 + 營養鏈
+Φ不截斷 + EEZ地理校正 + HSI幾何平均
+生成: 2026-02-12 00:41 UTC</description>
+<Folder><name>黃鰭鮪</name>
+<Placemark><name>#1 黃鰭鮪 (48%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 48% ═══
+🧬 代謝指數Φ: 8.95 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5370 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 3236m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1002 nm (100.2hr)
+📊 【黃鰭鮪】評分 48% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.0,8.5,0</coordinates></Point></Placemark>
+<Placemark><name>#2 黃鰭鮪 (48%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 48% ═══
+🧬 代謝指數Φ: 8.96 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5360 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 4107m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1032 nm (103.2hr)
+📊 【黃鰭鮪】評分 48% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.0,8.0,0</coordinates></Point></Placemark>
+<Placemark><name>#3 黃鰭鮪 (48%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 48% ═══
+🧬 代謝指數Φ: 9.18 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5564 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 4052m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1061 nm (106.1hr)
+📊 【黃鰭鮪】評分 48% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.25,7.5,0</coordinates></Point></Placemark>
+<Placemark><name>#4 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.92 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5987 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 112m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 986 nm (98.6hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>123.25,8.75,0</coordinates></Point></Placemark>
+<Placemark><name>#5 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.11 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6387 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 2415m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1043 nm (104.3hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>122.0,7.75,0</coordinates></Point></Placemark>
+<Placemark><name>#6 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.08 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5950 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 4281m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1044 nm (104.4hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.75,7.75,0</coordinates></Point></Placemark>
+<Placemark><name>#7 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.10 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5332 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 3993m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1092 nm (109.2hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 54%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 46%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.0,7.0,0</coordinates></Point></Placemark>
+<Placemark><name>#8 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.87 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5598 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 693m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 989 nm (98.9hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>123.75,8.75,0</coordinates></Point></Placemark>
+<Placemark><name>#9 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.99 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5790 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 4029m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1015 nm (101.5hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.5,8.25,0</coordinates></Point></Placemark>
+<Placemark><name>#10 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.05 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5772 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 1m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1047 nm (104.7hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>123.5,7.75,0</coordinates></Point></Placemark>
+<Placemark><name>#11 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.88 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6270 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 4151m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 983 nm (98.3hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>121.25,8.75,0</coordinates></Point></Placemark>
+<Placemark><name>#12 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.11 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6211 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: 4598m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1058 nm (105.8hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>121.25,7.5,0</coordinates></Point></Placemark>
+<Placemark><name>#13 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.97 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5790 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: -438m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1017 nm (101.7hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>123.5,8.25,0</coordinates></Point></Placemark>
+<Placemark><name>#14 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.05 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6314 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: -322m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1044 nm (104.4hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>122.5,7.75,0</coordinates></Point></Placemark>
+<Placemark><name>#15 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.87 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6418 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 3928m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 983 nm (98.3hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>122.25,8.75,0</coordinates></Point></Placemark>
+<Placemark><name>#16 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.97 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6125 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: -11m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1015 nm (101.5hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>123.0,8.25,0</coordinates></Point></Placemark>
+<Placemark><name>#17 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 9.08 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6090 mgC/m²/d | DO: 5.0 ml/L
+🏔️ 深度: -1m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1060 nm (106.0hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>123.0,7.5,0</coordinates></Point></Placemark>
+<Placemark><name>#18 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.83 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 5988 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 3025m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 984 nm (98.4hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>120.75,8.75,0</coordinates></Point></Placemark>
+<Placemark><name>#19 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.95 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6395 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 4847m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 1013 nm (101.3hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 53%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 47%
+  3. 🍤 餌料可及性 (差) → 貢獻 0%
+  4. 🌀 渦旋邊緣 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>121.75,8.25,0</coordinates></Point></Placemark>
+<Placemark><name>#20 黃鰭鮪 (47%)</name>
+<description><![CDATA[【v10.2 商業級分析】🟡良好
+═══ 綜合 HSI: 47% ═══
+🧬 代謝指數Φ: 8.82 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: N/A
+🌿 NPP: 6269 mgC/m²/d | DO: 5.1 ml/L
+🏔️ 深度: 3961m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 984 nm (98.4hr)
+📊 【黃鰭鮪】評分 47% — 主要優勢：
+  1. 🫧 代謝指數(溫度×溶氧) (優) → 貢獻 52%
+  2. 🌡️ 水溫適宜度 (優) → 貢獻 48%
+  3. 🌀 渦旋邊緣 (差) → 貢獻 0%
+  4. 🍤 餌料可及性 (差) → 貢獻 0%]]></description>
+<styleUrl>#s_fair</styleUrl>
+<Point><coordinates>122.75,8.75,0</coordinates></Point></Placemark>
+</Folder>
+</Folder>
+<Folder><name>分析範圍</name><Placemark><styleUrl>#s_area</styleUrl>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>
+120.0,5.0,0 175.0,5.0,0 175.0,35.0,0 120.0,35.0,0 120.0,5.0,0
+</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder>
+</Document>
+</kml>

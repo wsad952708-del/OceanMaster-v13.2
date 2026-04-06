@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>🎣 OceanMaster v10.2 漁場預測</name>
+<description>生成: 2026-02-14 23:13 UTC
+⚠️ 本預測僅供參考，實際作業請依據船長經驗和即時觀測</description>
+<Style id="s_best"><IconStyle><scale>1.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_good"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_fair"><IconStyle><scale>0.9</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_low"><IconStyle><scale>0.7</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_area"><PolyStyle><color>20ffffff</color><outline>1</outline></PolyStyle><LineStyle><color>ff0088ff</color><width>1</width></LineStyle></Style>
+<LookAt><longitude>147.5</longitude><latitude>20.0</latitude><range>2500000</range></LookAt>
+<Folder><name>🎯 v10.2 漁場熱點</name><open>1</open>
+<description>Φ(Deutsch2015真實計算) + SEAPODYM棲息地 + 營養鏈
+Φ不截斷 + EEZ地理校正 + HSI幾何平均
+生成: 2026-02-14 23:13 UTC</description>
+<Folder><name>大目鮪</name>
+<Placemark><name>#1 大目鮪 (89%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 11.94 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 19.3°C
+🌿 NPP: 5000 mgC/m²/d | DO: 6.7 ml/L
+🏔️ 深度: 4000m
+⚓ 水域: 公海
+📍 距離: 269 nm (26.9hr)
+📊 【大目鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>125.0,28.5,0</coordinates></Point></Placemark>
+<Placemark><name>#2 大目鮪 (89%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 89% ═══
+🧬 代謝指數Φ: 11.98 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 19.4°C
+🌿 NPP: 5000 mgC/m²/d | DO: 6.7 ml/L
+🏔️ 深度: 4000m
+⚓ 水域: 日本EEZ
+EEZ驗證: 需日本政府許可證
+📍 距離: 287 nm (28.7hr)
+📊 【大目鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>125.5,28.5,0</coordinates></Point></Placemark>
+<Placemark><name>#3 大目鮪 (88%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 88% ═══
+🧬 代謝指數Φ: 12.02 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 19.4°C
+🌿 NPP: 4756 mgC/m²/d | DO: 6.7 ml/L
+🏔️ 深度: 4000m
+⚓ 水域: 日本EEZ
+EEZ驗證: 需日本政府許可證
+📍 距離: 307 nm (30.7hr)
+📊 【大目鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>126.0,28.5,0</coordinates></Point></Placemark>
+<Placemark><name>#4 大目鮪 (87%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 11.65 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.7°C
+🌿 NPP: 4972 mgC/m²/d | DO: 6.8 ml/L
+🏔️ 深度: 4000m
+⚓ 水域: 公海
+📍 距離: 373 nm (37.3hr)
+📊 【大目鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>126.0,30.0,0</coordinates></Point></Placemark>
+<Placemark><name>#5 大目鮪 (87%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 87% ═══
+🧬 代謝指數Φ: 11.62 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.6°C
+🌿 NPP: 5000 mgC/m²/d | DO: 6.8 ml/L
+🏔️ 深度: 4000m
+⚓ 水域: 公海
+📍 距離: 356 nm (35.7hr)
+📊 【大目鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>125.5,30.0,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>黃鰭鮪</name>
+<Placemark><name>#1 黃鰭鮪 (80%)</name>
+<description><![CDATA[【v10.2 商業級分析】🔴最佳
+═══ 綜合 HSI: 80% ═══
+🧬 代謝指數Φ: 8.60 ✅充足 (Φ_crit=3.0)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 24.9°C
+🌿 NPP: 3917 mgC/m²/d | DO: 5.2 ml/L
+🏔️ 深度: 7869m
+⚓ 水域: 菲律賓EEZ
+EEZ驗證: 外國漁船需特別許可
+📍 距離: 901 nm (90.1hr)
+📊 【黃鰭鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_best</styleUrl>
+<Point><coordinates>125.5,10.5,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>長鰭鮪</name>
+<Placemark><name>#1 長鰭鮪 (17%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 17% ═══
+🧬 代謝指數Φ: 5.00 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.7°C
+🌿 NPP: 3062 mgC/m²/d | DO: 6.9 ml/L
+🏔️ 深度: 2576m
+⚓ 水域: 公海
+📍 距離: 1048 nm (104.8hr)
+📊 【長鰭鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>140.0,30.75,0</coordinates></Point></Placemark>
+<Placemark><name>#2 長鰭鮪 (17%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 17% ═══
+🧬 代謝指數Φ: 5.00 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.8°C
+🌿 NPP: 3063 mgC/m²/d | DO: 6.9 ml/L
+🏔️ 深度: 2891m
+⚓ 水域: 公海
+📍 距離: 1022 nm (102.2hr)
+📊 【長鰭鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>139.5,30.75,0</coordinates></Point></Placemark>
+<Placemark><name>#3 長鰭鮪 (17%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 17% ═══
+🧬 代謝指數Φ: 5.00 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.7°C
+🌿 NPP: 3061 mgC/m²/d | DO: 6.9 ml/L
+🏔️ 深度: 2891m
+⚓ 水域: 公海
+📍 距離: 1073 nm (107.3hr)
+📊 【長鰭鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>140.5,30.75,0</coordinates></Point></Placemark>
+<Placemark><name>#4 長鰭鮪 (17%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 17% ═══
+🧬 代謝指數Φ: 5.00 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 19.0°C
+🌿 NPP: 2989 mgC/m²/d | DO: 6.8 ml/L
+🏔️ 深度: 1651m
+⚓ 水域: 公海
+📍 距離: 1038 nm (103.8hr)
+📊 【長鰭鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>140.0,30.25,0</coordinates></Point></Placemark>
+<Placemark><name>#5 長鰭鮪 (17%)</name>
+<description><![CDATA[【v10.2 商業級分析】⚪偏低
+═══ 綜合 HSI: 17% ═══
+🧬 代謝指數Φ: 5.00 ✅充足 (Φ_crit=3.5)
+Φ真實計算: Deutsch 2015 (非截斷)
+🌡️ SST: 18.4°C
+🌿 NPP: 3130 mgC/m²/d | DO: 6.9 ml/L
+🏔️ 深度: 3508m
+⚓ 水域: 公海
+📍 距離: 1045 nm (104.5hr)
+📊 【長鰭鮪】預測依據：
+  1. ⛰️水深 ↓ (貢獻 52%)
+  2. bathy_slope ↓ (貢獻 25%)
+  3. dist_shelf_break ↑ (貢獻 5%)
+  4. 🌀渦旋強度 ↓ (貢獻 4%)]]></description>
+<styleUrl>#s_low</styleUrl>
+<Point><coordinates>139.75,31.25,0</coordinates></Point></Placemark>
+</Folder>
+</Folder>
+<Folder><name>分析範圍</name><Placemark><styleUrl>#s_area</styleUrl>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>
+120.0,5.0,0 175.0,5.0,0 175.0,35.0,0 120.0,35.0,0 120.0,5.0,0
+</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder>
+</Document>
+</kml>

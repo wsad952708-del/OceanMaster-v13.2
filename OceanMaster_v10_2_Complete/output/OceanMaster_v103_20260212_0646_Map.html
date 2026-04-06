@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>OceanMaster v10.2 漁場地圖</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif}
+#map{height:100vh;width:100%}
+.info-box{position:absolute;top:10px;left:50px;z-index:1000;background:rgba(0,0,0,.85);color:#fff;
+  padding:12px 18px;border-radius:8px;font-size:13px;max-width:400px}
+.info-box h3{margin:0 0 6px;color:#3498db}
+.legend{position:absolute;bottom:30px;left:50px;z-index:1000;background:rgba(0,0,0,.8);color:#fff;
+  padding:8px 14px;border-radius:6px;font-size:12px}
+.grade-bar{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:4px}
+</style></head><body>
+<div id="map"></div>
+<div class="info-box">
+  <h3>🎣 OceanMaster v10.2</h3>
+  <div>分析時間: 2026-02-12T06:46:47</div>
+  <div style="margin-top:4px"><span style='color:#3498db;font-weight:bold'>●</span> 大目鮪 (20)</div>
+  <div style="margin-top:4px;color:#aaa;font-size:11px">Φ=Deutsch 2015 代謝指數(真實計算) | SEAPODYM 棲息地</div>
+</div>
+<div class="legend">
+  <span class="grade-bar" style="background:#e74c3c"></span>最佳(≥75%)
+  <span class="grade-bar" style="background:#f39c12;margin-left:8px"></span>優秀(60-75%)
+  <span class="grade-bar" style="background:#f1c40f;margin-left:8px"></span>良好(45-60%)
+  <span class="grade-bar" style="background:#95a5a6;margin-left:8px"></span>偏低(&lt;45%)
+</div>
+<script>
+const data = [
+{lat:22.50,lng:137.75,name:'#1 大目鮪 (93%)',species:'大目鮪',hsi:93,phi:13.88,sst:0.0,npp:1764,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4562.0,eez:'公海',popup:`<b>#1 大目鮪 (93%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 93%<br>Φ: 13.88 | SST: 0.0°C<br>NPP: 1764 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 884 nm (88.4hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.00,lng:138.25,name:'#2 大目鮪 (93%)',species:'大目鮪',hsi:93,phi:13.91,sst:0.0,npp:1763,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4770.0,eez:'公海',popup:`<b>#2 大目鮪 (93%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 93%<br>Φ: 13.91 | SST: 0.0°C<br>NPP: 1763 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 916 nm (91.6hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.00,lng:137.75,name:'#3 大目鮪 (93%)',species:'大目鮪',hsi:93,phi:14.32,sst:0.0,npp:1697,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4377.0,eez:'公海',popup:`<b>#3 大目鮪 (93%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 93%<br>Φ: 14.32 | SST: 0.0°C<br>NPP: 1697 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 890 nm (89.0hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.50,lng:138.75,name:'#4 大目鮪 (92%)',species:'大目鮪',hsi:92,phi:14.07,sst:0.0,npp:1735,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4846.0,eez:'公海',popup:`<b>#4 大目鮪 (92%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 92%<br>Φ: 14.07 | SST: 0.0°C<br>NPP: 1735 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 937 nm (93.7hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.50,lng:138.25,name:'#5 大目鮪 (92%)',species:'大目鮪',hsi:92,phi:13.85,sst:0.0,npp:1769,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:5131.0,eez:'公海',popup:`<b>#5 大目鮪 (92%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 92%<br>Φ: 13.85 | SST: 0.0°C<br>NPP: 1769 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 911 nm (91.1hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.00,lng:138.75,name:'#6 大目鮪 (92%)',species:'大目鮪',hsi:92,phi:14.47,sst:0.0,npp:1670,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4818.0,eez:'公海',popup:`<b>#6 大目鮪 (92%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 92%<br>Φ: 14.47 | SST: 0.0°C<br>NPP: 1670 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 943 nm (94.3hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:21.50,lng:138.50,name:'#7 大目鮪 (91%)',species:'大目鮪',hsi:91,phi:14.70,sst:0.0,npp:1634,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:5046.0,eez:'公海',popup:`<b>#7 大目鮪 (91%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 91%<br>Φ: 14.70 | SST: 0.0°C<br>NPP: 1634 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 936 nm (93.6hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.25,lng:137.25,name:'#8 大目鮪 (90%)',species:'大目鮪',hsi:90,phi:13.91,sst:0.0,npp:1762,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4826.0,eez:'公海',popup:`<b>#8 大目鮪 (90%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 90%<br>Φ: 13.91 | SST: 0.0°C<br>NPP: 1762 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 860 nm (86.0hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:21.25,lng:138.00,name:'#9 大目鮪 (90%)',species:'大目鮪',hsi:90,phi:14.84,sst:0.0,npp:1609,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4805.0,eez:'公海',popup:`<b>#9 大目鮪 (90%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 90%<br>Φ: 14.84 | SST: 0.0°C<br>NPP: 1609 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 913 nm (91.3hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:21.50,lng:139.00,name:'#10 大目鮪 (89%)',species:'大目鮪',hsi:89,phi:14.89,sst:0.0,npp:1599,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4785.0,eez:'公海',popup:`<b>#10 大目鮪 (89%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 89%<br>Φ: 14.89 | SST: 0.0°C<br>NPP: 1599 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 962 nm (96.3hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.50,lng:140.25,name:'#11 大目鮪 (89%)',species:'大目鮪',hsi:89,phi:14.24,sst:0.0,npp:1708,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4513.0,eez:'公海',popup:`<b>#11 大目鮪 (89%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 89%<br>Φ: 14.24 | SST: 0.0°C<br>NPP: 1708 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 1018 nm (101.8hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.50,lng:139.25,name:'#12 大目鮪 (89%)',species:'大目鮪',hsi:89,phi:14.62,sst:0.0,npp:1642,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:5398.0,eez:'公海',popup:`<b>#12 大目鮪 (89%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 89%<br>Φ: 14.62 | SST: 0.0°C<br>NPP: 1642 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 964 nm (96.4hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.50,lng:136.75,name:'#13 大目鮪 (88%)',species:'大目鮪',hsi:88,phi:14.23,sst:0.0,npp:1708,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4305.0,eez:'公海',popup:`<b>#13 大目鮪 (88%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 88%<br>Φ: 14.23 | SST: 0.0°C<br>NPP: 1708 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 830 nm (83.0hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.00,lng:139.25,name:'#14 大目鮪 (88%)',species:'大目鮪',hsi:88,phi:14.89,sst:0.0,npp:1595,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:3901.0,eez:'公海',popup:`<b>#14 大目鮪 (88%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 88%<br>Φ: 14.89 | SST: 0.0°C<br>NPP: 1595 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 970 nm (97.0hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.00,lng:140.25,name:'#15 大目鮪 (88%)',species:'大目鮪',hsi:88,phi:14.45,sst:0.0,npp:1674,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4533.0,eez:'公海',popup:`<b>#15 大目鮪 (88%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 88%<br>Φ: 14.45 | SST: 0.0°C<br>NPP: 1674 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 1023 nm (102.3hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:22.50,lng:139.75,name:'#16 大目鮪 (88%)',species:'大目鮪',hsi:88,phi:14.40,sst:0.0,npp:1681,chl:0.000,do_:6.2,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4493.0,eez:'公海',popup:`<b>#16 大目鮪 (88%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 88%<br>Φ: 14.40 | SST: 0.0°C<br>NPP: 1681 | Chl: 0.000 | DO: 6.2<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 991 nm (99.1hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:21.75,lng:137.25,name:'#17 大目鮪 (87%)',species:'大目鮪',hsi:87,phi:14.99,sst:0.0,npp:1579,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4359.0,eez:'公海',popup:`<b>#17 大目鮪 (87%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 87%<br>Φ: 14.99 | SST: 0.0°C<br>NPP: 1579 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 867 nm (86.7hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:21.00,lng:129.75,name:'#18 大目鮪 (87%)',species:'大目鮪',hsi:87,phi:14.02,sst:0.0,npp:1753,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:5932.0,eez:'公海',popup:`<b>#18 大目鮪 (87%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 87%<br>Φ: 14.02 | SST: 0.0°C<br>NPP: 1753 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 501 nm (50.1hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:21.25,lng:140.25,name:'#19 大目鮪 (87%)',species:'大目鮪',hsi:87,phi:14.49,sst:0.0,npp:1672,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4603.0,eez:'公海',popup:`<b>#19 大目鮪 (87%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 87%<br>Φ: 14.49 | SST: 0.0°C<br>NPP: 1672 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 1032 nm (103.2hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'},
+{lat:20.75,lng:137.75,name:'#20 大目鮪 (87%)',species:'大目鮪',hsi:87,phi:15.25,sst:0.0,npp:1537,chl:0.000,do_:6.1,front:0,eddy:0,conv:0,forage:0,thermal:0,depth:4439.0,eez:'公海',popup:`<b>#20 大目鮪 (87%)</b><br><span style='color:#e74c3c'>最佳🔴</span> HSI: 87%<br>Φ: 15.25 | SST: 0.0°C<br>NPP: 1537 | Chl: 0.000 | DO: 6.1<br>鋒面: 0% | 渦旋: 0% | 匯聚: 0%<br>水域: 公海<br>📍 距離: 908 nm (90.9hr @10kn)`,spColor:'#3498db',gradeColor:'#e74c3c'}
+];
+
+const map = L.map('map').setView([21.94,138.14], 5);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',{
+  attribution:'&copy; CARTO',maxZoom:18
+}).addTo(map);
+
+data.forEach(d => {
+  const marker = L.circleMarker([d.lat, d.lng], {
+    radius: Math.max(5, d.hsi / 8),
+    fillColor: d.gradeColor,
+    color: d.spColor,
+    weight: 2,
+    opacity: 0.9,
+    fillOpacity: 0.7
+  }).addTo(map);
+  marker.bindPopup(d.popup, {maxWidth:300});
+});
+
+// Vessel position
+L.marker([25.13,121.74], {
+  icon: L.divIcon({html:'⛵',className:'',iconSize:[20,20]})
+}).addTo(map).bindPopup('母港 / 船位');
+</script></body></html>
